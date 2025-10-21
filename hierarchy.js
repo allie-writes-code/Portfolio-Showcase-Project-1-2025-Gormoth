@@ -9,8 +9,10 @@ var hierarchy =
     [ "MonoBehaviour", null, [
       [ "AIMove", "class_a_i_move.html", null ],
       [ "CharacterHealth", "class_character_health.html", null ],
+      [ "DisplayBuildModeText", "class_display_build_mode_text.html", null ],
       [ "DisplayResourceText", "class_display_resource_text.html", null ],
       [ "EnemyAILoop", "class_enemy_a_i_loop.html", null ],
+      [ "EnemySpawnManager", "class_enemy_spawn_manager.html", null ],
       [ "LevelManager", "class_level_manager.html", null ],
       [ "NodeGrid", "class_node_grid.html", null ],
       [ "PathManager", "class_path_manager.html", null ],
@@ -23,14 +25,20 @@ var hierarchy =
       [ "SimpleProjectileBehaviour", "class_simple_projectile_behaviour.html", null ]
     ] ],
     [ "PathQueue.PathRequest", "struct_path_queue_1_1_path_request.html", null ],
+    [ "PlaneDebugger", "class_plane_debugger.html", null ],
     [ "ResourceDropperDeathLogic.ResourceDrop", "class_resource_dropper_death_logic_1_1_resource_drop.html", null ],
+    [ "Buildable.ResourceIngredient", "class_buildable_1_1_resource_ingredient.html", null ],
     [ "ScriptableObject", null, [
+      [ "Buildable", "class_buildable.html", null ],
+      [ "BuildingManager", "class_building_manager.html", null ],
       [ "CharacterStats", "class_character_stats.html", null ],
       [ "DeathLogic", "class_death_logic.html", [
+        [ "EnemyDeathLogic", "class_enemy_death_logic.html", null ],
         [ "ResourceDropperDeathLogic", "class_resource_dropper_death_logic.html", null ]
       ] ],
       [ "DelegateBroadcaster", "class_delegate_broadcaster.html", null ],
       [ "DelegateListener", "class_delegate_listener.html", null ],
+      [ "LevelSpawner", "class_level_spawner.html", null ],
       [ "PlayerSkill", "class_player_skill.html", [
         [ "AttackFireProjectile", "class_attack_fire_projectile.html", null ]
       ] ],
@@ -42,7 +50,7 @@ var hierarchy =
       [ "Stat", "class_stat.html", null ],
       [ "WorldGridManager", "class_world_grid_manager.html", null ],
       [ "WorldObjecfSpawnChance", "class_world_objecf_spawn_chance.html", null ],
-      [ "WorldObjectManager", "class_world_object_manager.html", null ],
+      [ "WorldObjectSpawner", "class_world_object_spawner.html", null ],
       [ "WorldSpawnData", "class_world_spawn_data.html", null ]
     ] ],
     [ "WorldGridManager.WorldGridNode", "class_world_grid_manager_1_1_world_grid_node.html", null ]

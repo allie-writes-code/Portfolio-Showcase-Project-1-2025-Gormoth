@@ -5,7 +5,7 @@ var class_a_i_move =
     [ "PathFinish", "class_a_i_move.html#ae8057c87fecad6ba6a9b87ae37019dda", null ],
     [ "Start", "class_a_i_move.html#a02d7a6f7e97d3263edd365a7ecdd5c06", null ],
     [ "UpdatePathCheck", "class_a_i_move.html#a42e7528b43703473f60290d4088bab04", null ],
-    [ "aiMoveBroadcaster", "class_a_i_move.html#ae32f92622cfaad291106c6d28d5c04a8", null ],
+    [ "aiLoop", "class_a_i_move.html#a9fd27673d3ba6e2b80db46c7ea891558", null ],
     [ "lastKnownTargetPosition", "class_a_i_move.html#a94524b14f67d889a189b11d1402a4de3", null ],
     [ "path", "class_a_i_move.html#a960ac3ec5b931d0a2198ce8f391d888f", null ],
     [ "stats", "class_a_i_move.html#a60c516bc88b050a65903a1586bb5ac49", null ],

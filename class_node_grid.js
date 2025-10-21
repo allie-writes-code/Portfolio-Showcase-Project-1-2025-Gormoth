@@ -4,7 +4,6 @@ var class_node_grid =
     [ "CreateGrid", "class_node_grid.html#a83c44fd398e7fc550d20f9fc485bbdac", null ],
     [ "GetNeighbours", "class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5", null ],
     [ "NodeFromWorldPoint", "class_node_grid.html#a3967acb8e4c8583e7c7656a7b1e25a2c", null ],
-    [ "OnDrawGizmos", "class_node_grid.html#ac98ba0aa9808711c729ab7e257191fa5", null ],
     [ "UpdateWalkableAtPoint", "class_node_grid.html#a04db8e3594cfcbbbabe9e19ef8ed9d91", null ],
     [ "grid", "class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2", null ],
     [ "gridSizeX", "class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc", null ],

@@ -13,6 +13,6 @@ var searchData=
   ['playerdistancecheckradius_10',['playerDistanceCheckRadius',['../class_enemy_a_i_loop.html#ac6df898af2c90d7c076f3cc3c64288f4',1,'EnemyAILoop']]],
   ['playerlayer_11',['playerLayer',['../class_enemy_a_i_loop.html#a268faedaddf955ad88bfe68d4a58ecdd',1,'EnemyAILoop']]],
   ['playerobject_12',['playerObject',['../class_player_skill.html#a85ed0e73d92bfe4dae1b435c4d05195e',1,'PlayerSkill']]],
-  ['playerprefab_13',['playerPrefab',['../class_level_manager.html#a856537c339580767c87ab170508bdadd',1,'LevelManager']]],
+  ['playerprefab_13',['playerPrefab',['../class_level_manager.html#a856537c339580767c87ab170508bdadd',1,'LevelManager.playerPrefab'],['../class_world_spawn_data.html#a78e1bc5442a2600b142ddfa1a4e88e52',1,'WorldSpawnData.playerPrefab']]],
   ['playerstats_14',['playerStats',['../class_player_controls.html#abaa9edabcfd46dab48f68019a092a1ff',1,'PlayerControls']]]
 ];

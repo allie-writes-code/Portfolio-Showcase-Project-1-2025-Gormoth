@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['heap_2d1_2dg_0',['Heap-1-g',['../class_heap-1-g.html',1,'']]]
+  ['enemyailoop_0',['EnemyAILoop',['../class_enemy_a_i_loop.html',1,'']]],
+  ['enemydeathlogic_1',['EnemyDeathLogic',['../class_enemy_death_logic.html',1,'']]],
+  ['enemyspawnmanager_2',['EnemySpawnManager',['../class_enemy_spawn_manager.html',1,'']]]
 ];

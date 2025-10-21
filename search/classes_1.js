@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['characterhealth_0',['CharacterHealth',['../class_character_health.html',1,'']]],
-  ['characterstats_1',['CharacterStats',['../class_character_stats.html',1,'']]]
+  ['buildable_0',['Buildable',['../class_buildable.html',1,'']]],
+  ['buildingmanager_1',['BuildingManager',['../class_building_manager.html',1,'']]]
 ];

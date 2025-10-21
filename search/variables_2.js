@@ -10,7 +10,10 @@ var searchData=
   ['cooldownstat_7',['cooldownStat',['../class_skill_cooldown.html#ac4b98b8e426a2b081cffd7a142c2712d',1,'SkillCooldown']]],
   ['core_8',['core',['../class_enemy_a_i_loop.html#a9057d851eab2ab82120498b36515d050',1,'EnemyAILoop']]],
   ['coreprefab_9',['corePrefab',['../class_world_spawn_data.html#a98569a7646efd9cceb6e55ded4effacb',1,'WorldSpawnData']]],
-  ['currenthealth_10',['currentHealth',['../class_character_health.html#a1aeab73ed24a091ec925f0852ddefb73',1,'CharacterHealth']]],
-  ['currentitemcount_11',['currentItemCount',['../class_heap-1-g.html#a2ab23ec5a3edfe8462c0bc7a6e39a7ee',1,'Heap-1-g']]],
-  ['currentpathrequest_12',['currentPathRequest',['../class_path_queue.html#aa9283faebc3d99e6c916d4c41cc9f315',1,'PathQueue']]]
+  ['currentenemytotal_10',['currentEnemyTotal',['../class_world_spawn_data.html#ad32b3b223c9e0433ac9f11e32ed29bad',1,'WorldSpawnData']]],
+  ['currenthealth_11',['currentHealth',['../class_character_health.html#a1aeab73ed24a091ec925f0852ddefb73',1,'CharacterHealth']]],
+  ['currentitemcount_12',['currentItemCount',['../class_heap-1-g.html#a2ab23ec5a3edfe8462c0bc7a6e39a7ee',1,'Heap-1-g']]],
+  ['currentlyspawnedbuildable_13',['currentlySpawnedBuildable',['../class_building_manager.html#ac0e04c999efcfb23d5b7dd3209293eb0',1,'BuildingManager']]],
+  ['currentpathrequest_14',['currentPathRequest',['../class_path_queue.html#aa9283faebc3d99e6c916d4c41cc9f315',1,'PathQueue']]],
+  ['currentresourcedropperstotal_15',['currentResourceDroppersTotal',['../class_world_spawn_data.html#a86b9176be627845bd3fbbed84422006c',1,'WorldSpawnData']]]
 ];

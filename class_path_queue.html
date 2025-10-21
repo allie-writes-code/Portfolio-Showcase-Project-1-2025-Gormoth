@@ -192,11 +192,13 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_path_queue_8cs_source.html#l00038">38</a> of file <a class="el" href="_path_queue_8cs_source.html">PathQueue.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        Debug.Log(<span class="stringliteral">&quot;Waypoints in path - Finished Processing Path: &quot;</span> + path.Length);</div>
-<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="#aa9283faebc3d99e6c916d4c41cc9f315">currentPathRequest</a>.callback(path, success);</div>
-<div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="#a26e37281aa1a322cad02b5d74ea7cc45">isProcessingPath</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_function" href="#a507fbc9ec068aacff11387ec7e9ea30e">TryProcessNext</a>();</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa9283faebc3d99e6c916d4c41cc9f315">currentPathRequest</a>.callback != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <a class="code hl_variable" href="#aa9283faebc3d99e6c916d4c41cc9f315">currentPathRequest</a>.callback(path, success);</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_variable" href="#a26e37281aa1a322cad02b5d74ea7cc45">isProcessingPath</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_function" href="#a507fbc9ec068aacff11387ec7e9ea30e">TryProcessNext</a>();</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
 <div class="ttc" id="aclass_path_queue_html_a26e37281aa1a322cad02b5d74ea7cc45"><div class="ttname"><a href="#a26e37281aa1a322cad02b5d74ea7cc45">PathQueue.isProcessingPath</a></div><div class="ttdeci">bool isProcessingPath</div><div class="ttdef"><b>Definition</b> <a href="_path_queue_8cs_source.html#l00013">PathQueue.cs:13</a></div></div>
 <div class="ttc" id="aclass_path_queue_html_a507fbc9ec068aacff11387ec7e9ea30e"><div class="ttname"><a href="#a507fbc9ec068aacff11387ec7e9ea30e">PathQueue.TryProcessNext</a></div><div class="ttdeci">void TryProcessNext()</div><div class="ttdef"><b>Definition</b> <a href="_path_queue_8cs_source.html#l00028">PathQueue.cs:28</a></div></div>
 <div class="ttc" id="aclass_path_queue_html_aa9283faebc3d99e6c916d4c41cc9f315"><div class="ttname"><a href="#aa9283faebc3d99e6c916d4c41cc9f315">PathQueue.currentPathRequest</a></div><div class="ttdeci">PathRequest currentPathRequest</div><div class="ttdef"><b>Definition</b> <a href="_path_queue_8cs_source.html#l00008">PathQueue.cs:8</a></div></div>
@@ -241,7 +243,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   24</span>        <a class="code hl_variable" href="#acca2425f07d8cc09810eee34ad062ee5">instance</a>.pathRequestQueue.Enqueue(newRequest);</div>
 <div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="#acca2425f07d8cc09810eee34ad062ee5">instance</a>.TryProcessNext();</div>
 <div class="line"><span class="lineno">   26</span>    }</div>
-<div class="ttc" id="astruct_path_queue_1_1_path_request_html"><div class="ttname"><a href="struct_path_queue_1_1_path_request.html">PathQueue.PathRequest</a></div><div class="ttdef"><b>Definition</b> <a href="_path_queue_8cs_source.html#l00046">PathQueue.cs:47</a></div></div>
+<div class="ttc" id="astruct_path_queue_1_1_path_request_html"><div class="ttname"><a href="struct_path_queue_1_1_path_request.html">PathQueue.PathRequest</a></div><div class="ttdef"><b>Definition</b> <a href="_path_queue_8cs_source.html#l00048">PathQueue.cs:49</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

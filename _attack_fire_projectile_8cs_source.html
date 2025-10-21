@@ -122,34 +122,37 @@ $(function(){initNavTree('_attack_fire_projectile_8cs_source.html','',''); });
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">if</span> (closestCollider != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                Debug.Log(<span class="stringliteral">&quot;Enemy target found &quot;</span> + closestCollider.gameObject.name);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <a class="code hl_property" href="class_player_skill.html#a6147276aa045246414da50124ea86b12">Cooldown</a>.Reset();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            hitColliders = Physics.OverlapSphere(<a class="code hl_property" href="class_player_skill.html#a2249dc30fa03cbec755a0dedd4794549">PlayerObject</a>.transform.position, <a class="code hl_variable" href="class_attack_fire_projectile.html#af27b7b1660f79d39b80938279717e9a5">targetCheckRadius</a>, <a class="code hl_variable" href="class_attack_fire_projectile.html#a2fd93b461e579b44228e0a4d8081fd68">droppersLayer</a>);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">if</span> (hitColliders.Length &gt; 0)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="comment">// Sort colliders by distance to the sphere&#39;s center</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                Collider closestCollider = hitColliders</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    .OrderBy(c =&gt; Vector3.SqrMagnitude(<a class="code hl_property" href="class_player_skill.html#a2249dc30fa03cbec755a0dedd4794549">PlayerObject</a>.transform.position - c.transform.position))</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    .FirstOrDefault();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="keywordflow">if</span> (closestCollider != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                    GameObject newProjectile = Instantiate(<a class="code hl_property" href="class_player_skill.html#a5132571652b9e7a7854a0f712af5e5d3">SkillPrefab</a>, <a class="code hl_property" href="class_player_skill.html#a2249dc30fa03cbec755a0dedd4794549">PlayerObject</a>.transform.position, <a class="code hl_property" href="class_player_skill.html#a5132571652b9e7a7854a0f712af5e5d3">SkillPrefab</a>.transform.rotation);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                    <a class="code hl_class" href="class_simple_projectile_behaviour.html">SimpleProjectileBehaviour</a> behaviour = newProjectile.GetComponent&lt;<a class="code hl_class" href="class_simple_projectile_behaviour.html">SimpleProjectileBehaviour</a>&gt;();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    behaviour.<a class="code hl_function" href="class_simple_projectile_behaviour.html#a50f516e6d0eedb2f0656089fe167b7a4">FireProjectile</a>((closestCollider.transform.position - <a class="code hl_property" href="class_player_skill.html#a2249dc30fa03cbec755a0dedd4794549">PlayerObject</a>.transform.position).normalized, <a class="code hl_property" href="class_player_skill.html#ab6ce2d0554f12da4306cdd871c6573c0">SkillStat</a>.Value);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    <a class="code hl_property" href="class_player_skill.html#a6147276aa045246414da50124ea86b12">Cooldown</a>.Reset();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                GameObject newProjectile = Instantiate(<a class="code hl_property" href="class_player_skill.html#a5132571652b9e7a7854a0f712af5e5d3">SkillPrefab</a>, <a class="code hl_property" href="class_player_skill.html#a2249dc30fa03cbec755a0dedd4794549">PlayerObject</a>.transform.position, <a class="code hl_property" href="class_player_skill.html#a5132571652b9e7a7854a0f712af5e5d3">SkillPrefab</a>.transform.rotation);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <a class="code hl_class" href="class_simple_projectile_behaviour.html">SimpleProjectileBehaviour</a> behaviour = newProjectile.GetComponent&lt;<a class="code hl_class" href="class_simple_projectile_behaviour.html">SimpleProjectileBehaviour</a>&gt;();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                behaviour.<a class="code hl_function" href="class_simple_projectile_behaviour.html#a50f516e6d0eedb2f0656089fe167b7a4">FireProjectile</a>((closestCollider.transform.position - <a class="code hl_property" href="class_player_skill.html#a2249dc30fa03cbec755a0dedd4794549">PlayerObject</a>.transform.position).normalized, <a class="code hl_property" href="class_player_skill.html#ab6ce2d0554f12da4306cdd871c6573c0">SkillStat</a>.Value);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <a class="code hl_property" href="class_player_skill.html#a6147276aa045246414da50124ea86b12">Cooldown</a>.Reset();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            hitColliders = Physics.OverlapSphere(<a class="code hl_property" href="class_player_skill.html#a2249dc30fa03cbec755a0dedd4794549">PlayerObject</a>.transform.position, <a class="code hl_variable" href="class_attack_fire_projectile.html#af27b7b1660f79d39b80938279717e9a5">targetCheckRadius</a>, <a class="code hl_variable" href="class_attack_fire_projectile.html#a2fd93b461e579b44228e0a4d8081fd68">droppersLayer</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">if</span> (hitColliders.Length &gt; 0)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="comment">// Sort colliders by distance to the sphere&#39;s center</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                Collider closestCollider = hitColliders</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    .OrderBy(c =&gt; Vector3.SqrMagnitude(<a class="code hl_property" href="class_player_skill.html#a2249dc30fa03cbec755a0dedd4794549">PlayerObject</a>.transform.position - c.transform.position))</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    .FirstOrDefault();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">if</span> (closestCollider != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    GameObject newProjectile = Instantiate(<a class="code hl_property" href="class_player_skill.html#a5132571652b9e7a7854a0f712af5e5d3">SkillPrefab</a>, <a class="code hl_property" href="class_player_skill.html#a2249dc30fa03cbec755a0dedd4794549">PlayerObject</a>.transform.position, <a class="code hl_property" href="class_player_skill.html#a5132571652b9e7a7854a0f712af5e5d3">SkillPrefab</a>.transform.rotation);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    <a class="code hl_class" href="class_simple_projectile_behaviour.html">SimpleProjectileBehaviour</a> behaviour = newProjectile.GetComponent&lt;<a class="code hl_class" href="class_simple_projectile_behaviour.html">SimpleProjectileBehaviour</a>&gt;();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    behaviour.<a class="code hl_function" href="class_simple_projectile_behaviour.html#a50f516e6d0eedb2f0656089fe167b7a4">FireProjectile</a>((closestCollider.transform.position - <a class="code hl_property" href="class_player_skill.html#a2249dc30fa03cbec755a0dedd4794549">PlayerObject</a>.transform.position).normalized, <a class="code hl_property" href="class_player_skill.html#ab6ce2d0554f12da4306cdd871c6573c0">SkillStat</a>.Value);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    <a class="code hl_property" href="class_player_skill.html#a6147276aa045246414da50124ea86b12">Cooldown</a>.Reset();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
 </div>
 <div class="ttc" id="aclass_attack_fire_projectile_html"><div class="ttname"><a href="class_attack_fire_projectile.html">AttackFireProjectile</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">AttackFireProjectile.cs:6</a></div></div>
 <div class="ttc" id="aclass_attack_fire_projectile_html_a1ab91b09ed6aa5f408a6754a45d58ce1"><div class="ttname"><a href="class_attack_fire_projectile.html#a1ab91b09ed6aa5f408a6754a45d58ce1">AttackFireProjectile.enemiesLayer</a></div><div class="ttdeci">LayerMask enemiesLayer</div><div class="ttdoc">LayerMask reference to define enemy target layer.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">AttackFireProjectile.cs:13</a></div></div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_0',['Value',['../class_stat.html#a4e6c6fdec2e32183c10049b782ca038e',1,'Stat']]]
+  ['xplier_0',['XPlier',['../class_stat.html#a1a7fcaee475082d3fd46f865aec2d8dc',1,'Stat']]]
 ];

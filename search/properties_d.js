@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timer_0',['Timer',['../class_skill_cooldown.html#af6ee27d23632248a6b77c5eb7817bc33',1,'SkillCooldown']]]
+  ['value_0',['Value',['../class_stat.html#a4e6c6fdec2e32183c10049b782ca038e',1,'Stat']]]
 ];

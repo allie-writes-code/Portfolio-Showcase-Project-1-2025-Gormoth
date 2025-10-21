@@ -114,6 +114,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:acbb829ec9a98eae33f86cd5d155bad29" id="r_acbb829ec9a98eae33f86cd5d155bad29"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbb829ec9a98eae33f86cd5d155bad29">vert</a> = 0</td></tr>
 <tr class="memitem:abaa9edabcfd46dab48f68019a092a1ff" id="r_abaa9edabcfd46dab48f68019a092a1ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character_stats.html">CharacterStats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaa9edabcfd46dab48f68019a092a1ff">playerStats</a></td></tr>
 <tr class="memitem:afa2f4661c54ab2219474a3c66841822f" id="r_afa2f4661c54ab2219474a3c66841822f"><td class="memItemLeft" align="right" valign="top">LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa2f4661c54ab2219474a3c66841822f">resourceDropperLayer</a></td></tr>
+<tr class="memitem:a7a635817ffc91eb51cab64a1aa79c050" id="r_a7a635817ffc91eb51cab64a1aa79c050"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_building_manager.html">BuildingManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a635817ffc91eb51cab64a1aa79c050">buildingManager</a></td></tr>
+<tr class="memdesc:a7a635817ffc91eb51cab64a1aa79c050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to a <a class="el" href="class_building_manager.html" title="ScriptableObject class for defining a building manager. This class is responsible for managing the in...">BuildingManager</a> instance. We send control input, positions, etc, to this to control the in game building system.  <br /></td></tr>
+<tr class="memitem:a8d3ec671f454b97e64ff8e521f0abd96" id="r_a8d3ec671f454b97e64ff8e521f0abd96"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d3ec671f454b97e64ff8e521f0abd96">testBuildPos</a></td></tr>
+<tr class="memitem:a7c2881169359f87539edebd5ee6c2c8c" id="r_a7c2881169359f87539edebd5ee6c2c8c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c2881169359f87539edebd5ee6c2c8c">buildModeOn</a> = false</td></tr>
+<tr class="memdesc:a7c2881169359f87539edebd5ee6c2c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bool to control interaction with the <a class="el" href="class_building_manager.html" title="ScriptableObject class for defining a building manager. This class is responsible for managing the in...">BuildingManager</a>.  <br /></td></tr>
 <tr class="memitem:aca7ba82e3db1c6655baa80eed645749f" id="r_aca7ba82e3db1c6655baa80eed645749f"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca7ba82e3db1c6655baa80eed645749f">moveDirUp</a> = new Vector3(-1, 0, 1)</td></tr>
 <tr class="memitem:a4c4dcd264b264148a383f20d1375f76c" id="r_a4c4dcd264b264148a383f20d1375f76c"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c4dcd264b264148a383f20d1375f76c">moveDirDown</a> = new Vector3(1, 0, -1)</td></tr>
 <tr class="memitem:a33ad9b2b94349e5ea74ac48ab5aa5212" id="r_a33ad9b2b94349e5ea74ac48ab5aa5212"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33ad9b2b94349e5ea74ac48ab5aa5212">moveDirLeft</a> = new Vector3(-1, 0, -1)</td></tr>
@@ -146,14 +151,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00049">49</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a>.x &gt; 0) { moveDirection.x = 1; }</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a>.x &lt; 0) { moveDirection.x = -1; }</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a>.z &gt; 0) { moveDirection.z = 1; }</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a>.z &lt; 0) { moveDirection.z = -1; }</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00092">92</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a>.x &gt; 0) { moveDirection.x = 1; }</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a>.x &lt; 0) { moveDirection.x = -1; }</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a>.z &gt; 0) { moveDirection.z = 1; }</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a>.z &lt; 0) { moveDirection.z = -1; }</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
 <div class="ttc" id="aclass_player_controls_html_a8e52a80b83aadaf009fb159d7cb777e5"><div class="ttname"><a href="#a8e52a80b83aadaf009fb159d7cb777e5">PlayerControls.moveDirection</a></div><div class="ttdeci">Vector3 moveDirection</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00005">PlayerControls.cs:5</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -181,50 +186,138 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00016">16</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a> = Vector3.zero;</div>
-<div class="line"><span class="lineno">   19</span> </div>
-<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="#afb622e8be8f59caacca2d9b8aab683eb">hor</a> = Input.GetAxis(<span class="stringliteral">&quot;Horizontal&quot;</span>);</div>
-<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="#acbb829ec9a98eae33f86cd5d155bad29">vert</a> = Input.GetAxis(<span class="stringliteral">&quot;Vertical&quot;</span>);</div>
-<div class="line"><span class="lineno">   22</span> </div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afb622e8be8f59caacca2d9b8aab683eb">hor</a> &gt; 0) <span class="comment">// Right</span></div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a> += <a class="code hl_variable" href="#a87c7dea2de494a9d3da0f6dc19a726d4">moveDirRight</a>;            </div>
-<div class="line"><span class="lineno">   26</span>        } </div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afb622e8be8f59caacca2d9b8aab683eb">hor</a> &lt; 0) <span class="comment">// Left</span></div>
-<div class="line"><span class="lineno">   28</span>        {</div>
-<div class="line"><span class="lineno">   29</span>            <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a> += <a class="code hl_variable" href="#a33ad9b2b94349e5ea74ac48ab5aa5212">moveDirLeft</a>;</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acbb829ec9a98eae33f86cd5d155bad29">vert</a> &gt; 0) <span class="comment">// Up</span></div>
+<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00025">25</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a> = Vector3.zero;</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="#afb622e8be8f59caacca2d9b8aab683eb">hor</a> = Input.GetAxis(<span class="stringliteral">&quot;Horizontal&quot;</span>);</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="#acbb829ec9a98eae33f86cd5d155bad29">vert</a> = Input.GetAxis(<span class="stringliteral">&quot;Vertical&quot;</span>);</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afb622e8be8f59caacca2d9b8aab683eb">hor</a> &gt; 0) <span class="comment">// Right</span></div>
 <div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a> += <a class="code hl_variable" href="#aca7ba82e3db1c6655baa80eed645749f">moveDirUp</a>;</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a> += <a class="code hl_variable" href="#a87c7dea2de494a9d3da0f6dc19a726d4">moveDirRight</a>;            </div>
 <div class="line"><span class="lineno">   35</span>        } </div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acbb829ec9a98eae33f86cd5d155bad29">vert</a> &lt; 0) <span class="comment">// Down</span></div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#afb622e8be8f59caacca2d9b8aab683eb">hor</a> &lt; 0) <span class="comment">// Left</span></div>
 <div class="line"><span class="lineno">   37</span>        {</div>
-<div class="line"><span class="lineno">   38</span>            <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a> += <a class="code hl_variable" href="#a4c4dcd264b264148a383f20d1375f76c">moveDirDown</a>;</div>
+<div class="line"><span class="lineno">   38</span>            <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a> += <a class="code hl_variable" href="#a33ad9b2b94349e5ea74ac48ab5aa5212">moveDirLeft</a>;</div>
 <div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>        <a class="code hl_function" href="#a1c6e8af72404414ce61ba8b30b064049">RemoveDiagonalSpeedBoost</a>();</div>
-<div class="line"><span class="lineno">   42</span> </div>
-<div class="line"><span class="lineno">   43</span>        transform.position = Vector3.MoveTowards(</div>
-<div class="line"><span class="lineno">   44</span>            transform.position, </div>
-<div class="line"><span class="lineno">   45</span>            transform.position + <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a>, </div>
-<div class="line"><span class="lineno">   46</span>            <a class="code hl_variable" href="#abaa9edabcfd46dab48f68019a092a1ff">playerStats</a>.MoveSpeed.Value * (Time.deltaTime * 0.5f));</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="aclass_player_controls_html_a1c6e8af72404414ce61ba8b30b064049"><div class="ttname"><a href="#a1c6e8af72404414ce61ba8b30b064049">PlayerControls.RemoveDiagonalSpeedBoost</a></div><div class="ttdeci">void RemoveDiagonalSpeedBoost()</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00049">PlayerControls.cs:49</a></div></div>
-<div class="ttc" id="aclass_player_controls_html_a33ad9b2b94349e5ea74ac48ab5aa5212"><div class="ttname"><a href="#a33ad9b2b94349e5ea74ac48ab5aa5212">PlayerControls.moveDirLeft</a></div><div class="ttdeci">Vector3 moveDirLeft</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00060">PlayerControls.cs:60</a></div></div>
-<div class="ttc" id="aclass_player_controls_html_a4c4dcd264b264148a383f20d1375f76c"><div class="ttname"><a href="#a4c4dcd264b264148a383f20d1375f76c">PlayerControls.moveDirDown</a></div><div class="ttdeci">Vector3 moveDirDown</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00059">PlayerControls.cs:59</a></div></div>
-<div class="ttc" id="aclass_player_controls_html_a87c7dea2de494a9d3da0f6dc19a726d4"><div class="ttname"><a href="#a87c7dea2de494a9d3da0f6dc19a726d4">PlayerControls.moveDirRight</a></div><div class="ttdeci">Vector3 moveDirRight</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00061">PlayerControls.cs:61</a></div></div>
+<div class="line"><span class="lineno">   40</span>        </div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acbb829ec9a98eae33f86cd5d155bad29">vert</a> &gt; 0) <span class="comment">// Up</span></div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a> += <a class="code hl_variable" href="#aca7ba82e3db1c6655baa80eed645749f">moveDirUp</a>;</div>
+<div class="line"><span class="lineno">   44</span>        } </div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acbb829ec9a98eae33f86cd5d155bad29">vert</a> &lt; 0) <span class="comment">// Down</span></div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a> += <a class="code hl_variable" href="#a4c4dcd264b264148a383f20d1375f76c">moveDirDown</a>;</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>        <a class="code hl_function" href="#a1c6e8af72404414ce61ba8b30b064049">RemoveDiagonalSpeedBoost</a>();</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>        transform.position = Vector3.MoveTowards(</div>
+<div class="line"><span class="lineno">   53</span>            transform.position, </div>
+<div class="line"><span class="lineno">   54</span>            transform.position + <a class="code hl_variable" href="#a8e52a80b83aadaf009fb159d7cb777e5">moveDirection</a>, </div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_variable" href="#abaa9edabcfd46dab48f68019a092a1ff">playerStats</a>.MoveSpeed.Value * (Time.deltaTime * 0.5f));</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a7a635817ffc91eb51cab64a1aa79c050">buildingManager</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (Input.GetKeyDown(<span class="stringliteral">&quot;b&quot;</span>))</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                <a class="code hl_variable" href="#a7c2881169359f87539edebd5ee6c2c8c">buildModeOn</a> = !<a class="code hl_variable" href="#a7c2881169359f87539edebd5ee6c2c8c">buildModeOn</a>;</div>
+<div class="line"><span class="lineno">   62</span>                <a class="code hl_variable" href="#a7a635817ffc91eb51cab64a1aa79c050">buildingManager</a>.ToggleBuildMode(<a class="code hl_variable" href="#a7c2881169359f87539edebd5ee6c2c8c">buildModeOn</a>);</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a7c2881169359f87539edebd5ee6c2c8c">buildModeOn</a>)</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">if</span> (Input.GetKeyDown(<span class="stringliteral">&quot;e&quot;</span>)) <a class="code hl_variable" href="#a7a635817ffc91eb51cab64a1aa79c050">buildingManager</a>.CycleSelected(1);</div>
+<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Input.GetKeyDown(<span class="stringliteral">&quot;q&quot;</span>)) <a class="code hl_variable" href="#a7a635817ffc91eb51cab64a1aa79c050">buildingManager</a>.CycleSelected(-1);</div>
+<div class="line"><span class="lineno">   69</span>                </div>
+<div class="line"><span class="lineno">   70</span>                Plane plane = <span class="keyword">new</span> Plane(Vector3.up, Vector3.up);</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>                Vector3 worldPosition = Vector3.zero;</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">if</span> (plane.Raycast(ray, out <span class="keywordtype">float</span> enter)) {</div>
+<div class="line"><span class="lineno">   77</span>                    worldPosition = ray.GetPoint(enter);</div>
+<div class="line"><span class="lineno">   78</span>                    buildingManager.BuildPos = worldPosition;</div>
+<div class="line"><span class="lineno">   79</span>                }</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (Input.GetMouseButtonDown(0))</div>
+<div class="line"><span class="lineno">   83</span>            {</div>
+<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a7c2881169359f87539edebd5ee6c2c8c">buildModeOn</a>)</div>
+<div class="line"><span class="lineno">   85</span>                {</div>
+<div class="line"><span class="lineno">   86</span>                    <a class="code hl_variable" href="#a7a635817ffc91eb51cab64a1aa79c050">buildingManager</a>.Build();</div>
+<div class="line"><span class="lineno">   87</span>                }</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclass_player_controls_html_a1c6e8af72404414ce61ba8b30b064049"><div class="ttname"><a href="#a1c6e8af72404414ce61ba8b30b064049">PlayerControls.RemoveDiagonalSpeedBoost</a></div><div class="ttdeci">void RemoveDiagonalSpeedBoost()</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00092">PlayerControls.cs:92</a></div></div>
+<div class="ttc" id="aclass_player_controls_html_a33ad9b2b94349e5ea74ac48ab5aa5212"><div class="ttname"><a href="#a33ad9b2b94349e5ea74ac48ab5aa5212">PlayerControls.moveDirLeft</a></div><div class="ttdeci">Vector3 moveDirLeft</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00103">PlayerControls.cs:103</a></div></div>
+<div class="ttc" id="aclass_player_controls_html_a4c4dcd264b264148a383f20d1375f76c"><div class="ttname"><a href="#a4c4dcd264b264148a383f20d1375f76c">PlayerControls.moveDirDown</a></div><div class="ttdeci">Vector3 moveDirDown</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00102">PlayerControls.cs:102</a></div></div>
+<div class="ttc" id="aclass_player_controls_html_a7a635817ffc91eb51cab64a1aa79c050"><div class="ttname"><a href="#a7a635817ffc91eb51cab64a1aa79c050">PlayerControls.buildingManager</a></div><div class="ttdeci">BuildingManager buildingManager</div><div class="ttdoc">Reference to a BuildingManager instance. We send control input, positions, etc, to this to control th...</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00018">PlayerControls.cs:18</a></div></div>
+<div class="ttc" id="aclass_player_controls_html_a7c2881169359f87539edebd5ee6c2c8c"><div class="ttname"><a href="#a7c2881169359f87539edebd5ee6c2c8c">PlayerControls.buildModeOn</a></div><div class="ttdeci">bool buildModeOn</div><div class="ttdoc">Bool to control interaction with the BuildingManager.</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00023">PlayerControls.cs:23</a></div></div>
+<div class="ttc" id="aclass_player_controls_html_a87c7dea2de494a9d3da0f6dc19a726d4"><div class="ttname"><a href="#a87c7dea2de494a9d3da0f6dc19a726d4">PlayerControls.moveDirRight</a></div><div class="ttdeci">Vector3 moveDirRight</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00104">PlayerControls.cs:104</a></div></div>
 <div class="ttc" id="aclass_player_controls_html_abaa9edabcfd46dab48f68019a092a1ff"><div class="ttname"><a href="#abaa9edabcfd46dab48f68019a092a1ff">PlayerControls.playerStats</a></div><div class="ttdeci">CharacterStats playerStats</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00011">PlayerControls.cs:11</a></div></div>
-<div class="ttc" id="aclass_player_controls_html_aca7ba82e3db1c6655baa80eed645749f"><div class="ttname"><a href="#aca7ba82e3db1c6655baa80eed645749f">PlayerControls.moveDirUp</a></div><div class="ttdeci">Vector3 moveDirUp</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00058">PlayerControls.cs:58</a></div></div>
+<div class="ttc" id="aclass_player_controls_html_aca7ba82e3db1c6655baa80eed645749f"><div class="ttname"><a href="#aca7ba82e3db1c6655baa80eed645749f">PlayerControls.moveDirUp</a></div><div class="ttdeci">Vector3 moveDirUp</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00101">PlayerControls.cs:101</a></div></div>
 <div class="ttc" id="aclass_player_controls_html_acbb829ec9a98eae33f86cd5d155bad29"><div class="ttname"><a href="#acbb829ec9a98eae33f86cd5d155bad29">PlayerControls.vert</a></div><div class="ttdeci">float vert</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00008">PlayerControls.cs:8</a></div></div>
 <div class="ttc" id="aclass_player_controls_html_afb622e8be8f59caacca2d9b8aab683eb"><div class="ttname"><a href="#afb622e8be8f59caacca2d9b8aab683eb">PlayerControls.hor</a></div><div class="ttdeci">float hor</div><div class="ttdef"><b>Definition</b> <a href="_player_controls_8cs_source.html#l00007">PlayerControls.cs:7</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a7a635817ffc91eb51cab64a1aa79c050" name="a7a635817ffc91eb51cab64a1aa79c050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a635817ffc91eb51cab64a1aa79c050">&#9670;&#160;</a></span>buildingManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_building_manager.html">BuildingManager</a> PlayerControls.buildingManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reference to a <a class="el" href="class_building_manager.html" title="ScriptableObject class for defining a building manager. This class is responsible for managing the in...">BuildingManager</a> instance. We send control input, positions, etc, to this to control the in game building system. </p>
+
+<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00018">18</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7c2881169359f87539edebd5ee6c2c8c" name="a7c2881169359f87539edebd5ee6c2c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2881169359f87539edebd5ee6c2c8c">&#9670;&#160;</a></span>buildModeOn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerControls.buildModeOn = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bool to control interaction with the <a class="el" href="class_building_manager.html" title="ScriptableObject class for defining a building manager. This class is responsible for managing the in...">BuildingManager</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00023">23</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
+
+</div>
+</div>
 <a id="afb622e8be8f59caacca2d9b8aab683eb" name="afb622e8be8f59caacca2d9b8aab683eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb622e8be8f59caacca2d9b8aab683eb">&#9670;&#160;</a></span>hor</h2>
 
@@ -269,7 +362,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00059">59</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00102">102</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
 
 </div>
 </div>
@@ -317,7 +410,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00060">60</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00103">103</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
 
 </div>
 </div>
@@ -341,7 +434,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00061">61</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00104">104</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
 
 </div>
 </div>
@@ -365,7 +458,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00058">58</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00101">101</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
 
 </div>
 </div>
@@ -414,6 +507,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00014">14</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8d3ec671f454b97e64ff8e521f0abd96" name="a8d3ec671f454b97e64ff8e521f0abd96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3ec671f454b97e64ff8e521f0abd96">&#9670;&#160;</a></span>testBuildPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 PlayerControls.testBuildPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_controls_8cs_source.html#l00020">20</a> of file <a class="el" href="_player_controls_8cs_source.html">PlayerControls.cs</a>.</p>
 
 </div>
 </div>

@@ -143,8 +143,8 @@ Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_skill_cooldown_8cs_source.html#l00032">32</a> of file <a class="el" href="_skill_cooldown_8cs_source.html">SkillCooldown.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
 <div class="line"><span class="lineno">   34</span>        <span class="keywordtype">bool</span> ready = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   35</span> </div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt;= (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.Value))</div>
+<div class="line"><span class="lineno">   35</span>        </div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt;= (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.Value)))</div>
 <div class="line"><span class="lineno">   37</span>        {</div>
 <div class="line"><span class="lineno">   38</span>            ready = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   39</span>        }</div>
@@ -285,7 +285,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   20</span>        <span class="keyword">set</span> </div>
 <div class="line"><span class="lineno">   21</span>        { </div>
 <div class="line"><span class="lineno">   22</span>            <a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = value;</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt; (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.Value)) <a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.Value);</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt; (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.Value))) <a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.Value));</div>
 <div class="line"><span class="lineno">   24</span>        }</div>
 <div class="line"><span class="lineno">   25</span>    }</div>
 </div><!-- fragment -->

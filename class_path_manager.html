@@ -181,17 +181,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_path_manager_8cs_source.html#l00107">107</a> of file <a class="el" href="_path_manager_8cs_source.html">PathManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
-<div class="line"><span class="lineno">  109</span>        List&lt;Vector3&gt; waypoints = <span class="keyword">new</span> List&lt;Vector3&gt;();</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; path.Count; i++)</div>
-<div class="line"><span class="lineno">  111</span>        {</div>
-<div class="line"><span class="lineno">  112</span>            waypoints.Add(path[i].worldPosition);</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>        Debug.Log(<span class="stringliteral">&quot;Waypoints in path - Convert Path &quot;</span> + waypoints.Count);</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> waypoints.ToArray();</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_path_manager_8cs_source.html#l00104">104</a> of file <a class="el" href="_path_manager_8cs_source.html">PathManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        List&lt;Vector3&gt; waypoints = <span class="keyword">new</span> List&lt;Vector3&gt;();</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; path.Count; i++)</div>
+<div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            waypoints.Add(path[i].worldPosition);</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> waypoints.ToArray();</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -276,16 +275,16 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   74</span>        }</div>
 <div class="line"><span class="lineno">   75</span>        </div>
 <div class="line"><span class="lineno">   76</span>        yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (pathSuccess)</div>
-<div class="line"><span class="lineno">   78</span>        {</div>
-<div class="line"><span class="lineno">   79</span>            waypoints = <a class="code hl_function" href="#a31bd41078c37b6a015316c7f4b4fb562">RetracePath</a>(startNode, targetNode);</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (waypoints.Length == 0) pathSuccess = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>        Debug.Log(<span class="stringliteral">&quot;Waypoints in path - Find Path: &quot;</span> + waypoints.Length);</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (pathSuccess)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            waypoints = <a class="code hl_function" href="#a31bd41078c37b6a015316c7f4b4fb562">RetracePath</a>(startNode, targetNode);</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (waypoints.Length == 0) pathSuccess = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span> </div>
 <div class="line"><span class="lineno">   84</span>        <a class="code hl_variable" href="#ac366e12c9145ae3b0c7ac554f141e932">pathQueue</a>.FinishedProcessingPath(waypoints, pathSuccess);</div>
 <div class="line"><span class="lineno">   85</span>    }</div>
-<div class="ttc" id="aclass_path_manager_html_a227fb35e4ee1fb45663684078f4a88df"><div class="ttname"><a href="#a227fb35e4ee1fb45663684078f4a88df">PathManager.GetDistance</a></div><div class="ttdeci">int GetDistance(PathNode nodeA, PathNode nodeB)</div><div class="ttdef"><b>Definition</b> <a href="_path_manager_8cs_source.html#l00138">PathManager.cs:138</a></div></div>
+<div class="ttc" id="aclass_path_manager_html_a227fb35e4ee1fb45663684078f4a88df"><div class="ttname"><a href="#a227fb35e4ee1fb45663684078f4a88df">PathManager.GetDistance</a></div><div class="ttdeci">int GetDistance(PathNode nodeA, PathNode nodeB)</div><div class="ttdef"><b>Definition</b> <a href="_path_manager_8cs_source.html#l00134">PathManager.cs:134</a></div></div>
 <div class="ttc" id="aclass_path_manager_html_a31bd41078c37b6a015316c7f4b4fb562"><div class="ttname"><a href="#a31bd41078c37b6a015316c7f4b4fb562">PathManager.RetracePath</a></div><div class="ttdeci">Vector3[] RetracePath(PathNode startNode, PathNode endNode)</div><div class="ttdef"><b>Definition</b> <a href="_path_manager_8cs_source.html#l00087">PathManager.cs:87</a></div></div>
 <div class="ttc" id="aclass_path_node_html_a2aa8dc3316b0c5f3eea042eddbcc75aa"><div class="ttname"><a href="class_path_node.html#a2aa8dc3316b0c5f3eea042eddbcc75aa">PathNode.gCost</a></div><div class="ttdeci">int gCost</div><div class="ttdef"><b>Definition</b> <a href="_path_node_8cs_source.html#l00012">PathNode.cs:12</a></div></div>
 <div class="ttc" id="aclass_path_node_html_a954f777fd998af56c4acc5f78cbf41ca"><div class="ttname"><a href="class_path_node.html#a954f777fd998af56c4acc5f78cbf41ca">PathNode.walkable</a></div><div class="ttdeci">bool walkable</div><div class="ttdef"><b>Definition</b> <a href="_path_node_8cs_source.html#l00007">PathNode.cs:7</a></div></div>
@@ -319,18 +318,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_path_manager_8cs_source.html#l00138">138</a> of file <a class="el" href="_path_manager_8cs_source.html">PathManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordtype">int</span> dstX = Mathf.Abs(nodeA.<a class="code hl_variable" href="class_path_node.html#a7056d01ebc3cb9dd9864851e9c1f970b">gridX</a> - nodeB.<a class="code hl_variable" href="class_path_node.html#a7056d01ebc3cb9dd9864851e9c1f970b">gridX</a>);</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">int</span> dstY = Mathf.Abs(nodeA.<a class="code hl_variable" href="class_path_node.html#a18b1cd4e8a27b2d5b37d6da23e6b1ec7">gridY</a> - nodeB.<a class="code hl_variable" href="class_path_node.html#a18b1cd4e8a27b2d5b37d6da23e6b1ec7">gridY</a>);</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (dstX &gt; dstY)</div>
-<div class="line"><span class="lineno">  144</span>        {</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">return</span> 14 * dstY + 10 * (dstX - dstY);</div>
-<div class="line"><span class="lineno">  146</span>        }</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> 14 * dstX + 10 * (dstY - dstX);</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_path_manager_8cs_source.html#l00134">134</a> of file <a class="el" href="_path_manager_8cs_source.html">PathManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">int</span> dstX = Mathf.Abs(nodeA.<a class="code hl_variable" href="class_path_node.html#a7056d01ebc3cb9dd9864851e9c1f970b">gridX</a> - nodeB.<a class="code hl_variable" href="class_path_node.html#a7056d01ebc3cb9dd9864851e9c1f970b">gridX</a>);</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">int</span> dstY = Mathf.Abs(nodeA.<a class="code hl_variable" href="class_path_node.html#a18b1cd4e8a27b2d5b37d6da23e6b1ec7">gridY</a> - nodeB.<a class="code hl_variable" href="class_path_node.html#a18b1cd4e8a27b2d5b37d6da23e6b1ec7">gridY</a>);</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (dstX &gt; dstY)</div>
+<div class="line"><span class="lineno">  140</span>        {</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">return</span> 14 * dstY + 10 * (dstX - dstY);</div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> 14 * dstX + 10 * (dstY - dstX);</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
 <div class="ttc" id="aclass_path_node_html_a18b1cd4e8a27b2d5b37d6da23e6b1ec7"><div class="ttname"><a href="class_path_node.html#a18b1cd4e8a27b2d5b37d6da23e6b1ec7">PathNode.gridY</a></div><div class="ttdeci">int gridY</div><div class="ttdef"><b>Definition</b> <a href="_path_node_8cs_source.html#l00010">PathNode.cs:10</a></div></div>
 <div class="ttc" id="aclass_path_node_html_a7056d01ebc3cb9dd9864851e9c1f970b"><div class="ttname"><a href="class_path_node.html#a7056d01ebc3cb9dd9864851e9c1f970b">PathNode.gridX</a></div><div class="ttdeci">int gridX</div><div class="ttdef"><b>Definition</b> <a href="_path_node_8cs_source.html#l00009">PathNode.cs:9</a></div></div>
 </div><!-- fragment -->
@@ -368,21 +367,18 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   89</span>        List&lt;PathNode&gt; path = <span class="keyword">new</span> List&lt;PathNode&gt;();</div>
 <div class="line"><span class="lineno">   90</span>        PathNode currentNode = endNode;</div>
 <div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>        Debug.Log(<span class="stringliteral">&quot;Start Node &quot;</span> + startNode.<a class="code hl_variable" href="class_path_node.html#a7056d01ebc3cb9dd9864851e9c1f970b">gridX</a> + <span class="stringliteral">&quot;:&quot;</span> + startNode.<a class="code hl_variable" href="class_path_node.html#a18b1cd4e8a27b2d5b37d6da23e6b1ec7">gridY</a>);</div>
-<div class="line"><span class="lineno">   93</span>        Debug.Log(<span class="stringliteral">&quot;End node &quot;</span> + endNode.<a class="code hl_variable" href="class_path_node.html#a7056d01ebc3cb9dd9864851e9c1f970b">gridX</a> + <span class="stringliteral">&quot;:&quot;</span> + endNode.<a class="code hl_variable" href="class_path_node.html#a18b1cd4e8a27b2d5b37d6da23e6b1ec7">gridY</a>);</div>
-<div class="line"><span class="lineno">   94</span> </div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">while</span> (currentNode != startNode)</div>
-<div class="line"><span class="lineno">   96</span>        {</div>
-<div class="line"><span class="lineno">   97</span>            path.Add(currentNode);</div>
-<div class="line"><span class="lineno">   98</span>            currentNode = currentNode.<a class="code hl_variable" href="class_path_node.html#a7e710da0e330b718cb773314136d49a6">parent</a>;</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>        Vector3[] waypoints = <a class="code hl_function" href="#a273689e36df77705fc34432278a48ab7">ConvertPath</a>(path);</div>
-<div class="line"><span class="lineno">  102</span>        Array.Reverse(waypoints);</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> waypoints;</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>    }</div>
-<div class="ttc" id="aclass_path_manager_html_a273689e36df77705fc34432278a48ab7"><div class="ttname"><a href="#a273689e36df77705fc34432278a48ab7">PathManager.ConvertPath</a></div><div class="ttdeci">Vector3[] ConvertPath(List&lt; PathNode &gt; path)</div><div class="ttdef"><b>Definition</b> <a href="_path_manager_8cs_source.html#l00107">PathManager.cs:107</a></div></div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">while</span> (currentNode != startNode)</div>
+<div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            path.Add(currentNode);</div>
+<div class="line"><span class="lineno">   95</span>            currentNode = currentNode.<a class="code hl_variable" href="class_path_node.html#a7e710da0e330b718cb773314136d49a6">parent</a>;</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>        Vector3[] waypoints = <a class="code hl_function" href="#a273689e36df77705fc34432278a48ab7">ConvertPath</a>(path);</div>
+<div class="line"><span class="lineno">   99</span>        Array.Reverse(waypoints);</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> waypoints;</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+<div class="ttc" id="aclass_path_manager_html_a273689e36df77705fc34432278a48ab7"><div class="ttname"><a href="#a273689e36df77705fc34432278a48ab7">PathManager.ConvertPath</a></div><div class="ttdeci">Vector3[] ConvertPath(List&lt; PathNode &gt; path)</div><div class="ttdef"><b>Definition</b> <a href="_path_manager_8cs_source.html#l00104">PathManager.cs:104</a></div></div>
 <div class="ttc" id="aclass_path_node_html_a7e710da0e330b718cb773314136d49a6"><div class="ttname"><a href="class_path_node.html#a7e710da0e330b718cb773314136d49a6">PathNode.parent</a></div><div class="ttdeci">PathNode parent</div><div class="ttdef"><b>Definition</b> <a href="_path_node_8cs_source.html#l00014">PathNode.cs:14</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -410,24 +406,24 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_path_manager_8cs_source.html#l00119">119</a> of file <a class="el" href="_path_manager_8cs_source.html">PathManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>    {</div>
-<div class="line"><span class="lineno">  121</span>        List&lt;Vector3&gt; waypoints = <span class="keyword">new</span> List&lt;Vector3&gt;();</div>
-<div class="line"><span class="lineno">  122</span>        Vector2 oldDirection = Vector2.zero;</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; path.Count; i++)</div>
-<div class="line"><span class="lineno">  125</span>        {</div>
-<div class="line"><span class="lineno">  126</span>            Vector2 newDirection = <span class="keyword">new</span> Vector2(path[i - 1].gridX - path[i].gridX, path[i - 1].gridY - path[i].gridY);</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (newDirection != oldDirection)</div>
-<div class="line"><span class="lineno">  128</span>            {</div>
-<div class="line"><span class="lineno">  129</span>                waypoints.Add(path[i].worldPosition);</div>
-<div class="line"><span class="lineno">  130</span>            }</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>            oldDirection = newDirection;</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> waypoints.ToArray();</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_path_manager_8cs_source.html#l00115">115</a> of file <a class="el" href="_path_manager_8cs_source.html">PathManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        List&lt;Vector3&gt; waypoints = <span class="keyword">new</span> List&lt;Vector3&gt;();</div>
+<div class="line"><span class="lineno">  118</span>        Vector2 oldDirection = Vector2.zero;</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; path.Count; i++)</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            Vector2 newDirection = <span class="keyword">new</span> Vector2(path[i - 1].gridX - path[i].gridX, path[i - 1].gridY - path[i].gridY);</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">if</span> (newDirection != oldDirection)</div>
+<div class="line"><span class="lineno">  124</span>            {</div>
+<div class="line"><span class="lineno">  125</span>                waypoints.Add(path[i].worldPosition);</div>
+<div class="line"><span class="lineno">  126</span>            }</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>            oldDirection = newDirection;</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> waypoints.ToArray();</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

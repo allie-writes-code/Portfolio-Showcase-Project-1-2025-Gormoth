@@ -120,8 +120,8 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a856537c339580767c87ab170508bdadd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefab for the Player object. Set in editor.  <br /></td></tr>
 <tr class="memitem:a194b10d2ac93e75540b8c03e95f9926b" id="r_a194b10d2ac93e75540b8c03e95f9926b"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a194b10d2ac93e75540b8c03e95f9926b">groundPlanePrefab</a></td></tr>
 <tr class="memdesc:a194b10d2ac93e75540b8c03e95f9926b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefab for the Ground Plane object. Set in editor.  <br /></td></tr>
-<tr class="memitem:a264f901a7c929288f22684c519dec0fb" id="r_a264f901a7c929288f22684c519dec0fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_world_object_manager.html">WorldObjectManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a264f901a7c929288f22684c519dec0fb">worldManager</a></td></tr>
-<tr class="memdesc:a264f901a7c929288f22684c519dec0fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to a <a class="el" href="class_world_object_manager.html" title="ScriptableObject class for defining world object managers. This class works with the WorldGridManager...">WorldObjectManager</a>.  <br /></td></tr>
+<tr class="memitem:a27f4e5dc50f10e4a65d8ac13df9ddfae" id="r_a27f4e5dc50f10e4a65d8ac13df9ddfae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_level_spawner.html">LevelSpawner</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27f4e5dc50f10e4a65d8ac13df9ddfae">levelSpawner</a></td></tr>
+<tr class="memdesc:a27f4e5dc50f10e4a65d8ac13df9ddfae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to a WorldObjectManager.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is responsible for the managment of levels (an active game state, world, data and objects), including loading, generation and saving. </p>
@@ -161,9 +161,9 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   34</span>            groundPlane.name = <span class="stringliteral">&quot;Ground Plane&quot;</span>;</div>
 <div class="line"><span class="lineno">   35</span>        }</div>
 <div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a264f901a7c929288f22684c519dec0fb">worldManager</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a27f4e5dc50f10e4a65d8ac13df9ddfae">levelSpawner</a> != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            <a class="code hl_variable" href="#a264f901a7c929288f22684c519dec0fb">worldManager</a>.GenerateNewWorld();</div>
+<div class="line"><span class="lineno">   39</span>            <a class="code hl_variable" href="#a27f4e5dc50f10e4a65d8ac13df9ddfae">levelSpawner</a>.GenerateNewWorld();</div>
 <div class="line"><span class="lineno">   40</span>        }</div>
 <div class="line"><span class="lineno">   41</span> </div>
 <div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9d22fdc285e11ce35a0e4bbb85aeb594">pathManagerPrefab</a> != <span class="keyword">null</span>)</div>
@@ -171,16 +171,9 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   44</span>            GameObject pathManger = Instantiate(<a class="code hl_variable" href="#a9d22fdc285e11ce35a0e4bbb85aeb594">pathManagerPrefab</a>, Vector3.zero, Quaternion.identity);</div>
 <div class="line"><span class="lineno">   45</span>            pathManger.name = <span class="stringliteral">&quot;Path Manager&quot;</span>;</div>
 <div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a856537c339580767c87ab170508bdadd">playerPrefab</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            GameObject playerObject = Instantiate(<a class="code hl_variable" href="#a856537c339580767c87ab170508bdadd">playerPrefab</a>, <span class="keyword">new</span> Vector3(0, 1, 0), Quaternion.identity);</div>
-<div class="line"><span class="lineno">   51</span>            playerObject.name = <span class="stringliteral">&quot;Player&quot;</span>;</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
 <div class="ttc" id="aclass_level_manager_html_a194b10d2ac93e75540b8c03e95f9926b"><div class="ttname"><a href="#a194b10d2ac93e75540b8c03e95f9926b">LevelManager.groundPlanePrefab</a></div><div class="ttdeci">GameObject groundPlanePrefab</div><div class="ttdoc">Prefab for the Ground Plane object. Set in editor.</div><div class="ttdef"><b>Definition</b> <a href="_level_manager_8cs_source.html#l00016">LevelManager.cs:16</a></div></div>
-<div class="ttc" id="aclass_level_manager_html_a264f901a7c929288f22684c519dec0fb"><div class="ttname"><a href="#a264f901a7c929288f22684c519dec0fb">LevelManager.worldManager</a></div><div class="ttdeci">WorldObjectManager worldManager</div><div class="ttdoc">Reference to a WorldObjectManager.</div><div class="ttdef"><b>Definition</b> <a href="_level_manager_8cs_source.html#l00020">LevelManager.cs:20</a></div></div>
-<div class="ttc" id="aclass_level_manager_html_a856537c339580767c87ab170508bdadd"><div class="ttname"><a href="#a856537c339580767c87ab170508bdadd">LevelManager.playerPrefab</a></div><div class="ttdeci">GameObject playerPrefab</div><div class="ttdoc">Prefab for the Player object. Set in editor.</div><div class="ttdef"><b>Definition</b> <a href="_level_manager_8cs_source.html#l00012">LevelManager.cs:12</a></div></div>
+<div class="ttc" id="aclass_level_manager_html_a27f4e5dc50f10e4a65d8ac13df9ddfae"><div class="ttname"><a href="#a27f4e5dc50f10e4a65d8ac13df9ddfae">LevelManager.levelSpawner</a></div><div class="ttdeci">LevelSpawner levelSpawner</div><div class="ttdoc">Reference to a WorldObjectManager.</div><div class="ttdef"><b>Definition</b> <a href="_level_manager_8cs_source.html#l00020">LevelManager.cs:20</a></div></div>
 <div class="ttc" id="aclass_level_manager_html_a9d22fdc285e11ce35a0e4bbb85aeb594"><div class="ttname"><a href="#a9d22fdc285e11ce35a0e4bbb85aeb594">LevelManager.pathManagerPrefab</a></div><div class="ttdeci">GameObject pathManagerPrefab</div><div class="ttdoc">Prefab for the Path Manager object (A* pathfinding). Set in editor.</div><div class="ttdef"><b>Definition</b> <a href="_level_manager_8cs_source.html#l00008">LevelManager.cs:8</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -245,6 +238,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a27f4e5dc50f10e4a65d8ac13df9ddfae" name="a27f4e5dc50f10e4a65d8ac13df9ddfae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27f4e5dc50f10e4a65d8ac13df9ddfae">&#9670;&#160;</a></span>levelSpawner</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_level_spawner.html">LevelSpawner</a> LevelManager.levelSpawner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reference to a WorldObjectManager. </p>
+
+<p class="definition">Definition at line <a class="el" href="_level_manager_8cs_source.html#l00020">20</a> of file <a class="el" href="_level_manager_8cs_source.html">LevelManager.cs</a>.</p>
+
+</div>
+</div>
 <a id="a9d22fdc285e11ce35a0e4bbb85aeb594" name="a9d22fdc285e11ce35a0e4bbb85aeb594"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d22fdc285e11ce35a0e4bbb85aeb594">&#9670;&#160;</a></span>pathManagerPrefab</h2>
 
@@ -294,32 +313,6 @@ Private Attributes</h2></td></tr>
 <p>Prefab for the Player object. Set in editor. </p>
 
 <p class="definition">Definition at line <a class="el" href="_level_manager_8cs_source.html#l00012">12</a> of file <a class="el" href="_level_manager_8cs_source.html">LevelManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a264f901a7c929288f22684c519dec0fb" name="a264f901a7c929288f22684c519dec0fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a264f901a7c929288f22684c519dec0fb">&#9670;&#160;</a></span>worldManager</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_world_object_manager.html">WorldObjectManager</a> LevelManager.worldManager</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reference to a <a class="el" href="class_world_object_manager.html" title="ScriptableObject class for defining world object managers. This class works with the WorldGridManager...">WorldObjectManager</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="_level_manager_8cs_source.html#l00020">20</a> of file <a class="el" href="_level_manager_8cs_source.html">LevelManager.cs</a>.</p>
 
 </div>
 </div>

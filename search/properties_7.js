@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['iswaiting_0',['IsWaiting',['../class_resource_item_interact.html#a405304a9c9c3b420bfb6e5471a5c1fa1',1,'ResourceItemInteract']]],
-  ['itemprefab_1',['ItemPrefab',['../class_resource_item.html#aaaea8f828acb7f32a4165e37f77a2393',1,'ResourceItem']]]
+  ['maxsize_0',['MaxSize',['../class_node_grid.html#a8c318b2c4074737856287637fc254b7a',1,'NodeGrid']]],
+  ['movespeed_1',['MoveSpeed',['../class_character_stats.html#a095accb5b30ff055c7b4f74edaa8f6de',1,'CharacterStats']]],
+  ['myamt_2',['MyAmt',['../class_resource_total.html#a57054bf4197be4b6fb0c7f777b4f1020',1,'ResourceTotal']]],
+  ['myindex_3',['MyIndex',['../class_resource.html#a97254bc10c2b4290f93a9125abef4c9b',1,'Resource']]],
+  ['myname_4',['MyName',['../class_resource.html#a2be9b9b076d1d69a23ac444a373e624b',1,'Resource']]],
+  ['myresource_5',['MyResource',['../class_resource_item_interact.html#a0c22ad3227b179b78516ae0372f664b0',1,'ResourceItemInteract.MyResource'],['../class_resource_total.html#a256c238bd4babac620c4bb154b0074f1',1,'ResourceTotal.MyResource']]]
 ];
