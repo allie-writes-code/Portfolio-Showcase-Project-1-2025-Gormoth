@@ -107,6 +107,7 @@ Inheritance diagram for NodeGrid:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a887b5c1dac45a35d83f504ba45366950" id="r_a887b5c1dac45a35d83f504ba45366950"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a887b5c1dac45a35d83f504ba45366950">Init</a> ()</td></tr>
 <tr class="memitem:a04db8e3594cfcbbbabe9e19ef8ed9d91" id="r_a04db8e3594cfcbbbabe9e19ef8ed9d91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04db8e3594cfcbbbabe9e19ef8ed9d91">UpdateWalkableAtPoint</a> (Vector3 pos)</td></tr>
 <tr class="memitem:af14346b1742eac1d5ba01b99dbc187a5" id="r_af14346b1742eac1d5ba01b99dbc187a5"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_path_node.html">PathNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af14346b1742eac1d5ba01b99dbc187a5">GetNeighbours</a> (<a class="el" href="class_path_node.html">PathNode</a> node)</td></tr>
 <tr class="memitem:a3967acb8e4c8583e7c7656a7b1e25a2c" id="r_a3967acb8e4c8583e7c7656a7b1e25a2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_path_node.html">PathNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeFromWorldPoint</a> (Vector3 worldPosition)</td></tr>
@@ -116,6 +117,8 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a28c363d70b8fc65c1fb69e466cf6e70a" id="r_a28c363d70b8fc65c1fb69e466cf6e70a"><td class="memItemLeft" align="right" valign="top">LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a></td></tr>
 <tr class="memitem:a3c3d3ed448863af0729915ffde7e0df2" id="r_a3c3d3ed448863af0729915ffde7e0df2"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a></td></tr>
 <tr class="memitem:af314f4eb7197aa4a80e9c758dc801828" id="r_af314f4eb7197aa4a80e9c758dc801828"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a></td></tr>
+<tr class="memitem:a4cdb3f942769e51037767a202ea7dae2" id="r_a4cdb3f942769e51037767a202ea7dae2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_path_node.html">PathNode</a>[,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cdb3f942769e51037767a202ea7dae2">grid</a></td></tr>
+<tr class="memitem:a6779f63501ad59d97e6460c112744a5c" id="r_a6779f63501ad59d97e6460c112744a5c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -123,13 +126,10 @@ Properties</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a2142fb7f05ee1ee87241348a4a0f12ad" id="r_a2142fb7f05ee1ee87241348a4a0f12ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2142fb7f05ee1ee87241348a4a0f12ad">Awake</a> ()</td></tr>
 <tr class="memitem:a83c44fd398e7fc550d20f9fc485bbdac" id="r_a83c44fd398e7fc550d20f9fc485bbdac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83c44fd398e7fc550d20f9fc485bbdac">CreateGrid</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a4cdb3f942769e51037767a202ea7dae2" id="r_a4cdb3f942769e51037767a202ea7dae2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_path_node.html">PathNode</a>[,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cdb3f942769e51037767a202ea7dae2">grid</a></td></tr>
-<tr class="memitem:a6779f63501ad59d97e6460c112744a5c" id="r_a6779f63501ad59d97e6460c112744a5c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a></td></tr>
 <tr class="memitem:af76c93b47c55e413e6b2ef03592d46dc" id="r_af76c93b47c55e413e6b2ef03592d46dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a></td></tr>
 <tr class="memitem:a2aeba06b31205407ec72df85aaa65e2b" id="r_a2aeba06b31205407ec72df85aaa65e2b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a></td></tr>
 </table>
@@ -137,45 +137,6 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00005">5</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a2142fb7f05ee1ee87241348a4a0f12ad" name="a2142fb7f05ee1ee87241348a4a0f12ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2142fb7f05ee1ee87241348a4a0f12ad">&#9670;&#160;</a></span>Awake()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void NodeGrid.Awake </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00015">15</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> = <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a> * 2;</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> = Mathf.RoundToInt(<a class="code hl_variable" href="#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.x / <a class="code hl_variable" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a>);</div>
-<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a> = Mathf.RoundToInt(<a class="code hl_variable" href="#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.y / <a class="code hl_variable" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a>);</div>
-<div class="line"><span class="lineno">   20</span>        <a class="code hl_function" href="#a83c44fd398e7fc550d20f9fc485bbdac">CreateGrid</a>();</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
-<div class="ttc" id="aclass_node_grid_html_a2aeba06b31205407ec72df85aaa65e2b"><div class="ttname"><a href="#a2aeba06b31205407ec72df85aaa65e2b">NodeGrid.gridSizeY</a></div><div class="ttdeci">int gridSizeY</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00013">NodeGrid.cs:13</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_a3c3d3ed448863af0729915ffde7e0df2"><div class="ttname"><a href="#a3c3d3ed448863af0729915ffde7e0df2">NodeGrid.gridWorldSize</a></div><div class="ttdeci">Vector2 gridWorldSize</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00008">NodeGrid.cs:8</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_a6779f63501ad59d97e6460c112744a5c"><div class="ttname"><a href="#a6779f63501ad59d97e6460c112744a5c">NodeGrid.nodeDiameter</a></div><div class="ttdeci">float nodeDiameter</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00012">NodeGrid.cs:12</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_a83c44fd398e7fc550d20f9fc485bbdac"><div class="ttname"><a href="#a83c44fd398e7fc550d20f9fc485bbdac">NodeGrid.CreateGrid</a></div><div class="ttdeci">void CreateGrid()</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00031">NodeGrid.cs:31</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_af314f4eb7197aa4a80e9c758dc801828"><div class="ttname"><a href="#af314f4eb7197aa4a80e9c758dc801828">NodeGrid.nodeRadius</a></div><div class="ttdeci">float nodeRadius</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00009">NodeGrid.cs:9</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_af76c93b47c55e413e6b2ef03592d46dc"><div class="ttname"><a href="#af76c93b47c55e413e6b2ef03592d46dc">NodeGrid.gridSizeX</a></div><div class="ttdeci">int gridSizeX</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00013">NodeGrid.cs:13</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a83c44fd398e7fc550d20f9fc485bbdac" name="a83c44fd398e7fc550d20f9fc485bbdac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83c44fd398e7fc550d20f9fc485bbdac">&#9670;&#160;</a></span>CreateGrid()</h2>
 
@@ -199,29 +160,33 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00031">31</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
-<div class="line"><span class="lineno">   33</span>        <a class="code hl_variable" href="#a4cdb3f942769e51037767a202ea7dae2">grid</a> = <span class="keyword">new</span> PathNode[<a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a>, <a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>];</div>
-<div class="line"><span class="lineno">   34</span>        Vector3 worldBottomLeft = transform.position - </div>
-<div class="line"><span class="lineno">   35</span>            Vector3.right * gridWorldSize.x / 2 - </div>
-<div class="line"><span class="lineno">   36</span>            Vector3.forward * gridWorldSize.y /2;</div>
-<div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; <a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a>; x++)</div>
-<div class="line"><span class="lineno">   39</span>        {</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; <a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>; y++)</div>
-<div class="line"><span class="lineno">   41</span>            {</div>
-<div class="line"><span class="lineno">   42</span>                Vector3 worldPoint = worldBottomLeft +</div>
-<div class="line"><span class="lineno">   43</span>                    Vector3.right * (x * <a class="code hl_variable" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> + <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>)</div>
-<div class="line"><span class="lineno">   44</span>                    + Vector3.forward * (y * <a class="code hl_variable" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> + <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>);</div>
-<div class="line"><span class="lineno">   45</span>                worldPoint.y = 1;</div>
-<div class="line"><span class="lineno">   46</span> </div>
-<div class="line"><span class="lineno">   47</span>                <span class="keywordtype">bool</span> walkable = !(Physics.CheckSphere(worldPoint, <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
-<div class="line"><span class="lineno">   48</span>                <a class="code hl_variable" href="#a4cdb3f942769e51037767a202ea7dae2">grid</a>[x, y] = <span class="keyword">new</span> PathNode(walkable, worldPoint, x, y);</div>
-<div class="line"><span class="lineno">   49</span>            }</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00033">33</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="#a4cdb3f942769e51037767a202ea7dae2">grid</a> = <span class="keyword">new</span> PathNode[<a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a>, <a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>];</div>
+<div class="line"><span class="lineno">   36</span>        Vector3 worldBottomLeft = Vector3.zero - </div>
+<div class="line"><span class="lineno">   37</span>            Vector3.right * gridWorldSize.x / 2 - </div>
+<div class="line"><span class="lineno">   38</span>            Vector3.forward * gridWorldSize.y /2;</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; <a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a>; x++)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; <a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>; y++)</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                Vector3 worldPoint = worldBottomLeft +</div>
+<div class="line"><span class="lineno">   45</span>                    Vector3.right * (x * <a class="code hl_variable" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> + <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>)</div>
+<div class="line"><span class="lineno">   46</span>                    + Vector3.forward * (y * <a class="code hl_variable" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> + <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>);</div>
+<div class="line"><span class="lineno">   47</span>                worldPoint.y = 1;</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>                <span class="keywordtype">bool</span> walkable = !(Physics.CheckSphere(worldPoint, <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
+<div class="line"><span class="lineno">   50</span>                <a class="code hl_variable" href="#a4cdb3f942769e51037767a202ea7dae2">grid</a>[x, y] = <span class="keyword">new</span> PathNode(walkable, worldPoint, x, y);</div>
+<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 <div class="ttc" id="aclass_node_grid_html_a28c363d70b8fc65c1fb69e466cf6e70a"><div class="ttname"><a href="#a28c363d70b8fc65c1fb69e466cf6e70a">NodeGrid.unwalkableMask</a></div><div class="ttdeci">LayerMask unwalkableMask</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00007">NodeGrid.cs:7</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_a2aeba06b31205407ec72df85aaa65e2b"><div class="ttname"><a href="#a2aeba06b31205407ec72df85aaa65e2b">NodeGrid.gridSizeY</a></div><div class="ttdeci">int gridSizeY</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00015">NodeGrid.cs:15</a></div></div>
 <div class="ttc" id="aclass_node_grid_html_a4cdb3f942769e51037767a202ea7dae2"><div class="ttname"><a href="#a4cdb3f942769e51037767a202ea7dae2">NodeGrid.grid</a></div><div class="ttdeci">PathNode[,] grid</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00010">NodeGrid.cs:10</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_a6779f63501ad59d97e6460c112744a5c"><div class="ttname"><a href="#a6779f63501ad59d97e6460c112744a5c">NodeGrid.nodeDiameter</a></div><div class="ttdeci">float nodeDiameter</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00013">NodeGrid.cs:13</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_af314f4eb7197aa4a80e9c758dc801828"><div class="ttname"><a href="#af314f4eb7197aa4a80e9c758dc801828">NodeGrid.nodeRadius</a></div><div class="ttdeci">float nodeRadius</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00009">NodeGrid.cs:9</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_af76c93b47c55e413e6b2ef03592d46dc"><div class="ttname"><a href="#af76c93b47c55e413e6b2ef03592d46dc">NodeGrid.gridSizeX</a></div><div class="ttdeci">int gridSizeX</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00015">NodeGrid.cs:15</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -240,29 +205,56 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00065">65</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
-<div class="line"><span class="lineno">   67</span>        List&lt;PathNode&gt; neighbours = <span class="keyword">new</span> List&lt;PathNode&gt;();</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = - 1; x &lt;= 1; x++)</div>
-<div class="line"><span class="lineno">   70</span>        {</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = -1; y &lt;= 1; y++)</div>
-<div class="line"><span class="lineno">   72</span>            {</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">if</span> (x == 0 &amp;&amp; y == 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>                <span class="keywordtype">int</span> checkX = node.gridX + x;</div>
-<div class="line"><span class="lineno">   76</span>                <span class="keywordtype">int</span> checkY = node.gridY + y;</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> (checkX &gt;= 0 &amp;&amp; checkX &lt; <a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a></div>
-<div class="line"><span class="lineno">   79</span>                    &amp;&amp; checkY &gt;=0 &amp;&amp; checkY &lt; <a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>)</div>
-<div class="line"><span class="lineno">   80</span>                {</div>
-<div class="line"><span class="lineno">   81</span>                    neighbours.Add(<a class="code hl_variable" href="#a4cdb3f942769e51037767a202ea7dae2">grid</a>[checkX, checkY]);</div>
-<div class="line"><span class="lineno">   82</span>                }</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> neighbours;</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00067">67</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        List&lt;PathNode&gt; neighbours = <span class="keyword">new</span> List&lt;PathNode&gt;();</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = - 1; x &lt;= 1; x++)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = -1; y &lt;= 1; y++)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">if</span> (x == 0 &amp;&amp; y == 0) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>                <span class="keywordtype">int</span> checkX = node.gridX + x;</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordtype">int</span> checkY = node.gridY + y;</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">if</span> (checkX &gt;= 0 &amp;&amp; checkX &lt; <a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a></div>
+<div class="line"><span class="lineno">   81</span>                    &amp;&amp; checkY &gt;=0 &amp;&amp; checkY &lt; <a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>)</div>
+<div class="line"><span class="lineno">   82</span>                {</div>
+<div class="line"><span class="lineno">   83</span>                    neighbours.Add(<a class="code hl_variable" href="#a4cdb3f942769e51037767a202ea7dae2">grid</a>[checkX, checkY]);</div>
+<div class="line"><span class="lineno">   84</span>                }</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> neighbours;</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a887b5c1dac45a35d83f504ba45366950" name="a887b5c1dac45a35d83f504ba45366950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a887b5c1dac45a35d83f504ba45366950">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NodeGrid.Init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00017">17</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> = <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a> * 2;</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> = Mathf.RoundToInt(<a class="code hl_variable" href="#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.x / <a class="code hl_variable" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a>);</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a> = Mathf.RoundToInt(<a class="code hl_variable" href="#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.y / <a class="code hl_variable" href="#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a>);</div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_function" href="#a83c44fd398e7fc550d20f9fc485bbdac">CreateGrid</a>();</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+<div class="ttc" id="aclass_node_grid_html_a3c3d3ed448863af0729915ffde7e0df2"><div class="ttname"><a href="#a3c3d3ed448863af0729915ffde7e0df2">NodeGrid.gridWorldSize</a></div><div class="ttdeci">Vector2 gridWorldSize</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00008">NodeGrid.cs:8</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_a83c44fd398e7fc550d20f9fc485bbdac"><div class="ttname"><a href="#a83c44fd398e7fc550d20f9fc485bbdac">NodeGrid.CreateGrid</a></div><div class="ttdeci">void CreateGrid()</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00033">NodeGrid.cs:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,18 +273,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00089">89</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">float</span> percentX = (worldPosition.x + gridWorldSize.x / 2) / <a class="code hl_variable" href="#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.x;</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">float</span> percentY = (worldPosition.z + gridWorldSize.y / 2) / <a class="code hl_variable" href="#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.y;</div>
-<div class="line"><span class="lineno">   93</span>        percentX = Mathf.Clamp01(percentX);</div>
-<div class="line"><span class="lineno">   94</span>        percentY = Mathf.Clamp01(percentY);</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">int</span> x = Mathf.RoundToInt((<a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> - 1) * percentX);</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordtype">int</span> y = Mathf.RoundToInt((<a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a> - 1) * percentY);</div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a4cdb3f942769e51037767a202ea7dae2">grid</a>[x, y];</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00091">91</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">float</span> percentX = (worldPosition.x + gridWorldSize.x / 2) / <a class="code hl_variable" href="#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.x;</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">float</span> percentY = (worldPosition.z + gridWorldSize.y / 2) / <a class="code hl_variable" href="#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.y;</div>
+<div class="line"><span class="lineno">   95</span>        percentX = Mathf.Clamp01(percentX);</div>
+<div class="line"><span class="lineno">   96</span>        percentY = Mathf.Clamp01(percentY);</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">int</span> x = Mathf.RoundToInt((<a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> - 1) * percentX);</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">int</span> y = Mathf.RoundToInt((<a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a> - 1) * percentY);</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a4cdb3f942769e51037767a202ea7dae2">grid</a>[x, y];</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -311,19 +303,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00053">53</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
-<div class="line"><span class="lineno">   55</span>        PathNode centreNode = <a class="code hl_function" href="#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeFromWorldPoint</a>(pos);</div>
-<div class="line"><span class="lineno">   56</span>        centreNode.walkable = !(Physics.CheckSphere(centreNode.<a class="code hl_variable" href="class_path_node.html#a870c8ffff5ca2edf6851aee10b27565b">worldPosition</a>, <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
-<div class="line"><span class="lineno">   57</span>        List&lt;PathNode&gt; neighbours = <a class="code hl_function" href="#af14346b1742eac1d5ba01b99dbc187a5">GetNeighbours</a>(centreNode);</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">foreach</span>(PathNode n <span class="keywordflow">in</span> neighbours)</div>
-<div class="line"><span class="lineno">   60</span>        {</div>
-<div class="line"><span class="lineno">   61</span>            n.walkable = !(Physics.CheckSphere(n.<a class="code hl_variable" href="class_path_node.html#a870c8ffff5ca2edf6851aee10b27565b">worldPosition</a>, <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
-<div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aclass_node_grid_html_a3967acb8e4c8583e7c7656a7b1e25a2c"><div class="ttname"><a href="#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeGrid.NodeFromWorldPoint</a></div><div class="ttdeci">PathNode NodeFromWorldPoint(Vector3 worldPosition)</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00089">NodeGrid.cs:89</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_af14346b1742eac1d5ba01b99dbc187a5"><div class="ttname"><a href="#af14346b1742eac1d5ba01b99dbc187a5">NodeGrid.GetNeighbours</a></div><div class="ttdeci">List&lt; PathNode &gt; GetNeighbours(PathNode node)</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00065">NodeGrid.cs:65</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00055">55</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        PathNode centreNode = <a class="code hl_function" href="#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeFromWorldPoint</a>(pos);</div>
+<div class="line"><span class="lineno">   58</span>        centreNode.walkable = !(Physics.CheckSphere(centreNode.<a class="code hl_variable" href="class_path_node.html#a870c8ffff5ca2edf6851aee10b27565b">worldPosition</a>, <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
+<div class="line"><span class="lineno">   59</span>        List&lt;PathNode&gt; neighbours = <a class="code hl_function" href="#af14346b1742eac1d5ba01b99dbc187a5">GetNeighbours</a>(centreNode);</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">foreach</span>(PathNode n <span class="keywordflow">in</span> neighbours)</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            n.walkable = !(Physics.CheckSphere(n.<a class="code hl_variable" href="class_path_node.html#a870c8ffff5ca2edf6851aee10b27565b">worldPosition</a>, <a class="code hl_variable" href="#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclass_node_grid_html_a3967acb8e4c8583e7c7656a7b1e25a2c"><div class="ttname"><a href="#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeGrid.NodeFromWorldPoint</a></div><div class="ttdeci">PathNode NodeFromWorldPoint(Vector3 worldPosition)</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00091">NodeGrid.cs:91</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_af14346b1742eac1d5ba01b99dbc187a5"><div class="ttname"><a href="#af14346b1742eac1d5ba01b99dbc187a5">NodeGrid.GetNeighbours</a></div><div class="ttdeci">List&lt; PathNode &gt; GetNeighbours(PathNode node)</div><div class="ttdef"><b>Definition</b> <a href="_node_grid_8cs_source.html#l00067">NodeGrid.cs:67</a></div></div>
 <div class="ttc" id="aclass_path_node_html_a870c8ffff5ca2edf6851aee10b27565b"><div class="ttname"><a href="class_path_node.html#a870c8ffff5ca2edf6851aee10b27565b">PathNode.worldPosition</a></div><div class="ttdeci">Vector3 worldPosition</div><div class="ttdef"><b>Definition</b> <a href="_path_node_8cs_source.html#l00008">PathNode.cs:8</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -334,19 +326,11 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_path_node.html">PathNode</a> [,] NodeGrid.grid</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00010">10</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
@@ -373,7 +357,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00013">13</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00015">15</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
 
 </div>
 </div>
@@ -397,7 +381,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00013">13</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00015">15</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
 
 </div>
 </div>
@@ -422,22 +406,14 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">float NodeGrid.nodeDiameter</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00012">12</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00013">13</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
 
 </div>
 </div>
@@ -494,13 +470,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00023">23</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   26</span>        {</div>
-<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> * <a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>;</div>
-<div class="line"><span class="lineno">   28</span>        }</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_node_grid_8cs_source.html#l00025">25</a> of file <a class="el" href="_node_grid_8cs_source.html">NodeGrid.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> * <a class="code hl_variable" href="#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

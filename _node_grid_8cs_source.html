@@ -92,150 +92,136 @@ $(function(){initNavTree('_node_grid_8cs_source.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a href="_node_grid_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEditor;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>[CreateAssetMenu(fileName = <span class="stringliteral">&quot;New Node Grid&quot;</span>, menuName = <span class="stringliteral">&quot;Scriptable Objects/AStar/Node Gride&quot;</span>, order = 1)]</div>
 <div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_node_grid.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_node_grid.html">NodeGrid</a> : MonoBehaviour</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_node_grid.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_node_grid.html">NodeGrid</a> : ScriptableObject</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_node_grid.html#a28c363d70b8fc65c1fb69e466cf6e70a">    7</a></span>    <span class="keyword">public</span> LayerMask <a class="code hl_variable" href="class_node_grid.html#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">    8</a></span>    <span class="keyword">public</span> Vector2 <a class="code hl_variable" href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">    9</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">   10</a></span>    <a class="code hl_class" href="class_path_node.html">PathNode</a>[,] <a class="code hl_variable" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">grid</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">   10</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="class_path_node.html">PathNode</a>[,] <a class="code hl_variable" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">grid</a>;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">   12</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">   13</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a>, <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    [HideInInspector]</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">   13</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a>;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_node_grid.html#a2142fb7f05ee1ee87241348a4a0f12ad">   15</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_node_grid.html#a2142fb7f05ee1ee87241348a4a0f12ad">Awake</a>()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> = <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a> * 2;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> = Mathf.RoundToInt(<a class="code hl_variable" href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.x / <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a>);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a> = Mathf.RoundToInt(<a class="code hl_variable" href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.y / <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a>);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_function" href="class_node_grid.html#a83c44fd398e7fc550d20f9fc485bbdac">CreateGrid</a>();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">   15</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a>, <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_node_grid.html#a887b5c1dac45a35d83f504ba45366950">   17</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_node_grid.html#a887b5c1dac45a35d83f504ba45366950">Init</a>()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> = <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a> * 2;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> = Mathf.RoundToInt(<a class="code hl_variable" href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.x / <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a> = Mathf.RoundToInt(<a class="code hl_variable" href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.y / <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_function" href="class_node_grid.html#a83c44fd398e7fc550d20f9fc485bbdac">CreateGrid</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
 </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_node_grid.html#a8c318b2c4074737856287637fc254b7a">   23</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="class_node_grid.html#a8c318b2c4074737856287637fc254b7a">MaxSize</a></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">get</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> * <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_node_grid.html#a8c318b2c4074737856287637fc254b7a">   25</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="class_node_grid.html#a8c318b2c4074737856287637fc254b7a">MaxSize</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> * <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
 </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_node_grid.html#a83c44fd398e7fc550d20f9fc485bbdac">   31</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_node_grid.html#a83c44fd398e7fc550d20f9fc485bbdac">CreateGrid</a>()</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_variable" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">grid</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_path_node.html">PathNode</a>[<a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a>, <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>];</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        Vector3 worldBottomLeft = transform.position - </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            Vector3.right * gridWorldSize.x / 2 - </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            Vector3.forward * gridWorldSize.y /2;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; <a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a>; x++)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>; y++)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                Vector3 worldPoint = worldBottomLeft +</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                    Vector3.right * (x * <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> + <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>)</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    + Vector3.forward * (y * <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> + <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                worldPoint.y = 1;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordtype">bool</span> walkable = !(Physics.CheckSphere(worldPoint, <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="class_node_grid.html#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <a class="code hl_variable" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">grid</a>[x, y] = <span class="keyword">new</span> <a class="code hl_class" href="class_path_node.html">PathNode</a>(walkable, worldPoint, x, y);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_node_grid.html#a83c44fd398e7fc550d20f9fc485bbdac">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_node_grid.html#a83c44fd398e7fc550d20f9fc485bbdac">CreateGrid</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_variable" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">grid</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_path_node.html">PathNode</a>[<a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a>, <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>];</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        Vector3 worldBottomLeft = Vector3.zero - </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            Vector3.right * gridWorldSize.x / 2 - </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            Vector3.forward * gridWorldSize.y /2;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; <a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a>; x++)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>; y++)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                Vector3 worldPoint = worldBottomLeft +</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    Vector3.right * (x * <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> + <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    + Vector3.forward * (y * <a class="code hl_variable" href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">nodeDiameter</a> + <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                worldPoint.y = 1;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <span class="keywordtype">bool</span> walkable = !(Physics.CheckSphere(worldPoint, <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="class_node_grid.html#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <a class="code hl_variable" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">grid</a>[x, y] = <span class="keyword">new</span> <a class="code hl_class" href="class_path_node.html">PathNode</a>(walkable, worldPoint, x, y);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_node_grid.html#a04db8e3594cfcbbbabe9e19ef8ed9d91">   53</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_node_grid.html#a04db8e3594cfcbbbabe9e19ef8ed9d91">UpdateWalkableAtPoint</a>(Vector3 pos)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_class" href="class_path_node.html">PathNode</a> centreNode = <a class="code hl_function" href="class_node_grid.html#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeFromWorldPoint</a>(pos);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        centreNode.walkable = !(Physics.CheckSphere(centreNode.<a class="code hl_variable" href="class_path_node.html#a870c8ffff5ca2edf6851aee10b27565b">worldPosition</a>, <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="class_node_grid.html#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        List&lt;PathNode&gt; neighbours = <a class="code hl_function" href="class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5">GetNeighbours</a>(centreNode);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">foreach</span>(<a class="code hl_class" href="class_path_node.html">PathNode</a> n <span class="keywordflow">in</span> neighbours)</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            n.walkable = !(Physics.CheckSphere(n.<a class="code hl_variable" href="class_path_node.html#a870c8ffff5ca2edf6851aee10b27565b">worldPosition</a>, <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="class_node_grid.html#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_node_grid.html#a04db8e3594cfcbbbabe9e19ef8ed9d91">   55</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_node_grid.html#a04db8e3594cfcbbbabe9e19ef8ed9d91">UpdateWalkableAtPoint</a>(Vector3 pos)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_class" href="class_path_node.html">PathNode</a> centreNode = <a class="code hl_function" href="class_node_grid.html#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeFromWorldPoint</a>(pos);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        centreNode.walkable = !(Physics.CheckSphere(centreNode.<a class="code hl_variable" href="class_path_node.html#a870c8ffff5ca2edf6851aee10b27565b">worldPosition</a>, <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="class_node_grid.html#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        List&lt;PathNode&gt; neighbours = <a class="code hl_function" href="class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5">GetNeighbours</a>(centreNode);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">foreach</span>(<a class="code hl_class" href="class_path_node.html">PathNode</a> n <span class="keywordflow">in</span> neighbours)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            n.walkable = !(Physics.CheckSphere(n.<a class="code hl_variable" href="class_path_node.html#a870c8ffff5ca2edf6851aee10b27565b">worldPosition</a>, <a class="code hl_variable" href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">nodeRadius</a>, <a class="code hl_variable" href="class_node_grid.html#a28c363d70b8fc65c1fb69e466cf6e70a">unwalkableMask</a>));</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5">   65</a></span>    <span class="keyword">public</span> List&lt;PathNode&gt; <a class="code hl_function" href="class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5">GetNeighbours</a>(<a class="code hl_class" href="class_path_node.html">PathNode</a> node)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        List&lt;PathNode&gt; neighbours = <span class="keyword">new</span> List&lt;PathNode&gt;();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = - 1; x &lt;= 1; x++)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = -1; y &lt;= 1; y++)</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="keywordflow">if</span> (x == 0 &amp;&amp; y == 0) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordtype">int</span> checkX = node.gridX + x;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                <span class="keywordtype">int</span> checkY = node.gridY + y;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">if</span> (checkX &gt;= 0 &amp;&amp; checkX &lt; <a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    &amp;&amp; checkY &gt;=0 &amp;&amp; checkY &lt; <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>)</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    neighbours.Add(<a class="code hl_variable" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">grid</a>[checkX, checkY]);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">return</span> neighbours;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5">   67</a></span>    <span class="keyword">public</span> List&lt;PathNode&gt; <a class="code hl_function" href="class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5">GetNeighbours</a>(<a class="code hl_class" href="class_path_node.html">PathNode</a> node)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        List&lt;PathNode&gt; neighbours = <span class="keyword">new</span> List&lt;PathNode&gt;();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = - 1; x &lt;= 1; x++)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = -1; y &lt;= 1; y++)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">if</span> (x == 0 &amp;&amp; y == 0) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="keywordtype">int</span> checkX = node.gridX + x;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordtype">int</span> checkY = node.gridY + y;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keywordflow">if</span> (checkX &gt;= 0 &amp;&amp; checkX &lt; <a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    &amp;&amp; checkY &gt;=0 &amp;&amp; checkY &lt; <a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a>)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    neighbours.Add(<a class="code hl_variable" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">grid</a>[checkX, checkY]);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">return</span> neighbours;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
 </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_node_grid.html#a3967acb8e4c8583e7c7656a7b1e25a2c">   89</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="class_path_node.html">PathNode</a> <a class="code hl_function" href="class_node_grid.html#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeFromWorldPoint</a>(Vector3 worldPosition)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordtype">float</span> percentX = (worldPosition.x + gridWorldSize.x / 2) / <a class="code hl_variable" href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.x;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordtype">float</span> percentY = (worldPosition.z + gridWorldSize.y / 2) / <a class="code hl_variable" href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.y;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        percentX = Mathf.Clamp01(percentX);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        percentY = Mathf.Clamp01(percentY);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordtype">int</span> x = Mathf.RoundToInt((<a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> - 1) * percentX);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">int</span> y = Mathf.RoundToInt((<a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a> - 1) * percentY);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">grid</a>[x, y];</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_node_grid.html#a3967acb8e4c8583e7c7656a7b1e25a2c">   91</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="class_path_node.html">PathNode</a> <a class="code hl_function" href="class_node_grid.html#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeFromWorldPoint</a>(Vector3 worldPosition)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordtype">float</span> percentX = (worldPosition.x + gridWorldSize.x / 2) / <a class="code hl_variable" href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.x;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">float</span> percentY = (worldPosition.z + gridWorldSize.y / 2) / <a class="code hl_variable" href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">gridWorldSize</a>.y;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        percentX = Mathf.Clamp01(percentX);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        percentY = Mathf.Clamp01(percentY);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordtype">int</span> x = Mathf.RoundToInt((<a class="code hl_variable" href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">gridSizeX</a> - 1) * percentX);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">int</span> y = Mathf.RoundToInt((<a class="code hl_variable" href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">gridSizeY</a> - 1) * percentY);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">grid</a>[x, y];</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
 </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">    private void OnDrawGizmos()</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">    {</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">        Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment"></span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">        if (grid != null)</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">        {</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">            foreach (PathNode n in grid)</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">            {</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">                Gizmos.color = (n.walkable) ? Color.white : Color.red;</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">                Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - 0.1f));</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">            }</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">        }</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">    }</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
 </div>
 <div class="ttc" id="aclass_node_grid_html"><div class="ttname"><a href="class_node_grid.html">NodeGrid</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">NodeGrid.cs:6</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_a04db8e3594cfcbbbabe9e19ef8ed9d91"><div class="ttname"><a href="class_node_grid.html#a04db8e3594cfcbbbabe9e19ef8ed9d91">NodeGrid.UpdateWalkableAtPoint</a></div><div class="ttdeci">void UpdateWalkableAtPoint(Vector3 pos)</div><div class="ttdef"><b>Definition</b> <a href="#l00053">NodeGrid.cs:53</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_a2142fb7f05ee1ee87241348a4a0f12ad"><div class="ttname"><a href="class_node_grid.html#a2142fb7f05ee1ee87241348a4a0f12ad">NodeGrid.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdef"><b>Definition</b> <a href="#l00015">NodeGrid.cs:15</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_a04db8e3594cfcbbbabe9e19ef8ed9d91"><div class="ttname"><a href="class_node_grid.html#a04db8e3594cfcbbbabe9e19ef8ed9d91">NodeGrid.UpdateWalkableAtPoint</a></div><div class="ttdeci">void UpdateWalkableAtPoint(Vector3 pos)</div><div class="ttdef"><b>Definition</b> <a href="#l00055">NodeGrid.cs:55</a></div></div>
 <div class="ttc" id="aclass_node_grid_html_a28c363d70b8fc65c1fb69e466cf6e70a"><div class="ttname"><a href="class_node_grid.html#a28c363d70b8fc65c1fb69e466cf6e70a">NodeGrid.unwalkableMask</a></div><div class="ttdeci">LayerMask unwalkableMask</div><div class="ttdef"><b>Definition</b> <a href="#l00007">NodeGrid.cs:7</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_a2aeba06b31205407ec72df85aaa65e2b"><div class="ttname"><a href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">NodeGrid.gridSizeY</a></div><div class="ttdeci">int gridSizeY</div><div class="ttdef"><b>Definition</b> <a href="#l00013">NodeGrid.cs:13</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_a3967acb8e4c8583e7c7656a7b1e25a2c"><div class="ttname"><a href="class_node_grid.html#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeGrid.NodeFromWorldPoint</a></div><div class="ttdeci">PathNode NodeFromWorldPoint(Vector3 worldPosition)</div><div class="ttdef"><b>Definition</b> <a href="#l00089">NodeGrid.cs:89</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_a2aeba06b31205407ec72df85aaa65e2b"><div class="ttname"><a href="class_node_grid.html#a2aeba06b31205407ec72df85aaa65e2b">NodeGrid.gridSizeY</a></div><div class="ttdeci">int gridSizeY</div><div class="ttdef"><b>Definition</b> <a href="#l00015">NodeGrid.cs:15</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_a3967acb8e4c8583e7c7656a7b1e25a2c"><div class="ttname"><a href="class_node_grid.html#a3967acb8e4c8583e7c7656a7b1e25a2c">NodeGrid.NodeFromWorldPoint</a></div><div class="ttdeci">PathNode NodeFromWorldPoint(Vector3 worldPosition)</div><div class="ttdef"><b>Definition</b> <a href="#l00091">NodeGrid.cs:91</a></div></div>
 <div class="ttc" id="aclass_node_grid_html_a3c3d3ed448863af0729915ffde7e0df2"><div class="ttname"><a href="class_node_grid.html#a3c3d3ed448863af0729915ffde7e0df2">NodeGrid.gridWorldSize</a></div><div class="ttdeci">Vector2 gridWorldSize</div><div class="ttdef"><b>Definition</b> <a href="#l00008">NodeGrid.cs:8</a></div></div>
 <div class="ttc" id="aclass_node_grid_html_a4cdb3f942769e51037767a202ea7dae2"><div class="ttname"><a href="class_node_grid.html#a4cdb3f942769e51037767a202ea7dae2">NodeGrid.grid</a></div><div class="ttdeci">PathNode[,] grid</div><div class="ttdef"><b>Definition</b> <a href="#l00010">NodeGrid.cs:10</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_a6779f63501ad59d97e6460c112744a5c"><div class="ttname"><a href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">NodeGrid.nodeDiameter</a></div><div class="ttdeci">float nodeDiameter</div><div class="ttdef"><b>Definition</b> <a href="#l00012">NodeGrid.cs:12</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_a83c44fd398e7fc550d20f9fc485bbdac"><div class="ttname"><a href="class_node_grid.html#a83c44fd398e7fc550d20f9fc485bbdac">NodeGrid.CreateGrid</a></div><div class="ttdeci">void CreateGrid()</div><div class="ttdef"><b>Definition</b> <a href="#l00031">NodeGrid.cs:31</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_a8c318b2c4074737856287637fc254b7a"><div class="ttname"><a href="class_node_grid.html#a8c318b2c4074737856287637fc254b7a">NodeGrid.MaxSize</a></div><div class="ttdeci">int MaxSize</div><div class="ttdef"><b>Definition</b> <a href="#l00023">NodeGrid.cs:24</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_af14346b1742eac1d5ba01b99dbc187a5"><div class="ttname"><a href="class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5">NodeGrid.GetNeighbours</a></div><div class="ttdeci">List&lt; PathNode &gt; GetNeighbours(PathNode node)</div><div class="ttdef"><b>Definition</b> <a href="#l00065">NodeGrid.cs:65</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_a6779f63501ad59d97e6460c112744a5c"><div class="ttname"><a href="class_node_grid.html#a6779f63501ad59d97e6460c112744a5c">NodeGrid.nodeDiameter</a></div><div class="ttdeci">float nodeDiameter</div><div class="ttdef"><b>Definition</b> <a href="#l00013">NodeGrid.cs:13</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_a83c44fd398e7fc550d20f9fc485bbdac"><div class="ttname"><a href="class_node_grid.html#a83c44fd398e7fc550d20f9fc485bbdac">NodeGrid.CreateGrid</a></div><div class="ttdeci">void CreateGrid()</div><div class="ttdef"><b>Definition</b> <a href="#l00033">NodeGrid.cs:33</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_a887b5c1dac45a35d83f504ba45366950"><div class="ttname"><a href="class_node_grid.html#a887b5c1dac45a35d83f504ba45366950">NodeGrid.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition</b> <a href="#l00017">NodeGrid.cs:17</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_a8c318b2c4074737856287637fc254b7a"><div class="ttname"><a href="class_node_grid.html#a8c318b2c4074737856287637fc254b7a">NodeGrid.MaxSize</a></div><div class="ttdeci">int MaxSize</div><div class="ttdef"><b>Definition</b> <a href="#l00025">NodeGrid.cs:26</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_af14346b1742eac1d5ba01b99dbc187a5"><div class="ttname"><a href="class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5">NodeGrid.GetNeighbours</a></div><div class="ttdeci">List&lt; PathNode &gt; GetNeighbours(PathNode node)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">NodeGrid.cs:67</a></div></div>
 <div class="ttc" id="aclass_node_grid_html_af314f4eb7197aa4a80e9c758dc801828"><div class="ttname"><a href="class_node_grid.html#af314f4eb7197aa4a80e9c758dc801828">NodeGrid.nodeRadius</a></div><div class="ttdeci">float nodeRadius</div><div class="ttdef"><b>Definition</b> <a href="#l00009">NodeGrid.cs:9</a></div></div>
-<div class="ttc" id="aclass_node_grid_html_af76c93b47c55e413e6b2ef03592d46dc"><div class="ttname"><a href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">NodeGrid.gridSizeX</a></div><div class="ttdeci">int gridSizeX</div><div class="ttdef"><b>Definition</b> <a href="#l00013">NodeGrid.cs:13</a></div></div>
+<div class="ttc" id="aclass_node_grid_html_af76c93b47c55e413e6b2ef03592d46dc"><div class="ttname"><a href="class_node_grid.html#af76c93b47c55e413e6b2ef03592d46dc">NodeGrid.gridSizeX</a></div><div class="ttdeci">int gridSizeX</div><div class="ttdef"><b>Definition</b> <a href="#l00015">NodeGrid.cs:15</a></div></div>
 <div class="ttc" id="aclass_path_node_html"><div class="ttname"><a href="class_path_node.html">PathNode</a></div><div class="ttdef"><b>Definition</b> <a href="_path_node_8cs_source.html#l00004">PathNode.cs:5</a></div></div>
 <div class="ttc" id="aclass_path_node_html_a870c8ffff5ca2edf6851aee10b27565b"><div class="ttname"><a href="class_path_node.html#a870c8ffff5ca2edf6851aee10b27565b">PathNode.worldPosition</a></div><div class="ttdeci">Vector3 worldPosition</div><div class="ttdef"><b>Definition</b> <a href="_path_node_8cs_source.html#l00008">PathNode.cs:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

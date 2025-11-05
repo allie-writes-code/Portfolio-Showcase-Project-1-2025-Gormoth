@@ -161,15 +161,15 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   34</span>            groundPlane.name = <span class="stringliteral">&quot;Ground Plane&quot;</span>;</div>
 <div class="line"><span class="lineno">   35</span>        }</div>
 <div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a27f4e5dc50f10e4a65d8ac13df9ddfae">levelSpawner</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9d22fdc285e11ce35a0e4bbb85aeb594">pathManagerPrefab</a> != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            <a class="code hl_variable" href="#a27f4e5dc50f10e4a65d8ac13df9ddfae">levelSpawner</a>.GenerateNewWorld();</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
-<div class="line"><span class="lineno">   41</span> </div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9d22fdc285e11ce35a0e4bbb85aeb594">pathManagerPrefab</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            GameObject pathManger = Instantiate(<a class="code hl_variable" href="#a9d22fdc285e11ce35a0e4bbb85aeb594">pathManagerPrefab</a>, Vector3.zero, Quaternion.identity);</div>
-<div class="line"><span class="lineno">   45</span>            pathManger.name = <span class="stringliteral">&quot;Path Manager&quot;</span>;</div>
+<div class="line"><span class="lineno">   39</span>            GameObject pathManger = Instantiate(<a class="code hl_variable" href="#a9d22fdc285e11ce35a0e4bbb85aeb594">pathManagerPrefab</a>, Vector3.zero, Quaternion.identity);</div>
+<div class="line"><span class="lineno">   40</span>            pathManger.name = <span class="stringliteral">&quot;Path Manager&quot;</span>;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a27f4e5dc50f10e4a65d8ac13df9ddfae">levelSpawner</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <a class="code hl_variable" href="#a27f4e5dc50f10e4a65d8ac13df9ddfae">levelSpawner</a>.GenerateNewWorld();</div>
 <div class="line"><span class="lineno">   46</span>        }</div>
 <div class="line"><span class="lineno">   47</span>    }</div>
 <div class="ttc" id="aclass_level_manager_html_a194b10d2ac93e75540b8c03e95f9926b"><div class="ttname"><a href="#a194b10d2ac93e75540b8c03e95f9926b">LevelManager.groundPlanePrefab</a></div><div class="ttdeci">GameObject groundPlanePrefab</div><div class="ttdoc">Prefab for the Ground Plane object. Set in editor.</div><div class="ttdef"><b>Definition</b> <a href="_level_manager_8cs_source.html#l00016">LevelManager.cs:16</a></div></div>

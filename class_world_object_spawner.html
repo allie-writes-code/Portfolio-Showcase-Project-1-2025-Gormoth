@@ -110,7 +110,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a3668db27a3b0f9e45d9642aebe59dbf8" id="r_a3668db27a3b0f9e45d9642aebe59dbf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3668db27a3b0f9e45d9642aebe59dbf8">OnEnable</a> ()</td></tr>
 <tr class="memitem:ae3f2ff209284b3732c6fa23b1de30a07" id="r_ae3f2ff209284b3732c6fa23b1de30a07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3f2ff209284b3732c6fa23b1de30a07">OnDisable</a> ()</td></tr>
 <tr class="memitem:a201839ecd7b58e1f98741a724c8ead04" id="r_a201839ecd7b58e1f98741a724c8ead04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a201839ecd7b58e1f98741a724c8ead04">LevelLoaded</a> ()</td></tr>
+<tr class="memitem:abe848c3ca94ce42c47b7ff5d2fdfc88c" id="r_abe848c3ca94ce42c47b7ff5d2fdfc88c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe848c3ca94ce42c47b7ff5d2fdfc88c">SpawnInitialBuildings</a> ()</td></tr>
 <tr class="memitem:aa6ee1df64e3bc765be3383d1979354c8" id="r_aa6ee1df64e3bc765be3383d1979354c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6ee1df64e3bc765be3383d1979354c8">SpawnInitialResourceDroppers</a> ()</td></tr>
+<tr class="memitem:ab3f8be1337a6e4ed1a321ea6651ad5ad" id="r_ab3f8be1337a6e4ed1a321ea6651ad5ad"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3f8be1337a6e4ed1a321ea6651ad5ad">GetClearPosWithDistance</a> (int min, int max)</td></tr>
 <tr class="memitem:a559a352e1d9e5c040f363782c3fba4d4" id="r_a559a352e1d9e5c040f363782c3fba4d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a559a352e1d9e5c040f363782c3fba4d4">SpawnPlayer</a> ()</td></tr>
 <tr class="memitem:a69b4cab734488f3d9546686c7effd545" id="r_a69b4cab734488f3d9546686c7effd545"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69b4cab734488f3d9546686c7effd545">ResourceDropperDied</a> ()</td></tr>
 </table><table class="memberdecls">
@@ -127,6 +129,62 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00006">6</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab3f8be1337a6e4ed1a321ea6651ad5ad" name="ab3f8be1337a6e4ed1a321ea6651ad5ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f8be1337a6e4ed1a321ea6651ad5ad">&#9670;&#160;</a></span>GetClearPosWithDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 WorldObjectSpawner.GetClearPosWithDistance </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00092">92</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">bool</span> posFound = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   95</span>        Vector3 ranPos = Vector3.zero;</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">int</span> breakcount = 0;</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">while</span> (posFound == <span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            breakcount++;</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">if</span> (breakcount &gt; 1000) </div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                Debug.Log(<span class="stringliteral">&quot;Break point in GetClearPosWithDistance hit.&quot;</span>);</div>
+<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">return</span> Vector3.zero; </div>
+<div class="line"><span class="lineno">  104</span>            }</div>
+<div class="line"><span class="lineno">  105</span>            ranPos = <span class="keyword">new</span> Vector3(Random.Range(-max, max + 1), 1, Random.Range(-max, max + 1));</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>            <span class="comment">// Check min distances, avoids having to use Vector3.Distance</span></div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">if</span> (ranPos.x &lt;= -min || ranPos.x &gt;= min</div>
+<div class="line"><span class="lineno">  109</span>                || ranPos.z &lt;= -min || ranPos.z &gt;= min)</div>
+<div class="line"><span class="lineno">  110</span>            {</div>
+<div class="line"><span class="lineno">  111</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.IsNodeClear(ranPos)) posFound = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  112</span>            }</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> ranPos;</div>
+<div class="line"><span class="lineno">  116</span>    } </div>
+<div class="ttc" id="aclass_world_object_spawner_html_a6989797216872c727bece32da01b04cb"><div class="ttname"><a href="#a6989797216872c727bece32da01b04cb">WorldObjectSpawner.grid</a></div><div class="ttdeci">WorldGridManager grid</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00015">WorldObjectSpawner.cs:15</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a201839ecd7b58e1f98741a724c8ead04" name="a201839ecd7b58e1f98741a724c8ead04"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a201839ecd7b58e1f98741a724c8ead04">&#9670;&#160;</a></span>LevelLoaded()</h2>
 
@@ -153,11 +211,13 @@ Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00035">35</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
 <div class="line"><span class="lineno">   37</span>        <a class="code hl_function" href="#aa6ee1df64e3bc765be3383d1979354c8">SpawnInitialResourceDroppers</a>();</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_function" href="#a559a352e1d9e5c040f363782c3fba4d4">SpawnPlayer</a>();</div>
-<div class="line"><span class="lineno">   39</span>        <a class="code hl_variable" href="#ac32868431fe8efc2b14cd237961d922b">levelLoadedBroadcaster</a>.InvokeMe();</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-<div class="ttc" id="aclass_world_object_spawner_html_a559a352e1d9e5c040f363782c3fba4d4"><div class="ttname"><a href="#a559a352e1d9e5c040f363782c3fba4d4">WorldObjectSpawner.SpawnPlayer</a></div><div class="ttdeci">void SpawnPlayer()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00099">WorldObjectSpawner.cs:99</a></div></div>
-<div class="ttc" id="aclass_world_object_spawner_html_aa6ee1df64e3bc765be3383d1979354c8"><div class="ttname"><a href="#aa6ee1df64e3bc765be3383d1979354c8">WorldObjectSpawner.SpawnInitialResourceDroppers</a></div><div class="ttdeci">void SpawnInitialResourceDroppers()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00042">WorldObjectSpawner.cs:42</a></div></div>
+<div class="line"><span class="lineno">   38</span>        <a class="code hl_function" href="#abe848c3ca94ce42c47b7ff5d2fdfc88c">SpawnInitialBuildings</a>();</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_function" href="#a559a352e1d9e5c040f363782c3fba4d4">SpawnPlayer</a>();</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="#ac32868431fe8efc2b14cd237961d922b">levelLoadedBroadcaster</a>.InvokeMe();</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclass_world_object_spawner_html_a559a352e1d9e5c040f363782c3fba4d4"><div class="ttname"><a href="#a559a352e1d9e5c040f363782c3fba4d4">WorldObjectSpawner.SpawnPlayer</a></div><div class="ttdeci">void SpawnPlayer()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00118">WorldObjectSpawner.cs:118</a></div></div>
+<div class="ttc" id="aclass_world_object_spawner_html_aa6ee1df64e3bc765be3383d1979354c8"><div class="ttname"><a href="#aa6ee1df64e3bc765be3383d1979354c8">WorldObjectSpawner.SpawnInitialResourceDroppers</a></div><div class="ttdeci">void SpawnInitialResourceDroppers()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00057">WorldObjectSpawner.cs:57</a></div></div>
+<div class="ttc" id="aclass_world_object_spawner_html_abe848c3ca94ce42c47b7ff5d2fdfc88c"><div class="ttname"><a href="#abe848c3ca94ce42c47b7ff5d2fdfc88c">WorldObjectSpawner.SpawnInitialBuildings</a></div><div class="ttdeci">void SpawnInitialBuildings()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00043">WorldObjectSpawner.cs:43</a></div></div>
 <div class="ttc" id="aclass_world_object_spawner_html_ac32868431fe8efc2b14cd237961d922b"><div class="ttname"><a href="#ac32868431fe8efc2b14cd237961d922b">WorldObjectSpawner.levelLoadedBroadcaster</a></div><div class="ttdeci">DelegateBroadcaster levelLoadedBroadcaster</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00021">WorldObjectSpawner.cs:21</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -192,7 +252,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   33</span>    }</div>
 <div class="ttc" id="aclass_world_object_spawner_html_a201839ecd7b58e1f98741a724c8ead04"><div class="ttname"><a href="#a201839ecd7b58e1f98741a724c8ead04">WorldObjectSpawner.LevelLoaded</a></div><div class="ttdeci">void LevelLoaded()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00035">WorldObjectSpawner.cs:35</a></div></div>
 <div class="ttc" id="aclass_world_object_spawner_html_a51dce4cc9b23915439247c5ad272a5b7"><div class="ttname"><a href="#a51dce4cc9b23915439247c5ad272a5b7">WorldObjectSpawner.resourceDropperDiedListener</a></div><div class="ttdeci">DelegateListener resourceDropperDiedListener</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00012">WorldObjectSpawner.cs:12</a></div></div>
-<div class="ttc" id="aclass_world_object_spawner_html_a69b4cab734488f3d9546686c7effd545"><div class="ttname"><a href="#a69b4cab734488f3d9546686c7effd545">WorldObjectSpawner.ResourceDropperDied</a></div><div class="ttdeci">void ResourceDropperDied()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00108">WorldObjectSpawner.cs:108</a></div></div>
+<div class="ttc" id="aclass_world_object_spawner_html_a69b4cab734488f3d9546686c7effd545"><div class="ttname"><a href="#a69b4cab734488f3d9546686c7effd545">WorldObjectSpawner.ResourceDropperDied</a></div><div class="ttdeci">void ResourceDropperDied()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00127">WorldObjectSpawner.cs:127</a></div></div>
 <div class="ttc" id="aclass_world_object_spawner_html_a8d2b0c2bbf821c8c2701b5d2b39d0503"><div class="ttname"><a href="#a8d2b0c2bbf821c8c2701b5d2b39d0503">WorldObjectSpawner.levelSpawnedListener</a></div><div class="ttdeci">DelegateListener levelSpawnedListener</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00009">WorldObjectSpawner.cs:9</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -251,11 +311,55 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00108">108</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
-<div class="line"><span class="lineno">  110</span>        <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.currentResourceDroppersTotal--;</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00127">127</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.currentResourceDroppersTotal--;</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
 <div class="ttc" id="aclass_world_object_spawner_html_a5e9a68541c74b6e3867238d472340fe2"><div class="ttname"><a href="#a5e9a68541c74b6e3867238d472340fe2">WorldObjectSpawner.spawnData</a></div><div class="ttdeci">WorldSpawnData spawnData</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00018">WorldObjectSpawner.cs:18</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abe848c3ca94ce42c47b7ff5d2fdfc88c" name="abe848c3ca94ce42c47b7ff5d2fdfc88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe848c3ca94ce42c47b7ff5d2fdfc88c">&#9670;&#160;</a></span>SpawnInitialBuildings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WorldObjectSpawner.SpawnInitialBuildings </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00043">43</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">foreach</span> (WorldObjecfSpawnChance chance <span class="keywordflow">in</span> <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.initialSpawnBuildings)</div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; chance.<a class="code hl_property" href="class_world_objecf_spawn_chance.html#a446ab7f5f7bba3a79228328b04db2481">HowManyToSpawn</a>; i++)</div>
+<div class="line"><span class="lineno">   48</span>            {</div>
+<div class="line"><span class="lineno">   49</span>                Vector3 spawnPos = <a class="code hl_function" href="#ab3f8be1337a6e4ed1a321ea6651ad5ad">GetClearPosWithDistance</a>(chance.<a class="code hl_function" href="class_world_objecf_spawn_chance.html#a23174d30c0fb640831244ae213fddb7e">MinDistance</a>(<a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.GridMaxX), chance.<a class="code hl_function" href="class_world_objecf_spawn_chance.html#a0874e3300a1199c7fa8e5cb81c113279">MaxDistance</a>(<a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.GridMaxX));</div>
+<div class="line"><span class="lineno">   50</span>                GameObject newBuilding = Instantiate(chance.<a class="code hl_variable" href="class_world_objecf_spawn_chance.html#a964403ccec29be3a03575227de9e7c10">worldObjectPrefab</a>, spawnPos, chance.<a class="code hl_variable" href="class_world_objecf_spawn_chance.html#a964403ccec29be3a03575227de9e7c10">worldObjectPrefab</a>.transform.rotation);</div>
+<div class="line"><span class="lineno">   51</span>                <a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.OccupyNode(spawnPos);</div>
+<div class="line"><span class="lineno">   52</span>                <a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.SetNodeObject(spawnPos, newBuilding);</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aclass_world_objecf_spawn_chance_html_a0874e3300a1199c7fa8e5cb81c113279"><div class="ttname"><a href="class_world_objecf_spawn_chance.html#a0874e3300a1199c7fa8e5cb81c113279">WorldObjecfSpawnChance.MaxDistance</a></div><div class="ttdeci">int MaxDistance(int max)</div><div class="ttdef"><b>Definition</b> <a href="_world_objecf_spawn_chance_8cs_source.html#l00043">WorldObjecfSpawnChance.cs:43</a></div></div>
+<div class="ttc" id="aclass_world_objecf_spawn_chance_html_a23174d30c0fb640831244ae213fddb7e"><div class="ttname"><a href="class_world_objecf_spawn_chance.html#a23174d30c0fb640831244ae213fddb7e">WorldObjecfSpawnChance.MinDistance</a></div><div class="ttdeci">int MinDistance(int max)</div><div class="ttdef"><b>Definition</b> <a href="_world_objecf_spawn_chance_8cs_source.html#l00037">WorldObjecfSpawnChance.cs:37</a></div></div>
+<div class="ttc" id="aclass_world_objecf_spawn_chance_html_a446ab7f5f7bba3a79228328b04db2481"><div class="ttname"><a href="class_world_objecf_spawn_chance.html#a446ab7f5f7bba3a79228328b04db2481">WorldObjecfSpawnChance.HowManyToSpawn</a></div><div class="ttdeci">int HowManyToSpawn</div><div class="ttdef"><b>Definition</b> <a href="_world_objecf_spawn_chance_8cs_source.html#l00032">WorldObjecfSpawnChance.cs:33</a></div></div>
+<div class="ttc" id="aclass_world_objecf_spawn_chance_html_a964403ccec29be3a03575227de9e7c10"><div class="ttname"><a href="class_world_objecf_spawn_chance.html#a964403ccec29be3a03575227de9e7c10">WorldObjecfSpawnChance.worldObjectPrefab</a></div><div class="ttdeci">GameObject worldObjectPrefab</div><div class="ttdef"><b>Definition</b> <a href="_world_objecf_spawn_chance_8cs_source.html#l00007">WorldObjecfSpawnChance.cs:7</a></div></div>
+<div class="ttc" id="aclass_world_object_spawner_html_ab3f8be1337a6e4ed1a321ea6651ad5ad"><div class="ttname"><a href="#ab3f8be1337a6e4ed1a321ea6651ad5ad">WorldObjectSpawner.GetClearPosWithDistance</a></div><div class="ttdeci">Vector3 GetClearPosWithDistance(int min, int max)</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00092">WorldObjectSpawner.cs:92</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -282,66 +386,41 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00042">42</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordtype">int</span> totalToSpawn = <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.resourceDroppersMaxAmt;</div>
-<div class="line"><span class="lineno">   45</span>        List&lt;GameObject&gt; selectedPrefabs = <span class="keyword">new</span> List&lt;GameObject&gt;();</div>
-<div class="line"><span class="lineno">   46</span>        Vector3 ranPos = Vector3.zero;</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= totalToSpawn;)</div>
-<div class="line"><span class="lineno">   48</span>        {</div>
-<div class="line"><span class="lineno">   49</span>            selectedPrefabs.Clear();</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordtype">bool</span> posFound = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordtype">int</span> breaker = 0;</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>            <span class="comment">// Loop until we find a position in grid that&#39;s unoccupied.</span></div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">while</span> (posFound == <span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">   56</span>            {</div>
-<div class="line"><span class="lineno">   57</span>                ranPos = <span class="keyword">new</span> Vector3(Random.Range(<a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.GridMinX, <a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.GridMaxX + 1), 1, Random.Range(<a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.GridMinY, <a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.GridMaxY + 1));</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.IsNodeClear(ranPos)) posFound = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">if</span> (breaker &gt; 1000)</div>
-<div class="line"><span class="lineno">   62</span>                {</div>
-<div class="line"><span class="lineno">   63</span>                    Debug.Log(<span class="stringliteral">&quot;Breakpoint hit looking for pos.&quot;</span>);</div>
-<div class="line"><span class="lineno">   64</span>                    posFound = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   65</span>                }</div>
+<p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00057">57</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">int</span> totalToSpawn = <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.resourceDroppersMaxAmt;</div>
+<div class="line"><span class="lineno">   60</span>        spawnData.currentResourceDroppersTotal = 0;</div>
+<div class="line"><span class="lineno">   61</span>        List&lt;WorldObjecfSpawnChance&gt; selectedChances = <span class="keyword">new</span> List&lt;WorldObjecfSpawnChance&gt;();</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= totalToSpawn;)</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            selectedChances.Clear();</div>
 <div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>                breaker++;</div>
-<div class="line"><span class="lineno">   68</span>            }</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordtype">float</span> distance = Vector3.Distance(Vector3.zero, ranPos);</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>            <span class="comment">// Get each applicable object based on its spawn chance data.</span></div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">foreach</span> (WorldObjecfSpawnChance chance <span class="keywordflow">in</span> <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.resourceDroppers)</div>
-<div class="line"><span class="lineno">   74</span>            {</div>
-<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">if</span> (distance &gt;= chance.<a class="code hl_function" href="class_world_objecf_spawn_chance.html#a23174d30c0fb640831244ae213fddb7e">MinDistance</a>(<a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.GridMaxX))</div>
-<div class="line"><span class="lineno">   76</span>                {</div>
-<div class="line"><span class="lineno">   77</span>                    <span class="keywordflow">if</span> (chance.<a class="code hl_function" href="class_world_objecf_spawn_chance.html#a288c6109bb0d445dad882d29a40368e2">SpawnRollPass</a>())</div>
-<div class="line"><span class="lineno">   78</span>                    {</div>
-<div class="line"><span class="lineno">   79</span>                        selectedPrefabs.Add(chance.<a class="code hl_variable" href="class_world_objecf_spawn_chance.html#a964403ccec29be3a03575227de9e7c10">worldObjectPrefab</a>);</div>
-<div class="line"><span class="lineno">   80</span>                    }</div>
-<div class="line"><span class="lineno">   81</span>                }</div>
-<div class="line"><span class="lineno">   82</span>            }</div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span>            <span class="comment">// Instantiate one of the objects from the list.</span></div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (selectedPrefabs.Count &gt; 0)</div>
-<div class="line"><span class="lineno">   86</span>            {</div>
-<div class="line"><span class="lineno">   87</span>                GameObject prefab = selectedPrefabs[Random.Range(0, selectedPrefabs.Count)];</div>
-<div class="line"><span class="lineno">   88</span>                GameObject newDropperObject = Instantiate(prefab, ranPos, prefab.transform.rotation);</div>
-<div class="line"><span class="lineno">   89</span>                newDropperObject.name = <span class="stringliteral">&quot;Resource Dropper&quot;</span>;</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>                <a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.OccupyNode(ranPos);</div>
-<div class="line"><span class="lineno">   92</span>                <a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.SetNodeObject(ranPos, newDropperObject);</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>                i++;</div>
-<div class="line"><span class="lineno">   95</span>            }</div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-<div class="ttc" id="aclass_world_objecf_spawn_chance_html_a23174d30c0fb640831244ae213fddb7e"><div class="ttname"><a href="class_world_objecf_spawn_chance.html#a23174d30c0fb640831244ae213fddb7e">WorldObjecfSpawnChance.MinDistance</a></div><div class="ttdeci">int MinDistance(int max)</div><div class="ttdef"><b>Definition</b> <a href="_world_objecf_spawn_chance_8cs_source.html#l00027">WorldObjecfSpawnChance.cs:27</a></div></div>
-<div class="ttc" id="aclass_world_objecf_spawn_chance_html_a288c6109bb0d445dad882d29a40368e2"><div class="ttname"><a href="class_world_objecf_spawn_chance.html#a288c6109bb0d445dad882d29a40368e2">WorldObjecfSpawnChance.SpawnRollPass</a></div><div class="ttdeci">bool SpawnRollPass()</div><div class="ttdef"><b>Definition</b> <a href="_world_objecf_spawn_chance_8cs_source.html#l00014">WorldObjecfSpawnChance.cs:14</a></div></div>
-<div class="ttc" id="aclass_world_objecf_spawn_chance_html_a964403ccec29be3a03575227de9e7c10"><div class="ttname"><a href="class_world_objecf_spawn_chance.html#a964403ccec29be3a03575227de9e7c10">WorldObjecfSpawnChance.worldObjectPrefab</a></div><div class="ttdeci">GameObject worldObjectPrefab</div><div class="ttdef"><b>Definition</b> <a href="_world_objecf_spawn_chance_8cs_source.html#l00007">WorldObjecfSpawnChance.cs:7</a></div></div>
-<div class="ttc" id="aclass_world_object_spawner_html_a6989797216872c727bece32da01b04cb"><div class="ttname"><a href="#a6989797216872c727bece32da01b04cb">WorldObjectSpawner.grid</a></div><div class="ttdeci">WorldGridManager grid</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00015">WorldObjectSpawner.cs:15</a></div></div>
+<div class="line"><span class="lineno">   67</span>            <span class="comment">// Get each applicable object based on its spawn chance data.</span></div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">foreach</span> (WorldObjecfSpawnChance chance <span class="keywordflow">in</span> <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.resourceDroppers)</div>
+<div class="line"><span class="lineno">   69</span>            {</div>
+<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">if</span> (chance.<a class="code hl_function" href="class_world_objecf_spawn_chance.html#a288c6109bb0d445dad882d29a40368e2">SpawnRollPass</a>())</div>
+<div class="line"><span class="lineno">   71</span>                {</div>
+<div class="line"><span class="lineno">   72</span>                    selectedChances.Add(chance);</div>
+<div class="line"><span class="lineno">   73</span>                }</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (selectedChances.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                WorldObjecfSpawnChance selected = selectedChances[Random.Range(0, selectedChances.Count)];</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>                <span class="comment">// We use GridMaxX for both because we want the values as percentages of the max.</span></div>
+<div class="line"><span class="lineno">   81</span>                Vector3 spawnPos = <a class="code hl_function" href="#ab3f8be1337a6e4ed1a321ea6651ad5ad">GetClearPosWithDistance</a>(selected.<a class="code hl_function" href="class_world_objecf_spawn_chance.html#a23174d30c0fb640831244ae213fddb7e">MinDistance</a>(<a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.GridMaxX), selected.<a class="code hl_function" href="class_world_objecf_spawn_chance.html#a0874e3300a1199c7fa8e5cb81c113279">MaxDistance</a>(<a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.GridMaxX));</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>                GameObject newDropperObject = Instantiate(selected.<a class="code hl_variable" href="class_world_objecf_spawn_chance.html#a964403ccec29be3a03575227de9e7c10">worldObjectPrefab</a>, spawnPos, selected.<a class="code hl_variable" href="class_world_objecf_spawn_chance.html#a964403ccec29be3a03575227de9e7c10">worldObjectPrefab</a>.transform.rotation);</div>
+<div class="line"><span class="lineno">   84</span>                newDropperObject.name = <span class="stringliteral">&quot;Resource Dropper&quot;</span>;</div>
+<div class="line"><span class="lineno">   85</span>                <a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.OccupyNode(spawnPos);</div>
+<div class="line"><span class="lineno">   86</span>                <a class="code hl_variable" href="#a6989797216872c727bece32da01b04cb">grid</a>.SetNodeObject(spawnPos, newDropperObject);</div>
+<div class="line"><span class="lineno">   87</span>                i++;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclass_world_objecf_spawn_chance_html_a288c6109bb0d445dad882d29a40368e2"><div class="ttname"><a href="class_world_objecf_spawn_chance.html#a288c6109bb0d445dad882d29a40368e2">WorldObjecfSpawnChance.SpawnRollPass</a></div><div class="ttdeci">bool SpawnRollPass()</div><div class="ttdef"><b>Definition</b> <a href="_world_objecf_spawn_chance_8cs_source.html#l00019">WorldObjecfSpawnChance.cs:19</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -368,14 +447,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00099">99</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.playerPrefab != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            GameObject playerObject = Instantiate(<a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.playerPrefab, <span class="keyword">new</span> Vector3(0, 1, 0), <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.playerPrefab.transform.rotation);</div>
-<div class="line"><span class="lineno">  104</span>            playerObject.name = <span class="stringliteral">&quot;Player&quot;</span>;</div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00118">118</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.playerPrefab != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            GameObject playerObject = Instantiate(<a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.playerPrefab, <span class="keyword">new</span> Vector3(0, 1, 0), <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.playerPrefab.transform.rotation);</div>
+<div class="line"><span class="lineno">  123</span>            playerObject.name = <span class="stringliteral">&quot;Player&quot;</span>;</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

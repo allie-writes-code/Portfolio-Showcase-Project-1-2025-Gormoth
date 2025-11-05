@@ -192,7 +192,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_path_queue_8cs_source.html#l00038">38</a> of file <a class="el" href="_path_queue_8cs_source.html">PathQueue.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa9283faebc3d99e6c916d4c41cc9f315">currentPathRequest</a>.callback != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa9283faebc3d99e6c916d4c41cc9f315">currentPathRequest</a>.callback.Target != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   41</span>        {</div>
 <div class="line"><span class="lineno">   42</span>            <a class="code hl_variable" href="#aa9283faebc3d99e6c916d4c41cc9f315">currentPathRequest</a>.callback(path, success);</div>
 <div class="line"><span class="lineno">   43</span>            <a class="code hl_variable" href="#a26e37281aa1a322cad02b5d74ea7cc45">isProcessingPath</a> = <span class="keyword">false</span>;</div>

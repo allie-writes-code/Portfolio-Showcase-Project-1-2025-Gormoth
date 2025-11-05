@@ -1,9 +1,9 @@
 var class_player_controls =
 [
+    [ "OnDrawGizmos", "class_player_controls.html#a64a6e82bb6a26af416ac1035dc1642f1", null ],
     [ "RemoveDiagonalSpeedBoost", "class_player_controls.html#a1c6e8af72404414ce61ba8b30b064049", null ],
     [ "Update", "class_player_controls.html#a5a15b038e7bb8eaf0653350fb0419bdd", null ],
-    [ "buildingManager", "class_player_controls.html#a7a635817ffc91eb51cab64a1aa79c050", null ],
-    [ "buildModeOn", "class_player_controls.html#a7c2881169359f87539edebd5ee6c2c8c", null ],
+    [ "grid", "class_player_controls.html#a551d03e10634b6005cf6c52185396e54", null ],
     [ "hor", "class_player_controls.html#afb622e8be8f59caacca2d9b8aab683eb", null ],
     [ "moveDirDown", "class_player_controls.html#a4c4dcd264b264148a383f20d1375f76c", null ],
     [ "moveDirection", "class_player_controls.html#a8e52a80b83aadaf009fb159d7cb777e5", null ],
@@ -12,6 +12,5 @@ var class_player_controls =
     [ "moveDirUp", "class_player_controls.html#aca7ba82e3db1c6655baa80eed645749f", null ],
     [ "playerStats", "class_player_controls.html#abaa9edabcfd46dab48f68019a092a1ff", null ],
     [ "resourceDropperLayer", "class_player_controls.html#afa2f4661c54ab2219474a3c66841822f", null ],
-    [ "testBuildPos", "class_player_controls.html#a8d3ec671f454b97e64ff8e521f0abd96", null ],
     [ "vert", "class_player_controls.html#acbb829ec9a98eae33f86cd5d155bad29", null ]
 ];

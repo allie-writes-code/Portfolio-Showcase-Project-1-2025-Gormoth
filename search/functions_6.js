@@ -6,8 +6,8 @@ var searchData=
   ['generatespaghettiwalls_3',['GenerateSpaghettiWalls',['../class_level_spawner.html#aebaa31fd5b213aad48a44be34e4a935c',1,'LevelSpawner']]],
   ['generateworldboundary_4',['GenerateWorldBoundary',['../class_level_spawner.html#a7f259c74b4fab53340e2fde213ecd4f6',1,'LevelSpawner']]],
   ['getboundaries_5',['GetBoundaries',['../class_level_spawner.html#a7a0f4c0a417ed06e043fec818104a117',1,'LevelSpawner']]],
-  ['getdistance_6',['GetDistance',['../class_path_manager.html#a227fb35e4ee1fb45663684078f4a88df',1,'PathManager']]],
-  ['getneighbours_7',['GetNeighbours',['../class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5',1,'NodeGrid']]],
-  ['getnodefrompos_8',['GetNodeFromPos',['../class_world_grid_manager.html#aeafaba768b44dc986b5ce867d182961a',1,'WorldGridManager']]],
-  ['getselectedbuildingdetails_9',['GetSelectedBuildingDetails',['../class_building_manager.html#a01c768dba7307dc891c3bd45ba694528',1,'BuildingManager']]]
+  ['getclearposwithdistance_6',['GetClearPosWithDistance',['../class_world_object_spawner.html#ab3f8be1337a6e4ed1a321ea6651ad5ad',1,'WorldObjectSpawner']]],
+  ['getdistance_7',['GetDistance',['../class_path_manager.html#a227fb35e4ee1fb45663684078f4a88df',1,'PathManager']]],
+  ['getneighbours_8',['GetNeighbours',['../class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5',1,'NodeGrid']]],
+  ['getnodefrompos_9',['GetNodeFromPos',['../class_world_grid_manager.html#aeafaba768b44dc986b5ce867d182961a',1,'WorldGridManager']]]
 ];

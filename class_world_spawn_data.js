@@ -6,6 +6,7 @@ var class_world_spawn_data =
     [ "currentEnemyTotal", "class_world_spawn_data.html#ad32b3b223c9e0433ac9f11e32ed29bad", null ],
     [ "currentResourceDroppersTotal", "class_world_spawn_data.html#a86b9176be627845bd3fbbed84422006c", null ],
     [ "enemyPrefab", "class_world_spawn_data.html#afcdf62878daa99f4b4414edad2d90b4e", null ],
+    [ "initialSpawnBuildings", "class_world_spawn_data.html#a1dc73d1c7d12f850c21be2b0d901eacb", null ],
     [ "maxEnemiesToSpawn", "class_world_spawn_data.html#ab43468a3377d1f2671b84543f5105d4a", null ],
     [ "playerPrefab", "class_world_spawn_data.html#a78e1bc5442a2600b142ddfa1a4e88e52", null ],
     [ "resourceDroppers", "class_world_spawn_data.html#a4cef56f8ed5bc4b5dda9d3837db4b152", null ],

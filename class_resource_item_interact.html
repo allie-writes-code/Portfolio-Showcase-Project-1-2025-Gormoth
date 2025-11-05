@@ -111,6 +111,7 @@ Inheritance diagram for ResourceItemInteract:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a947cb88efe047e0f2bf7a82d1522b94a" id="r_a947cb88efe047e0f2bf7a82d1522b94a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a947cb88efe047e0f2bf7a82d1522b94a">CollectMe</a> (GameObject c)</td></tr>
 <tr class="memdesc:a947cb88efe047e0f2bf7a82d1522b94a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run this method to initiate collection of the item by an object with the <a class="el" href="class_resource_carry.html">ResourceCarry</a> component.  <br /></td></tr>
+<tr class="memitem:a809b50a7d7fbb598040fd565c8b85cf6" id="r_a809b50a7d7fbb598040fd565c8b85cf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a809b50a7d7fbb598040fd565c8b85cf6">ConsumeMe</a> (GameObject c)</td></tr>
 <tr class="memitem:a4123320071a51e74de1acee23069650f" id="r_a4123320071a51e74de1acee23069650f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4123320071a51e74de1acee23069650f">PlayerDrop</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
@@ -123,6 +124,7 @@ Properties</h2></td></tr>
 <tr class="memdesc:a2f1f81cf24efe46cb4a5e1c89d8fe74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public Get method for droppedByPlayer;.  <br /></td></tr>
 <tr class="memitem:a405304a9c9c3b420bfb6e5471a5c1fa1" id="r_a405304a9c9c3b420bfb6e5471a5c1fa1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a405304a9c9c3b420bfb6e5471a5c1fa1">IsWaiting</a><code> [get]</code></td></tr>
 <tr class="memdesc:a405304a9c9c3b420bfb6e5471a5c1fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public Get method for isWaiting.  <br /></td></tr>
+<tr class="memitem:a63762613beed8a33727a9f513bacdcea" id="r_a63762613beed8a33727a9f513bacdcea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63762613beed8a33727a9f513bacdcea">BeingConsumed</a><code> [get]</code></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -148,11 +150,13 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a95044bbad917e80d9f578fb30ef59224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private Bool to control if item waits for a bit before allowing collection again.  <br /></td></tr>
 <tr class="memitem:a4bf271c6d34fdda16c6d719e0c5f6b24" id="r_a4bf271c6d34fdda16c6d719e0c5f6b24"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bf271c6d34fdda16c6d719e0c5f6b24">waitTime</a> = 10</td></tr>
 <tr class="memdesc:a4bf271c6d34fdda16c6d719e0c5f6b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Float to control how long it waits for.  <br /></td></tr>
+<tr class="memitem:a56ebc4ab8fa2967f292e29e7797ea4b8" id="r_a56ebc4ab8fa2967f292e29e7797ea4b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56ebc4ab8fa2967f292e29e7797ea4b8">beingConsumed</a> = false</td></tr>
+<tr class="memdesc:a56ebc4ab8fa2967f292e29e7797ea4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bool to control if item is being sent to a consumer.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MonoBehaviour class, attach to <a class="el" href="class_resource_item.html" title="ScriptableObject class to define resource items.">ResourceItem</a>'s to enable their behaviours in game. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00006">6</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00011">11</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a947cb88efe047e0f2bf7a82d1522b94a" name="a947cb88efe047e0f2bf7a82d1522b94a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a947cb88efe047e0f2bf7a82d1522b94a">&#9670;&#160;</a></span>CollectMe()</h2>
@@ -171,17 +175,44 @@ Private Attributes</h2></td></tr>
 
 <p>Run this method to initiate collection of the item by an object with the <a class="el" href="class_resource_carry.html">ResourceCarry</a> component. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00054">54</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a> &amp;&amp; !<a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a>)</div>
-<div class="line"><span class="lineno">   57</span>        {</div>
-<div class="line"><span class="lineno">   58</span>            <a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   59</span>            <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a> = c.transform;</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aclass_resource_item_interact_html_a13da5c6485a70b83ae1e7418a3402504"><div class="ttname"><a href="#a13da5c6485a70b83ae1e7418a3402504">ResourceItemInteract.beingCollected</a></div><div class="ttdeci">bool beingCollected</div><div class="ttdoc">Bool to track if item is being collected currently.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00019">ResourceItemInteract.cs:19</a></div></div>
-<div class="ttc" id="aclass_resource_item_interact_html_a4544088b557df4448bc95afffce8e2ea"><div class="ttname"><a href="#a4544088b557df4448bc95afffce8e2ea">ResourceItemInteract.collector</a></div><div class="ttdeci">Transform collector</div><div class="ttdoc">Reference to the target collector object&#39;s transform.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00024">ResourceItemInteract.cs:24</a></div></div>
-<div class="ttc" id="aclass_resource_item_interact_html_a95044bbad917e80d9f578fb30ef59224"><div class="ttname"><a href="#a95044bbad917e80d9f578fb30ef59224">ResourceItemInteract.isWaiting</a></div><div class="ttdeci">bool isWaiting</div><div class="ttdoc">Private Bool to control if item waits for a bit before allowing collection again.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00043">ResourceItemInteract.cs:43</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00061">61</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a> &amp;&amp; !<a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a>)</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   66</span>            <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a> = c.transform;</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclass_resource_item_interact_html_a13da5c6485a70b83ae1e7418a3402504"><div class="ttname"><a href="#a13da5c6485a70b83ae1e7418a3402504">ResourceItemInteract.beingCollected</a></div><div class="ttdeci">bool beingCollected</div><div class="ttdoc">Bool to track if item is being collected currently.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00024">ResourceItemInteract.cs:24</a></div></div>
+<div class="ttc" id="aclass_resource_item_interact_html_a4544088b557df4448bc95afffce8e2ea"><div class="ttname"><a href="#a4544088b557df4448bc95afffce8e2ea">ResourceItemInteract.collector</a></div><div class="ttdeci">Transform collector</div><div class="ttdoc">Reference to the target collector object&#39;s transform.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00029">ResourceItemInteract.cs:29</a></div></div>
+<div class="ttc" id="aclass_resource_item_interact_html_a95044bbad917e80d9f578fb30ef59224"><div class="ttname"><a href="#a95044bbad917e80d9f578fb30ef59224">ResourceItemInteract.isWaiting</a></div><div class="ttdeci">bool isWaiting</div><div class="ttdoc">Private Bool to control if item waits for a bit before allowing collection again.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00048">ResourceItemInteract.cs:48</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a809b50a7d7fbb598040fd565c8b85cf6" name="a809b50a7d7fbb598040fd565c8b85cf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809b50a7d7fbb598040fd565c8b85cf6">&#9670;&#160;</a></span>ConsumeMe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResourceItemInteract.ConsumeMe </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00070">70</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a56ebc4ab8fa2967f292e29e7797ea4b8">beingConsumed</a> &amp;&amp; !<a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a>)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="#a56ebc4ab8fa2967f292e29e7797ea4b8">beingConsumed</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   75</span>            <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a> = c.transform;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="ttc" id="aclass_resource_item_interact_html_a56ebc4ab8fa2967f292e29e7797ea4b8"><div class="ttname"><a href="#a56ebc4ab8fa2967f292e29e7797ea4b8">ResourceItemInteract.beingConsumed</a></div><div class="ttdeci">bool beingConsumed</div><div class="ttdoc">Bool to control if item is being sent to a consumer.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00053">ResourceItemInteract.cs:53</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -209,27 +240,34 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>MonoBehaviour OnTriggerEnter class. Using to detect when the <a class="el" href="class_resource_item.html" title="ScriptableObject class to define resource items.">ResourceItem</a> colliders with the (hopefully) defined collector object. We're using OnTriggerEnter so a trigger can be used on <a class="el" href="class_resource_item.html" title="ScriptableObject class to define resource items.">ResourceItem</a>'s instead, intentionally so they don't collide with other objects. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00080">80</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a> &amp;&amp; <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a>)</div>
-<div class="line"><span class="lineno">   83</span>        {</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (other.gameObject.transform == <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a>)</div>
-<div class="line"><span class="lineno">   85</span>            {</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">if</span> (other.gameObject.GetComponent&lt;ResourceCarry&gt;().AddToTotal(<a class="code hl_variable" href="#a2f608a9ca3a80682cdb62758a416cac3">myResource</a>))</div>
-<div class="line"><span class="lineno">   87</span>                {</div>
-<div class="line"><span class="lineno">   88</span>                    Destroy(this.gameObject);</div>
-<div class="line"><span class="lineno">   89</span>                }</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   91</span>                {</div>
-<div class="line"><span class="lineno">   92</span>                    <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   93</span>                    <a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   94</span>                    <a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   95</span>                    StartCoroutine(<span class="stringliteral">&quot;WaitABit&quot;</span>);</div>
-<div class="line"><span class="lineno">   96</span>                }</div>
-<div class="line"><span class="lineno">   97</span>            }</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclass_resource_item_interact_html_a2f608a9ca3a80682cdb62758a416cac3"><div class="ttname"><a href="#a2f608a9ca3a80682cdb62758a416cac3">ResourceItemInteract.myResource</a></div><div class="ttdeci">Resource myResource</div><div class="ttdoc">Reference to the Resource assigned to this item.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00009">ResourceItemInteract.cs:9</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00096">96</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> ((<a class="code hl_variable" href="#a56ebc4ab8fa2967f292e29e7797ea4b8">beingConsumed</a> || <a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a>) &amp;&amp; <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a>)</div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">if</span> (other.gameObject.transform == <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a>)</div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a56ebc4ab8fa2967f292e29e7797ea4b8">beingConsumed</a>)</div>
+<div class="line"><span class="lineno">  103</span>                {</div>
+<div class="line"><span class="lineno">  104</span>                    <span class="comment">// We don&#39;t need to do this here, due to ResourceConsumer totals being incremented already:</span></div>
+<div class="line"><span class="lineno">  105</span>                    <span class="comment">//other.gameObject.GetComponent&lt;ResourceConsumer&gt;().ConsumeResource(myResource);</span></div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>                    Destroy(this.gameObject);</div>
+<div class="line"><span class="lineno">  108</span>                }</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (other.gameObject.GetComponent&lt;ResourceCarry&gt;().AddToTotal(<a class="code hl_variable" href="#a2f608a9ca3a80682cdb62758a416cac3">myResource</a>))</div>
+<div class="line"><span class="lineno">  110</span>                {</div>
+<div class="line"><span class="lineno">  111</span>                    Destroy(this.gameObject);</div>
+<div class="line"><span class="lineno">  112</span>                }</div>
+<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  114</span>                {</div>
+<div class="line"><span class="lineno">  115</span>                    <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  116</span>                    <a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  117</span>                    <a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  118</span>                    StartCoroutine(<span class="stringliteral">&quot;WaitABit&quot;</span>);</div>
+<div class="line"><span class="lineno">  119</span>                }</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="ttc" id="aclass_resource_item_interact_html_a2f608a9ca3a80682cdb62758a416cac3"><div class="ttname"><a href="#a2f608a9ca3a80682cdb62758a416cac3">ResourceItemInteract.myResource</a></div><div class="ttdeci">Resource myResource</div><div class="ttdoc">Reference to the Resource assigned to this item.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00014">ResourceItemInteract.cs:14</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -248,12 +286,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00063">63</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_variable" href="#ae5875f2bb1dab475e039a99db40d4a32">droppedByPlayer</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   66</span>        StartCoroutine(<span class="stringliteral">&quot;PlayerDropReset&quot;</span>);</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-<div class="ttc" id="aclass_resource_item_interact_html_ae5875f2bb1dab475e039a99db40d4a32"><div class="ttname"><a href="#ae5875f2bb1dab475e039a99db40d4a32">ResourceItemInteract.droppedByPlayer</a></div><div class="ttdeci">bool droppedByPlayer</div><div class="ttdoc">Bool to track if recently dropped by the player.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00021">ResourceItemInteract.cs:21</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00079">79</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_variable" href="#ae5875f2bb1dab475e039a99db40d4a32">droppedByPlayer</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   82</span>        StartCoroutine(<span class="stringliteral">&quot;PlayerDropReset&quot;</span>);</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="ttc" id="aclass_resource_item_interact_html_ae5875f2bb1dab475e039a99db40d4a32"><div class="ttname"><a href="#ae5875f2bb1dab475e039a99db40d4a32">ResourceItemInteract.droppedByPlayer</a></div><div class="ttdeci">bool droppedByPlayer</div><div class="ttdoc">Bool to track if recently dropped by the player.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00026">ResourceItemInteract.cs:26</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -280,12 +318,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00107">107</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
-<div class="line"><span class="lineno">  109</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="#a4bf271c6d34fdda16c6d719e0c5f6b24">waitTime</a>);</div>
-<div class="line"><span class="lineno">  110</span>        <a class="code hl_variable" href="#ae5875f2bb1dab475e039a99db40d4a32">droppedByPlayer</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="ttc" id="aclass_resource_item_interact_html_a4bf271c6d34fdda16c6d719e0c5f6b24"><div class="ttname"><a href="#a4bf271c6d34fdda16c6d719e0c5f6b24">ResourceItemInteract.waitTime</a></div><div class="ttdeci">float waitTime</div><div class="ttdoc">Float to control how long it waits for.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00045">ResourceItemInteract.cs:45</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00130">130</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>    {</div>
+<div class="line"><span class="lineno">  132</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="#a4bf271c6d34fdda16c6d719e0c5f6b24">waitTime</a>);</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_variable" href="#ae5875f2bb1dab475e039a99db40d4a32">droppedByPlayer</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="ttc" id="aclass_resource_item_interact_html_a4bf271c6d34fdda16c6d719e0c5f6b24"><div class="ttname"><a href="#a4bf271c6d34fdda16c6d719e0c5f6b24">ResourceItemInteract.waitTime</a></div><div class="ttdeci">float waitTime</div><div class="ttdoc">Float to control how long it waits for.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00050">ResourceItemInteract.cs:50</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -314,14 +352,14 @@ Private Attributes</h2></td></tr>
 
 <p>MonoBehaviour Update method. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00070">70</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a> &amp;&amp; <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a>)</div>
-<div class="line"><span class="lineno">   73</span>        {</div>
-<div class="line"><span class="lineno">   74</span>            transform.position = Vector3.MoveTowards(transform.position, <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a>.position, <a class="code hl_variable" href="#a192bdaa2e81c2c7e0ea91d09d0411ab2">collectSpeed</a>.Value * (Time.deltaTime * 0.5f));</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
-<div class="ttc" id="aclass_resource_item_interact_html_a192bdaa2e81c2c7e0ea91d09d0411ab2"><div class="ttname"><a href="#a192bdaa2e81c2c7e0ea91d09d0411ab2">ResourceItemInteract.collectSpeed</a></div><div class="ttdeci">Stat collectSpeed</div><div class="ttdoc">Private float for collection speed.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00040">ResourceItemInteract.cs:40</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00086">86</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> ((<a class="code hl_variable" href="#a56ebc4ab8fa2967f292e29e7797ea4b8">beingConsumed</a> || <a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a>) &amp;&amp; <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a>)</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            transform.position = Vector3.MoveTowards(transform.position, <a class="code hl_variable" href="#a4544088b557df4448bc95afffce8e2ea">collector</a>.position, <a class="code hl_variable" href="#a192bdaa2e81c2c7e0ea91d09d0411ab2">collectSpeed</a>.ValueFloat * (Time.deltaTime * 0.5f));</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="ttc" id="aclass_resource_item_interact_html_a192bdaa2e81c2c7e0ea91d09d0411ab2"><div class="ttname"><a href="#a192bdaa2e81c2c7e0ea91d09d0411ab2">ResourceItemInteract.collectSpeed</a></div><div class="ttdeci">Stat collectSpeed</div><div class="ttdoc">Private float for collection speed.</div><div class="ttdef"><b>Definition</b> <a href="_resource_item_interact_8cs_source.html#l00045">ResourceItemInteract.cs:45</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -348,11 +386,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00101">101</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>    {</div>
-<div class="line"><span class="lineno">  103</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="#a4bf271c6d34fdda16c6d719e0c5f6b24">waitTime</a>);</div>
-<div class="line"><span class="lineno">  104</span>        <a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00124">124</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>    {</div>
+<div class="line"><span class="lineno">  126</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="#a4bf271c6d34fdda16c6d719e0c5f6b24">waitTime</a>);</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  128</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -379,7 +417,33 @@ Private Attributes</h2></td></tr>
 
 <p>Bool to track if item is being collected currently. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00019">19</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00024">24</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+
+</div>
+</div>
+<a id="a56ebc4ab8fa2967f292e29e7797ea4b8" name="a56ebc4ab8fa2967f292e29e7797ea4b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56ebc4ab8fa2967f292e29e7797ea4b8">&#9670;&#160;</a></span>beingConsumed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ResourceItemInteract.beingConsumed = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bool to control if item is being sent to a consumer. </p>
+
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00053">53</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -405,7 +469,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reference to the target collector object's transform. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00024">24</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00029">29</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -431,7 +495,7 @@ Private Attributes</h2></td></tr>
 
 <p>Private float for collection speed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00040">40</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00045">45</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -457,7 +521,7 @@ Private Attributes</h2></td></tr>
 
 <p>Bool to track if recently dropped by the player. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00021">21</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00026">26</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -483,7 +547,7 @@ Private Attributes</h2></td></tr>
 
 <p>Private Bool to control if item waits for a bit before allowing collection again. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00043">43</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00048">48</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -509,7 +573,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reference to the <a class="el" href="class_resource.html">Resource</a> assigned to this item. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00009">9</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00014">14</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -535,7 +599,7 @@ Private Attributes</h2></td></tr>
 
 <p>Float to control how long it waits for. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00045">45</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00050">50</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -562,10 +626,35 @@ Private Attributes</h2></td></tr>
 
 <p>Public Get method for beingCollected. Cannot be changed directly. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00027">27</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a>; }</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00032">32</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a13da5c6485a70b83ae1e7418a3402504">beingCollected</a>; }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a63762613beed8a33727a9f513bacdcea" name="a63762613beed8a33727a9f513bacdcea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63762613beed8a33727a9f513bacdcea">&#9670;&#160;</a></span>BeingConsumed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ResourceItemInteract.BeingConsumed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00058">58</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{ <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a56ebc4ab8fa2967f292e29e7797ea4b8">beingConsumed</a>; } }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -591,10 +680,10 @@ Private Attributes</h2></td></tr>
 
 <p>Public Get method for droppedByPlayer;. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00033">33</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae5875f2bb1dab475e039a99db40d4a32">droppedByPlayer</a>; }</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00038">38</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#ae5875f2bb1dab475e039a99db40d4a32">droppedByPlayer</a>; }</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -620,10 +709,8 @@ Private Attributes</h2></td></tr>
 
 <p>Public Get method for isWaiting. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00048">48</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a>; }</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00056">56</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>{ <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a95044bbad917e80d9f578fb30ef59224">isWaiting</a>; } }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -649,11 +736,11 @@ Private Attributes</h2></td></tr>
 
 <p>Public Get and Set method for myResource. </p>
 
-<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00012">12</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2f608a9ca3a80682cdb62758a416cac3">myResource</a>; }</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keyword">set</span> { <a class="code hl_variable" href="#a2f608a9ca3a80682cdb62758a416cac3">myResource</a> = value; }</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_resource_item_interact_8cs_source.html#l00017">17</a> of file <a class="el" href="_resource_item_interact_8cs_source.html">ResourceItemInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2f608a9ca3a80682cdb62758a416cac3">myResource</a>; }</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keyword">set</span> { <a class="code hl_variable" href="#a2f608a9ca3a80682cdb62758a416cac3">myResource</a> = value; }</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

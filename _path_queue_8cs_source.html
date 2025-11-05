@@ -138,7 +138,7 @@ $(function(){initNavTree('_path_queue_8cs_source.html','',''); });
 <div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_path_queue.html#ae8ca0ee811a6084172aa0475e0c24ab4">   38</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_path_queue.html#ae8ca0ee811a6084172aa0475e0c24ab4">FinishedProcessingPath</a>(Vector3[] path, <span class="keywordtype">bool</span> success)</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_path_queue.html#aa9283faebc3d99e6c916d4c41cc9f315">currentPathRequest</a>.callback != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_path_queue.html#aa9283faebc3d99e6c916d4c41cc9f315">currentPathRequest</a>.callback.Target != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_variable" href="class_path_queue.html#aa9283faebc3d99e6c916d4c41cc9f315">currentPathRequest</a>.callback(path, success);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_variable" href="class_path_queue.html#a26e37281aa1a322cad02b5d74ea7cc45">isProcessingPath</a> = <span class="keyword">false</span>;</div>
@@ -166,7 +166,7 @@ $(function(){initNavTree('_path_queue_8cs_source.html','',''); });
 </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
 </div>
-<div class="ttc" id="aclass_path_manager_html"><div class="ttname"><a href="class_path_manager.html">PathManager</a></div><div class="ttdef"><b>Definition</b> <a href="_path_manager_8cs_source.html#l00007">PathManager.cs:8</a></div></div>
+<div class="ttc" id="aclass_path_manager_html"><div class="ttname"><a href="class_path_manager.html">PathManager</a></div><div class="ttdef"><b>Definition</b> <a href="_path_manager_8cs_source.html#l00006">PathManager.cs:7</a></div></div>
 <div class="ttc" id="aclass_path_queue_html"><div class="ttname"><a href="class_path_queue.html">PathQueue</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">PathQueue.cs:6</a></div></div>
 <div class="ttc" id="aclass_path_queue_html_a0be7233e6ad4c567243ea1013ecfd486"><div class="ttname"><a href="class_path_queue.html#a0be7233e6ad4c567243ea1013ecfd486">PathQueue.RequestPath</a></div><div class="ttdeci">static void RequestPath(Vector3 pathStart, Vector3 pathEnd, Action&lt; Vector3[], bool &gt; callback)</div><div class="ttdef"><b>Definition</b> <a href="#l00021">PathQueue.cs:21</a></div></div>
 <div class="ttc" id="aclass_path_queue_html_a26e37281aa1a322cad02b5d74ea7cc45"><div class="ttname"><a href="class_path_queue.html#a26e37281aa1a322cad02b5d74ea7cc45">PathQueue.isProcessingPath</a></div><div class="ttdeci">bool isProcessingPath</div><div class="ttdef"><b>Definition</b> <a href="#l00013">PathQueue.cs:13</a></div></div>

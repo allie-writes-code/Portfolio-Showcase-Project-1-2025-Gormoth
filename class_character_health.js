@@ -7,7 +7,6 @@ var class_character_health =
     [ "Update", "class_character_health.html#a9fbac586cc1c3032bdafd6b76bd88606", null ],
     [ "baseHealthStat", "class_character_health.html#a50900b47338885e96d44c95b4c04d5bf", null ],
     [ "currentHealth", "class_character_health.html#a1aeab73ed24a091ec925f0852ddefb73", null ],
-    [ "deathBroadcast", "class_character_health.html#a5bc13bc8480d0fdc40fb2f0bcebe63e5", null ],
     [ "healthBarCanvas", "class_character_health.html#a0ae6fded0937e754b03aa0177fef4d76", null ],
     [ "healthBarImage", "class_character_health.html#a62d85544ffe0913fb000caeb806b8bee", null ],
     [ "maxHealth", "class_character_health.html#abe0e72be8d4cdfc57bd2313ad28ab7c7", null ],

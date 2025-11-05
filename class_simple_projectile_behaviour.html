@@ -106,7 +106,7 @@ Inheritance diagram for SimpleProjectileBehaviour:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a50f516e6d0eedb2f0656089fe167b7a4" id="r_a50f516e6d0eedb2f0656089fe167b7a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50f516e6d0eedb2f0656089fe167b7a4">FireProjectile</a> (Vector3 dir, float dmg)</td></tr>
+<tr class="memitem:ae8c070fe1918f92e52dc34d7788b5622" id="r_ae8c070fe1918f92e52dc34d7788b5622"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8c070fe1918f92e52dc34d7788b5622">FireProjectile</a> (Vector3 dir, int dmg)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -127,14 +127,14 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:ae6f2f2e4e565140889d3dd6e3dcaff86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector3 to store direction this projectile is moving in.  <br /></td></tr>
 <tr class="memitem:ab650b4220e898662be8c89eb3a948089" id="r_ab650b4220e898662be8c89eb3a948089"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab650b4220e898662be8c89eb3a948089">alive</a> = false</td></tr>
 <tr class="memdesc:ab650b4220e898662be8c89eb3a948089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bool variable, once set to true, this projectile will start moving.  <br /></td></tr>
-<tr class="memitem:a5ab7d79f3a77bcfae546c99103f004b7" id="r_a5ab7d79f3a77bcfae546c99103f004b7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ab7d79f3a77bcfae546c99103f004b7">damage</a> = 0</td></tr>
+<tr class="memitem:a4dfeb54026e9e7956a3b6b2552cae424" id="r_a4dfeb54026e9e7956a3b6b2552cae424"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dfeb54026e9e7956a3b6b2552cae424">damage</a> = 0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_simple_projectile_behaviour_8cs_source.html#l00003">3</a> of file <a class="el" href="_simple_projectile_behaviour_8cs_source.html">SimpleProjectileBehaviour.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a50f516e6d0eedb2f0656089fe167b7a4" name="a50f516e6d0eedb2f0656089fe167b7a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50f516e6d0eedb2f0656089fe167b7a4">&#9670;&#160;</a></span>FireProjectile()</h2>
+<a id="ae8c070fe1918f92e52dc34d7788b5622" name="ae8c070fe1918f92e52dc34d7788b5622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8c070fe1918f92e52dc34d7788b5622">&#9670;&#160;</a></span>FireProjectile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +147,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dmg</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dmg</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -155,10 +155,10 @@ Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_simple_projectile_behaviour_8cs_source.html#l00027">27</a> of file <a class="el" href="_simple_projectile_behaviour_8cs_source.html">SimpleProjectileBehaviour.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
 <div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="#ae6f2f2e4e565140889d3dd6e3dcaff86">direction</a> = dir;</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="#a5ab7d79f3a77bcfae546c99103f004b7">damage</a> = dmg;</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="#a4dfeb54026e9e7956a3b6b2552cae424">damage</a> = dmg;</div>
 <div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="#ab650b4220e898662be8c89eb3a948089">alive</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclass_simple_projectile_behaviour_html_a5ab7d79f3a77bcfae546c99103f004b7"><div class="ttname"><a href="#a5ab7d79f3a77bcfae546c99103f004b7">SimpleProjectileBehaviour.damage</a></div><div class="ttdeci">float damage</div><div class="ttdef"><b>Definition</b> <a href="_simple_projectile_behaviour_8cs_source.html#l00020">SimpleProjectileBehaviour.cs:20</a></div></div>
+<div class="ttc" id="aclass_simple_projectile_behaviour_html_a4dfeb54026e9e7956a3b6b2552cae424"><div class="ttname"><a href="#a4dfeb54026e9e7956a3b6b2552cae424">SimpleProjectileBehaviour.damage</a></div><div class="ttdeci">int damage</div><div class="ttdef"><b>Definition</b> <a href="_simple_projectile_behaviour_8cs_source.html#l00020">SimpleProjectileBehaviour.cs:20</a></div></div>
 <div class="ttc" id="aclass_simple_projectile_behaviour_html_ab650b4220e898662be8c89eb3a948089"><div class="ttname"><a href="#ab650b4220e898662be8c89eb3a948089">SimpleProjectileBehaviour.alive</a></div><div class="ttdeci">bool alive</div><div class="ttdoc">Bool variable, once set to true, this projectile will start moving.</div><div class="ttdef"><b>Definition</b> <a href="_simple_projectile_behaviour_8cs_source.html#l00018">SimpleProjectileBehaviour.cs:18</a></div></div>
 <div class="ttc" id="aclass_simple_projectile_behaviour_html_ae6f2f2e4e565140889d3dd6e3dcaff86"><div class="ttname"><a href="#ae6f2f2e4e565140889d3dd6e3dcaff86">SimpleProjectileBehaviour.direction</a></div><div class="ttdeci">Vector3 direction</div><div class="ttdoc">Vector3 to store direction this projectile is moving in.</div><div class="ttdef"><b>Definition</b> <a href="_simple_projectile_behaviour_8cs_source.html#l00015">SimpleProjectileBehaviour.cs:15</a></div></div>
 </div><!-- fragment -->
@@ -194,7 +194,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   38</span>            <a class="code hl_variable" href="#a47f1650630f303185f26e4819e3f57ae">aliveTimer</a> += (Time.deltaTime);</div>
 <div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a47f1650630f303185f26e4819e3f57ae">aliveTimer</a> &gt; <a class="code hl_variable" href="#ab2c37cdeb9c8f21f7ea24caa5d9ca414">timeToLive</a>) Destroy(this.gameObject);</div>
 <div class="line"><span class="lineno">   40</span>            </div>
-<div class="line"><span class="lineno">   41</span>            transform.Translate(<a class="code hl_variable" href="#ae6f2f2e4e565140889d3dd6e3dcaff86">direction</a> * <a class="code hl_variable" href="#a733e492b3eb412324ed7f7f27669f9c7">moveSpeedStat</a>.Value * (Time.deltaTime * 0.5f));</div>
+<div class="line"><span class="lineno">   41</span>            transform.Translate(<a class="code hl_variable" href="#ae6f2f2e4e565140889d3dd6e3dcaff86">direction</a> * <a class="code hl_variable" href="#a733e492b3eb412324ed7f7f27669f9c7">moveSpeedStat</a>.ValueFloat * (Time.deltaTime * 0.5f));</div>
 <div class="line"><span class="lineno">   42</span>        }</div>
 <div class="line"><span class="lineno">   43</span>    }</div>
 <div class="ttc" id="aclass_simple_projectile_behaviour_html_a47f1650630f303185f26e4819e3f57ae"><div class="ttname"><a href="#a47f1650630f303185f26e4819e3f57ae">SimpleProjectileBehaviour.aliveTimer</a></div><div class="ttdeci">float aliveTimer</div><div class="ttdef"><b>Definition</b> <a href="_simple_projectile_behaviour_8cs_source.html#l00012">SimpleProjectileBehaviour.cs:12</a></div></div>
@@ -254,8 +254,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5ab7d79f3a77bcfae546c99103f004b7" name="a5ab7d79f3a77bcfae546c99103f004b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ab7d79f3a77bcfae546c99103f004b7">&#9670;&#160;</a></span>damage</h2>
+<a id="a4dfeb54026e9e7956a3b6b2552cae424" name="a4dfeb54026e9e7956a3b6b2552cae424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dfeb54026e9e7956a3b6b2552cae424">&#9670;&#160;</a></span>damage</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,7 +264,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float SimpleProjectileBehaviour.damage = 0</td>
+          <td class="memname">int SimpleProjectileBehaviour.damage = 0</td>
         </tr>
       </table>
   </td>
@@ -379,7 +379,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_simple_projectile_behaviour_8cs_source.html#l00022">22</a> of file <a class="el" href="_simple_projectile_behaviour_8cs_source.html">SimpleProjectileBehaviour.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5ab7d79f3a77bcfae546c99103f004b7">damage</a>; }</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a4dfeb54026e9e7956a3b6b2552cae424">damage</a>; }</div>
 <div class="line"><span class="lineno">   25</span>    }</div>
 </div><!-- fragment -->
 </div>

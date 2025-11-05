@@ -12,6 +12,7 @@ var class_world_grid_manager =
     [ "gridMaxY", "class_world_grid_manager.html#a5b3ab723f395de6450c50aea8034c2f7", null ],
     [ "gridMinX", "class_world_grid_manager.html#ae3accc6572a89c5ff56b0788f34040fa", null ],
     [ "gridMinY", "class_world_grid_manager.html#ad544fa45ea4a0af30c93320415e206a0", null ],
+    [ "pathGrid", "class_world_grid_manager.html#a418a9196eb978196a6b39ab6c834a553", null ],
     [ "worldGrid", "class_world_grid_manager.html#a64ed9c0bfde95b8c90cea93d3aab94b2", null ],
     [ "GridMaxX", "class_world_grid_manager.html#a1816d3d7b4fe243c84e4d17f373e5dbb", null ],
     [ "GridMaxY", "class_world_grid_manager.html#ae8dcc2c57a03280b1f8ac6de3332af4b", null ],

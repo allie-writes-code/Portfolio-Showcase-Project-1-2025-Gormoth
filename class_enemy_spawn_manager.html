@@ -151,10 +151,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_enemy_spawn_manager_8cs_source.html#l00064">64</a> of file <a class="el" href="_enemy_spawn_manager_8cs_source.html">EnemySpawnManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
-<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="#abfdf7127897bce4eb1d9e7314e590475">spawningActive</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_enemy_spawn_manager_8cs_source.html#l00062">62</a> of file <a class="el" href="_enemy_spawn_manager_8cs_source.html">EnemySpawnManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        spawnData.currentEnemyTotal = 0;</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_variable" href="#abfdf7127897bce4eb1d9e7314e590475">spawningActive</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
 <div class="ttc" id="aclass_enemy_spawn_manager_html_abfdf7127897bce4eb1d9e7314e590475"><div class="ttname"><a href="#abfdf7127897bce4eb1d9e7314e590475">EnemySpawnManager.spawningActive</a></div><div class="ttdeci">bool spawningActive</div><div class="ttdef"><b>Definition</b> <a href="_enemy_spawn_manager_8cs_source.html#l00007">EnemySpawnManager.cs:7</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -182,10 +183,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_enemy_spawn_manager_8cs_source.html#l00069">69</a> of file <a class="el" href="_enemy_spawn_manager_8cs_source.html">EnemySpawnManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
-<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.currentEnemyTotal--;</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_enemy_spawn_manager_8cs_source.html#l00068">68</a> of file <a class="el" href="_enemy_spawn_manager_8cs_source.html">EnemySpawnManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.currentEnemyTotal--;</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
 <div class="ttc" id="aclass_enemy_spawn_manager_html_a3e4c824f84dd3f84489bd99d00432966"><div class="ttname"><a href="#a3e4c824f84dd3f84489bd99d00432966">EnemySpawnManager.spawnData</a></div><div class="ttdeci">WorldSpawnData spawnData</div><div class="ttdef"><b>Definition</b> <a href="_enemy_spawn_manager_8cs_source.html#l00016">EnemySpawnManager.cs:16</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -213,15 +214,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_enemy_spawn_manager_8cs_source.html#l00058">58</a> of file <a class="el" href="_enemy_spawn_manager_8cs_source.html">EnemySpawnManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="#a096b60c1c838740d69c4a38084a3f115">enemyDiedListener</a>.DeregisterFunction(<a class="code hl_function" href="#ad30bee88b1355ffe3e8cfd889020beab">EnemyDied</a>);</div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="#a4a2b5038983f5ba8b3ecf92a3cefa3bd">levelLoadedListener</a>.DeregisterFunction(<a class="code hl_function" href="#a1d034bd2a41380d887afd1a850f15208">BeginSpawningEnemies</a>);</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_enemy_spawn_manager_8cs_source.html#l00056">56</a> of file <a class="el" href="_enemy_spawn_manager_8cs_source.html">EnemySpawnManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="#a096b60c1c838740d69c4a38084a3f115">enemyDiedListener</a>.DeregisterFunction(<a class="code hl_function" href="#ad30bee88b1355ffe3e8cfd889020beab">EnemyDied</a>);</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_variable" href="#a4a2b5038983f5ba8b3ecf92a3cefa3bd">levelLoadedListener</a>.DeregisterFunction(<a class="code hl_function" href="#a1d034bd2a41380d887afd1a850f15208">BeginSpawningEnemies</a>);</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
 <div class="ttc" id="aclass_enemy_spawn_manager_html_a096b60c1c838740d69c4a38084a3f115"><div class="ttname"><a href="#a096b60c1c838740d69c4a38084a3f115">EnemySpawnManager.enemyDiedListener</a></div><div class="ttdeci">DelegateListener enemyDiedListener</div><div class="ttdef"><b>Definition</b> <a href="_enemy_spawn_manager_8cs_source.html#l00010">EnemySpawnManager.cs:10</a></div></div>
-<div class="ttc" id="aclass_enemy_spawn_manager_html_a1d034bd2a41380d887afd1a850f15208"><div class="ttname"><a href="#a1d034bd2a41380d887afd1a850f15208">EnemySpawnManager.BeginSpawningEnemies</a></div><div class="ttdeci">void BeginSpawningEnemies()</div><div class="ttdef"><b>Definition</b> <a href="_enemy_spawn_manager_8cs_source.html#l00064">EnemySpawnManager.cs:64</a></div></div>
+<div class="ttc" id="aclass_enemy_spawn_manager_html_a1d034bd2a41380d887afd1a850f15208"><div class="ttname"><a href="#a1d034bd2a41380d887afd1a850f15208">EnemySpawnManager.BeginSpawningEnemies</a></div><div class="ttdeci">void BeginSpawningEnemies()</div><div class="ttdef"><b>Definition</b> <a href="_enemy_spawn_manager_8cs_source.html#l00062">EnemySpawnManager.cs:62</a></div></div>
 <div class="ttc" id="aclass_enemy_spawn_manager_html_a4a2b5038983f5ba8b3ecf92a3cefa3bd"><div class="ttname"><a href="#a4a2b5038983f5ba8b3ecf92a3cefa3bd">EnemySpawnManager.levelLoadedListener</a></div><div class="ttdeci">DelegateListener levelLoadedListener</div><div class="ttdef"><b>Definition</b> <a href="_enemy_spawn_manager_8cs_source.html#l00013">EnemySpawnManager.cs:13</a></div></div>
-<div class="ttc" id="aclass_enemy_spawn_manager_html_ad30bee88b1355ffe3e8cfd889020beab"><div class="ttname"><a href="#ad30bee88b1355ffe3e8cfd889020beab">EnemySpawnManager.EnemyDied</a></div><div class="ttdeci">void EnemyDied()</div><div class="ttdef"><b>Definition</b> <a href="_enemy_spawn_manager_8cs_source.html#l00069">EnemySpawnManager.cs:69</a></div></div>
+<div class="ttc" id="aclass_enemy_spawn_manager_html_ad30bee88b1355ffe3e8cfd889020beab"><div class="ttname"><a href="#ad30bee88b1355ffe3e8cfd889020beab">EnemySpawnManager.EnemyDied</a></div><div class="ttdeci">void EnemyDied()</div><div class="ttdef"><b>Definition</b> <a href="_enemy_spawn_manager_8cs_source.html#l00068">EnemySpawnManager.cs:68</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -248,11 +249,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_enemy_spawn_manager_8cs_source.html#l00052">52</a> of file <a class="el" href="_enemy_spawn_manager_8cs_source.html">EnemySpawnManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        <a class="code hl_variable" href="#a096b60c1c838740d69c4a38084a3f115">enemyDiedListener</a>.RegisterFunction(<a class="code hl_function" href="#ad30bee88b1355ffe3e8cfd889020beab">EnemyDied</a>);</div>
-<div class="line"><span class="lineno">   55</span>        <a class="code hl_variable" href="#a4a2b5038983f5ba8b3ecf92a3cefa3bd">levelLoadedListener</a>.RegisterFunction(<a class="code hl_function" href="#a1d034bd2a41380d887afd1a850f15208">BeginSpawningEnemies</a>);</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_enemy_spawn_manager_8cs_source.html#l00050">50</a> of file <a class="el" href="_enemy_spawn_manager_8cs_source.html">EnemySpawnManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_variable" href="#a096b60c1c838740d69c4a38084a3f115">enemyDiedListener</a>.RegisterFunction(<a class="code hl_function" href="#ad30bee88b1355ffe3e8cfd889020beab">EnemyDied</a>);</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="#a4a2b5038983f5ba8b3ecf92a3cefa3bd">levelLoadedListener</a>.RegisterFunction(<a class="code hl_function" href="#a1d034bd2a41380d887afd1a850f15208">BeginSpawningEnemies</a>);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,17 +282,15 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_enemy_spawn_manager_8cs_source.html#l00038">38</a> of file <a class="el" href="_enemy_spawn_manager_8cs_source.html">EnemySpawnManager.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        Debug.Log(<span class="stringliteral">&quot;Spawning wave&quot;</span>);</div>
-<div class="line"><span class="lineno">   41</span> </div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.maxEnemiesToSpawn.Value; i++)</div>
-<div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            GameObject newEnemy = Instantiate(<a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.enemyPrefab, <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.boundaryPositions[Random.Range(0, <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.boundaryPositions.Count)], <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.enemyPrefab.transform.rotation);</div>
-<div class="line"><span class="lineno">   45</span>            newEnemy.name = <span class="stringliteral">&quot;Enemy&quot;</span>;</div>
-<div class="line"><span class="lineno">   46</span>            <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.currentEnemyTotal++;</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>        yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.currentEnemyTotal; i &lt; <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.maxEnemiesToSpawn.ValueInt; i++)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            GameObject newEnemy = Instantiate(<a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.enemyPrefab, <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.boundaryPositions[Random.Range(0, <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.boundaryPositions.Count)], <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.enemyPrefab.transform.rotation);</div>
+<div class="line"><span class="lineno">   43</span>            newEnemy.name = <span class="stringliteral">&quot;Enemy&quot;</span>;</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_variable" href="#a3e4c824f84dd3f84489bd99d00432966">spawnData</a>.currentEnemyTotal++;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>        yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -322,7 +321,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
 <div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#abfdf7127897bce4eb1d9e7314e590475">spawningActive</a>) <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   26</span> </div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3f72fa390ce4316adc7b18364e050a11">waveTimer</a> &lt; <a class="code hl_variable" href="#a061fe60fcd347eed6237b8523580898c">waveTimeStat</a>.Value)</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a3f72fa390ce4316adc7b18364e050a11">waveTimer</a> &lt; <a class="code hl_variable" href="#a061fe60fcd347eed6237b8523580898c">waveTimeStat</a>.ValueFloat)</div>
 <div class="line"><span class="lineno">   28</span>        {</div>
 <div class="line"><span class="lineno">   29</span>            <a class="code hl_variable" href="#a3f72fa390ce4316adc7b18364e050a11">waveTimer</a> += Time.deltaTime;</div>
 <div class="line"><span class="lineno">   30</span>        }</div>

@@ -121,81 +121,26 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a02d7a6f7e97d3263edd365a7ecdd5c06" id="r_a02d7a6f7e97d3263edd365a7ecdd5c06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02d7a6f7e97d3263edd365a7ecdd5c06">Start</a> ()</td></tr>
 <tr class="memdesc:a02d7a6f7e97d3263edd365a7ecdd5c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start method.  <br /></td></tr>
 <tr class="memitem:a42e7528b43703473f60290d4088bab04" id="r_a42e7528b43703473f60290d4088bab04"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42e7528b43703473f60290d4088bab04">UpdatePathCheck</a> ()</td></tr>
-<tr class="memitem:a7308e1726c36d202f0dfd5e2d8c37c06" id="r_a7308e1726c36d202f0dfd5e2d8c37c06"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7308e1726c36d202f0dfd5e2d8c37c06">FollowPath</a> ()</td></tr>
-<tr class="memdesc:a7308e1726c36d202f0dfd5e2d8c37c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looping Coroutine to move this GameObject's transform along the path.  <br /></td></tr>
-<tr class="memitem:ae8057c87fecad6ba6a9b87ae37019dda" id="r_ae8057c87fecad6ba6a9b87ae37019dda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8057c87fecad6ba6a9b87ae37019dda">PathFinish</a> ()</td></tr>
+<tr class="memitem:aad1e31136af4f99ab318c79cb70ca0bb" id="r_aad1e31136af4f99ab318c79cb70ca0bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad1e31136af4f99ab318c79cb70ca0bb">Update</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a60c516bc88b050a65903a1586bb5ac49" id="r_a60c516bc88b050a65903a1586bb5ac49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character_stats.html">CharacterStats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60c516bc88b050a65903a1586bb5ac49">stats</a></td></tr>
 <tr class="memdesc:a60c516bc88b050a65903a1586bb5ac49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stats for move speed.  <br /></td></tr>
+<tr class="memitem:a0f12df81600c9d17517839732153c820" id="r_a0f12df81600c9d17517839732153c820"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f12df81600c9d17517839732153c820">waypointCheckDistance</a> = 0f</td></tr>
 <tr class="memitem:a960ac3ec5b931d0a2198ce8f391d888f" id="r_a960ac3ec5b931d0a2198ce8f391d888f"><td class="memItemLeft" align="right" valign="top">Vector3[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a960ac3ec5b931d0a2198ce8f391d888f">path</a></td></tr>
 <tr class="memdesc:a960ac3ec5b931d0a2198ce8f391d888f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector3 array to store path.  <br /></td></tr>
 <tr class="memitem:a616efbaff0e17cde19da418f56148926" id="r_a616efbaff0e17cde19da418f56148926"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a616efbaff0e17cde19da418f56148926">targetIndex</a></td></tr>
 <tr class="memdesc:a616efbaff0e17cde19da418f56148926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index value to track position on path.  <br /></td></tr>
-<tr class="memitem:a94524b14f67d889a189b11d1402a4de3" id="r_a94524b14f67d889a189b11d1402a4de3"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94524b14f67d889a189b11d1402a4de3">lastKnownTargetPosition</a> = Vector3.zero</td></tr>
-<tr class="memdesc:a94524b14f67d889a189b11d1402a4de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector3 to track position of target and update path when it changes.  <br /></td></tr>
+<tr class="memitem:afd92778426337042f253f39c7e37c9aa" id="r_afd92778426337042f253f39c7e37c9aa"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd92778426337042f253f39c7e37c9aa">currentWaypoint</a></td></tr>
 <tr class="memitem:a9fd27673d3ba6e2b80db46c7ea891558" id="r_a9fd27673d3ba6e2b80db46c7ea891558"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_enemy_a_i_loop.html">EnemyAILoop</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fd27673d3ba6e2b80db46c7ea891558">aiLoop</a></td></tr>
+<tr class="memitem:aa6fe8e9ead7258263b5e2c60fb3ab6bd" id="r_aa6fe8e9ead7258263b5e2c60fb3ab6bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6fe8e9ead7258263b5e2c60fb3ab6bd">onPath</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Move AI for non player characters. </p>
 
 <p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00005">5</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a7308e1726c36d202f0dfd5e2d8c37c06" name="a7308e1726c36d202f0dfd5e2d8c37c06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7308e1726c36d202f0dfd5e2d8c37c06">&#9670;&#160;</a></span>FollowPath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">IEnumerator AIMove.FollowPath </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Looping Coroutine to move this GameObject's transform along the path. </p>
-
-<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00063">63</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
-<div class="line"><span class="lineno">   65</span>        Vector3 currentWaypoint = <a class="code hl_variable" href="#a960ac3ec5b931d0a2198ce8f391d888f">path</a>[0];</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (transform.position == currentWaypoint)</div>
-<div class="line"><span class="lineno">   70</span>            {</div>
-<div class="line"><span class="lineno">   71</span>                <a class="code hl_variable" href="#a616efbaff0e17cde19da418f56148926">targetIndex</a>++;</div>
-<div class="line"><span class="lineno">   72</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a616efbaff0e17cde19da418f56148926">targetIndex</a> &gt;= <a class="code hl_variable" href="#a960ac3ec5b931d0a2198ce8f391d888f">path</a>.Length)</div>
-<div class="line"><span class="lineno">   73</span>                {</div>
-<div class="line"><span class="lineno">   74</span>                    <a class="code hl_function" href="#ae8057c87fecad6ba6a9b87ae37019dda">PathFinish</a>();</div>
-<div class="line"><span class="lineno">   75</span>                    yield <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   76</span>                }</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>                currentWaypoint = <a class="code hl_variable" href="#a960ac3ec5b931d0a2198ce8f391d888f">path</a>[<a class="code hl_variable" href="#a616efbaff0e17cde19da418f56148926">targetIndex</a>];</div>
-<div class="line"><span class="lineno">   79</span>            }</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>            transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, <a class="code hl_variable" href="#a60c516bc88b050a65903a1586bb5ac49">stats</a>.MoveSpeed.Value * (Time.deltaTime * 0.5f));</div>
-<div class="line"><span class="lineno">   82</span>            yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   83</span>        }</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-<div class="ttc" id="aclass_a_i_move_html_a60c516bc88b050a65903a1586bb5ac49"><div class="ttname"><a href="#a60c516bc88b050a65903a1586bb5ac49">AIMove.stats</a></div><div class="ttdeci">CharacterStats stats</div><div class="ttdoc">Stats for move speed.</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00012">AIMove.cs:12</a></div></div>
-<div class="ttc" id="aclass_a_i_move_html_a616efbaff0e17cde19da418f56148926"><div class="ttname"><a href="#a616efbaff0e17cde19da418f56148926">AIMove.targetIndex</a></div><div class="ttdeci">int targetIndex</div><div class="ttdoc">Index value to track position on path.</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00018">AIMove.cs:18</a></div></div>
-<div class="ttc" id="aclass_a_i_move_html_a960ac3ec5b931d0a2198ce8f391d888f"><div class="ttname"><a href="#a960ac3ec5b931d0a2198ce8f391d888f">AIMove.path</a></div><div class="ttdeci">Vector3[] path</div><div class="ttdoc">Vector3 array to store path.</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00015">AIMove.cs:15</a></div></div>
-<div class="ttc" id="aclass_a_i_move_html_ae8057c87fecad6ba6a9b87ae37019dda"><div class="ttname"><a href="#ae8057c87fecad6ba6a9b87ae37019dda">AIMove.PathFinish</a></div><div class="ttdeci">void PathFinish()</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00086">AIMove.cs:86</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a7a341e5023c2caf4a52ff714f95b92dd" name="a7a341e5023c2caf4a52ff714f95b92dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a341e5023c2caf4a52ff714f95b92dd">&#9670;&#160;</a></span>OnPathFound()</h2>
 
@@ -216,49 +161,20 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Callback from FinishedProcessingPath in <a class="el" href="class_path_queue.html">PathQueue</a>, returned after <a class="el" href="class_path_manager.html">PathManager</a> processes a path. Will not run if a successful path is not found. </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00050">50</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>        StopCoroutine(<span class="stringliteral">&quot;FollowPath&quot;</span>);</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (pathSuccessful)</div>
-<div class="line"><span class="lineno">   55</span>        {</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="#a960ac3ec5b931d0a2198ce8f391d888f">path</a> = newPath;</div>
-<div class="line"><span class="lineno">   57</span>            <a class="code hl_variable" href="#a616efbaff0e17cde19da418f56148926">targetIndex</a> = 0;</div>
-<div class="line"><span class="lineno">   58</span>            StartCoroutine(<span class="stringliteral">&quot;FollowPath&quot;</span>);</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ae8057c87fecad6ba6a9b87ae37019dda" name="ae8057c87fecad6ba6a9b87ae37019dda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8057c87fecad6ba6a9b87ae37019dda">&#9670;&#160;</a></span>PathFinish()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AIMove.PathFinish </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00086">86</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9fd27673d3ba6e2b80db46c7ea891558">aiLoop</a> == <span class="keyword">null</span>) <a class="code hl_variable" href="#a9fd27673d3ba6e2b80db46c7ea891558">aiLoop</a> = GetComponent&lt;EnemyAILoop&gt;();</div>
-<div class="line"><span class="lineno">   89</span>        <a class="code hl_variable" href="#a9fd27673d3ba6e2b80db46c7ea891558">aiLoop</a>.DamageCheck();</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-<div class="ttc" id="aclass_a_i_move_html_a9fd27673d3ba6e2b80db46c7ea891558"><div class="ttname"><a href="#a9fd27673d3ba6e2b80db46c7ea891558">AIMove.aiLoop</a></div><div class="ttdeci">EnemyAILoop aiLoop</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00023">AIMove.cs:23</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00053">53</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (pathSuccessful)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <a class="code hl_variable" href="#a960ac3ec5b931d0a2198ce8f391d888f">path</a> = newPath;</div>
+<div class="line"><span class="lineno">   58</span>            <a class="code hl_variable" href="#a616efbaff0e17cde19da418f56148926">targetIndex</a> = 0;</div>
+<div class="line"><span class="lineno">   59</span>            <a class="code hl_variable" href="#afd92778426337042f253f39c7e37c9aa">currentWaypoint</a> = <a class="code hl_variable" href="#a960ac3ec5b931d0a2198ce8f391d888f">path</a>[0];</div>
+<div class="line"><span class="lineno">   60</span>            <a class="code hl_variable" href="#aa6fe8e9ead7258263b5e2c60fb3ab6bd">onPath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="ttc" id="aclass_a_i_move_html_a616efbaff0e17cde19da418f56148926"><div class="ttname"><a href="#a616efbaff0e17cde19da418f56148926">AIMove.targetIndex</a></div><div class="ttdeci">int targetIndex</div><div class="ttdoc">Index value to track position on path.</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00021">AIMove.cs:21</a></div></div>
+<div class="ttc" id="aclass_a_i_move_html_a960ac3ec5b931d0a2198ce8f391d888f"><div class="ttname"><a href="#a960ac3ec5b931d0a2198ce8f391d888f">AIMove.path</a></div><div class="ttdeci">Vector3[] path</div><div class="ttdoc">Vector3 array to store path.</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00018">AIMove.cs:18</a></div></div>
+<div class="ttc" id="aclass_a_i_move_html_aa6fe8e9ead7258263b5e2c60fb3ab6bd"><div class="ttname"><a href="#aa6fe8e9ead7258263b5e2c60fb3ab6bd">AIMove.onPath</a></div><div class="ttdeci">bool onPath</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00027">AIMove.cs:27</a></div></div>
+<div class="ttc" id="aclass_a_i_move_html_afd92778426337042f253f39c7e37c9aa"><div class="ttname"><a href="#afd92778426337042f253f39c7e37c9aa">AIMove.currentWaypoint</a></div><div class="ttdeci">Vector3 currentWaypoint</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00023">AIMove.cs:23</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -287,10 +203,63 @@ Private Attributes</h2></td></tr>
 
 <p>Start method. </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00026">26</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        StartCoroutine(<span class="stringliteral">&quot;UpdatePathCheck&quot;</span>);</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00030">30</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        StartCoroutine(<span class="stringliteral">&quot;UpdatePathCheck&quot;</span>);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aad1e31136af4f99ab318c79cb70ca0bb" name="aad1e31136af4f99ab318c79cb70ca0bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad1e31136af4f99ab318c79cb70ca0bb">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AIMove.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00064">64</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#aa6fe8e9ead7258263b5e2c60fb3ab6bd">onPath</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aaf8f0583e205b321263546b9c0a424d9">target</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9fd27673d3ba6e2b80db46c7ea891558">aiLoop</a> == <span class="keyword">null</span>) <a class="code hl_variable" href="#a9fd27673d3ba6e2b80db46c7ea891558">aiLoop</a> = GetComponent&lt;EnemyAILoop&gt;();</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9fd27673d3ba6e2b80db46c7ea891558">aiLoop</a> != <span class="keyword">null</span>) <a class="code hl_variable" href="#a9fd27673d3ba6e2b80db46c7ea891558">aiLoop</a>.DamageCheck();</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (Vector3.Distance(<a class="code hl_variable" href="#afd92778426337042f253f39c7e37c9aa">currentWaypoint</a>, transform.position) &lt;= <a class="code hl_variable" href="#a0f12df81600c9d17517839732153c820">waypointCheckDistance</a>)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_variable" href="#a616efbaff0e17cde19da418f56148926">targetIndex</a>++;</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a616efbaff0e17cde19da418f56148926">targetIndex</a> &gt;= <a class="code hl_variable" href="#a960ac3ec5b931d0a2198ce8f391d888f">path</a>.Length)</div>
+<div class="line"><span class="lineno">   78</span>            {</div>
+<div class="line"><span class="lineno">   79</span>                <a class="code hl_variable" href="#aa6fe8e9ead7258263b5e2c60fb3ab6bd">onPath</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>            <a class="code hl_variable" href="#afd92778426337042f253f39c7e37c9aa">currentWaypoint</a> = <a class="code hl_variable" href="#a960ac3ec5b931d0a2198ce8f391d888f">path</a>[<a class="code hl_variable" href="#a616efbaff0e17cde19da418f56148926">targetIndex</a>];</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>        transform.position = Vector3.MoveTowards(transform.position, <a class="code hl_variable" href="#afd92778426337042f253f39c7e37c9aa">currentWaypoint</a>, <a class="code hl_variable" href="#a60c516bc88b050a65903a1586bb5ac49">stats</a>.MoveSpeed * (Time.deltaTime * 0.5f));</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="ttc" id="aclass_a_i_move_html_a0f12df81600c9d17517839732153c820"><div class="ttname"><a href="#a0f12df81600c9d17517839732153c820">AIMove.waypointCheckDistance</a></div><div class="ttdeci">float waypointCheckDistance</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00015">AIMove.cs:15</a></div></div>
+<div class="ttc" id="aclass_a_i_move_html_a60c516bc88b050a65903a1586bb5ac49"><div class="ttname"><a href="#a60c516bc88b050a65903a1586bb5ac49">AIMove.stats</a></div><div class="ttdeci">CharacterStats stats</div><div class="ttdoc">Stats for move speed.</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00012">AIMove.cs:12</a></div></div>
+<div class="ttc" id="aclass_a_i_move_html_a9fd27673d3ba6e2b80db46c7ea891558"><div class="ttname"><a href="#a9fd27673d3ba6e2b80db46c7ea891558">AIMove.aiLoop</a></div><div class="ttdeci">EnemyAILoop aiLoop</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00025">AIMove.cs:25</a></div></div>
+<div class="ttc" id="aclass_a_i_move_html_aaf8f0583e205b321263546b9c0a424d9"><div class="ttname"><a href="#aaf8f0583e205b321263546b9c0a424d9">AIMove.target</a></div><div class="ttdeci">Transform target</div><div class="ttdoc">Reference to a Transform to use as a pathfinding target.</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00008">AIMove.cs:8</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -318,23 +287,20 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Looping Coroutine to check if a new path is needed. Runs every X seconds. If target is not null and last known target position is not the target's current position, it finds a new path. </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00033">33</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aaf8f0583e205b321263546b9c0a424d9">target</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a94524b14f67d889a189b11d1402a4de3">lastKnownTargetPosition</a> != <a class="code hl_variable" href="#aaf8f0583e205b321263546b9c0a424d9">target</a>.position)</div>
-<div class="line"><span class="lineno">   38</span>            {</div>
-<div class="line"><span class="lineno">   39</span>                <a class="code hl_variable" href="#a94524b14f67d889a189b11d1402a4de3">lastKnownTargetPosition</a> = <a class="code hl_variable" href="#aaf8f0583e205b321263546b9c0a424d9">target</a>.position;</div>
-<div class="line"><span class="lineno">   40</span>                PathQueue.RequestPath(transform.position, <a class="code hl_variable" href="#aaf8f0583e205b321263546b9c0a424d9">target</a>.position, <a class="code hl_function" href="#a7a341e5023c2caf4a52ff714f95b92dd">OnPathFound</a>);</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span> </div>
-<div class="line"><span class="lineno">   44</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(0.5f);</div>
-<div class="line"><span class="lineno">   45</span>        StartCoroutine(<span class="stringliteral">&quot;UpdatePathCheck&quot;</span>);</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-<div class="ttc" id="aclass_a_i_move_html_a7a341e5023c2caf4a52ff714f95b92dd"><div class="ttname"><a href="#a7a341e5023c2caf4a52ff714f95b92dd">AIMove.OnPathFound</a></div><div class="ttdeci">void OnPathFound(Vector3[] newPath, bool pathSuccessful)</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00050">AIMove.cs:50</a></div></div>
-<div class="ttc" id="aclass_a_i_move_html_a94524b14f67d889a189b11d1402a4de3"><div class="ttname"><a href="#a94524b14f67d889a189b11d1402a4de3">AIMove.lastKnownTargetPosition</a></div><div class="ttdeci">Vector3 lastKnownTargetPosition</div><div class="ttdoc">Vector3 to track position of target and update path when it changes.</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00021">AIMove.cs:21</a></div></div>
-<div class="ttc" id="aclass_a_i_move_html_aaf8f0583e205b321263546b9c0a424d9"><div class="ttname"><a href="#aaf8f0583e205b321263546b9c0a424d9">AIMove.target</a></div><div class="ttdeci">Transform target</div><div class="ttdoc">Reference to a Transform to use as a pathfinding target.</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00008">AIMove.cs:8</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00037">37</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aaf8f0583e205b321263546b9c0a424d9">target</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                <a class="code hl_variable" href="#aa6fe8e9ead7258263b5e2c60fb3ab6bd">onPath</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   44</span>                PathQueue.RequestPath(transform.position, <a class="code hl_variable" href="#aaf8f0583e205b321263546b9c0a424d9">target</a>.position, <a class="code hl_function" href="#a7a341e5023c2caf4a52ff714f95b92dd">OnPathFound</a>);</div>
+<div class="line"><span class="lineno">   45</span>            }</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(1f);</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclass_a_i_move_html_a7a341e5023c2caf4a52ff714f95b92dd"><div class="ttname"><a href="#a7a341e5023c2caf4a52ff714f95b92dd">AIMove.OnPathFound</a></div><div class="ttdeci">void OnPathFound(Vector3[] newPath, bool pathSuccessful)</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00053">AIMove.cs:53</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -359,12 +325,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00023">23</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00025">25</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
 
 </div>
 </div>
-<a id="a94524b14f67d889a189b11d1402a4de3" name="a94524b14f67d889a189b11d1402a4de3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94524b14f67d889a189b11d1402a4de3">&#9670;&#160;</a></span>lastKnownTargetPosition</h2>
+<a id="afd92778426337042f253f39c7e37c9aa" name="afd92778426337042f253f39c7e37c9aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd92778426337042f253f39c7e37c9aa">&#9670;&#160;</a></span>currentWaypoint</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -373,7 +339,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vector3 AIMove.lastKnownTargetPosition = Vector3.zero</td>
+          <td class="memname">Vector3 AIMove.currentWaypoint</td>
         </tr>
       </table>
   </td>
@@ -383,9 +349,31 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Vector3 to track position of target and update path when it changes. </p>
+<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00023">23</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00021">21</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
+</div>
+</div>
+<a id="aa6fe8e9ead7258263b5e2c60fb3ab6bd" name="aa6fe8e9ead7258263b5e2c60fb3ab6bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6fe8e9ead7258263b5e2c60fb3ab6bd">&#9670;&#160;</a></span>onPath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AIMove.onPath = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00027">27</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
 
 </div>
 </div>
@@ -411,7 +399,7 @@ Private Attributes</h2></td></tr>
 
 <p>Vector3 array to store path. </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00015">15</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00018">18</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
 
 </div>
 </div>
@@ -481,7 +469,31 @@ Private Attributes</h2></td></tr>
 
 <p>Index value to track position on path. </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00018">18</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00021">21</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0f12df81600c9d17517839732153c820" name="a0f12df81600c9d17517839732153c820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f12df81600c9d17517839732153c820">&#9670;&#160;</a></span>waypointCheckDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float AIMove.waypointCheckDistance = 0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_i_move_8cs_source.html#l00015">15</a> of file <a class="el" href="_a_i_move_8cs_source.html">AIMove.cs</a>.</p>
 
 </div>
 </div>

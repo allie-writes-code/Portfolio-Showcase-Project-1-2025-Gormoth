@@ -90,7 +90,6 @@ $(function(){initNavTree('class_character_health.html','','class_character_healt
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -110,10 +109,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f028d211b0b943600799ff0a526af21" id="r_a1f028d211b0b943600799ff0a526af21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f028d211b0b943600799ff0a526af21">Kill</a> ()</td></tr>
 <tr class="memitem:a884e8c420ed89420a5bc9757aeb23766" id="r_a884e8c420ed89420a5bc9757aeb23766"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a884e8c420ed89420a5bc9757aeb23766">Hurt</a> (int amt)</td></tr>
 <tr class="memitem:a80889c5d34345d522a28d0be09442251" id="r_a80889c5d34345d522a28d0be09442251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80889c5d34345d522a28d0be09442251">Heal</a> (int amt)</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a5bc13bc8480d0fdc40fb2f0bcebe63e5" id="r_a5bc13bc8480d0fdc40fb2f0bcebe63e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_delegate_broadcaster.html">DelegateBroadcaster</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bc13bc8480d0fdc40fb2f0bcebe63e5">deathBroadcast</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -152,14 +147,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00072">72</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
-<div class="line"><span class="lineno">   74</span>        <a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> += amt;</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="#a7ddf08f99c5fbce556548feb9e3d9cbe">CurrentHealth</a> &gt; <a class="code hl_variable" href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">maxHealth</a>) { <a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> = <a class="code hl_variable" href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">maxHealth</a>; }</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00067">67</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> += amt;</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="#a7ddf08f99c5fbce556548feb9e3d9cbe">CurrentHealth</a> &gt; <a class="code hl_variable" href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">maxHealth</a>) { <a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> = <a class="code hl_variable" href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">maxHealth</a>; }</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
 <div class="ttc" id="aclass_character_health_html_a1aeab73ed24a091ec925f0852ddefb73"><div class="ttname"><a href="#a1aeab73ed24a091ec925f0852ddefb73">CharacterHealth.currentHealth</a></div><div class="ttdeci">int currentHealth</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00010">CharacterHealth.cs:10</a></div></div>
-<div class="ttc" id="aclass_character_health_html_a7ddf08f99c5fbce556548feb9e3d9cbe"><div class="ttname"><a href="#a7ddf08f99c5fbce556548feb9e3d9cbe">CharacterHealth.CurrentHealth</a></div><div class="ttdeci">int CurrentHealth</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00028">CharacterHealth.cs:29</a></div></div>
+<div class="ttc" id="aclass_character_health_html_a7ddf08f99c5fbce556548feb9e3d9cbe"><div class="ttname"><a href="#a7ddf08f99c5fbce556548feb9e3d9cbe">CharacterHealth.CurrentHealth</a></div><div class="ttdeci">int CurrentHealth</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00025">CharacterHealth.cs:26</a></div></div>
 <div class="ttc" id="aclass_character_health_html_abe0e72be8d4cdfc57bd2313ad28ab7c7"><div class="ttname"><a href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">CharacterHealth.maxHealth</a></div><div class="ttdeci">int maxHealth</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00009">CharacterHealth.cs:9</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -179,23 +174,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00056">56</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
-<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> -= amt;</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="#a7ddf08f99c5fbce556548feb9e3d9cbe">CurrentHealth</a> &lt;= 0) </div>
-<div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a5bc13bc8480d0fdc40fb2f0bcebe63e5">deathBroadcast</a> != <span class="keyword">null</span>) { <a class="code hl_variable" href="#a5bc13bc8480d0fdc40fb2f0bcebe63e5">deathBroadcast</a>.InvokeMe(); }</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a1f101c238f4f836f709c5ed0a24ca5df">myDeathLogic</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   65</span>            {</div>
-<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a1f101c238f4f836f709c5ed0a24ca5df">myDeathLogic</a>.DeathObject == <span class="keyword">null</span>) myDeathLogic.DeathObject = this.gameObject;</div>
-<div class="line"><span class="lineno">   67</span>                <a class="code hl_variable" href="#a1f101c238f4f836f709c5ed0a24ca5df">myDeathLogic</a>.Die();</div>
-<div class="line"><span class="lineno">   68</span>            }</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00053">53</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> -= amt;</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="#a7ddf08f99c5fbce556548feb9e3d9cbe">CurrentHealth</a> &lt;= 0) </div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a1f101c238f4f836f709c5ed0a24ca5df">myDeathLogic</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a1f101c238f4f836f709c5ed0a24ca5df">myDeathLogic</a>.DeathObject == <span class="keyword">null</span>) myDeathLogic.DeathObject = this.gameObject;</div>
+<div class="line"><span class="lineno">   62</span>                <a class="code hl_variable" href="#a1f101c238f4f836f709c5ed0a24ca5df">myDeathLogic</a>.Die();</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
 <div class="ttc" id="aclass_character_health_html_a1f101c238f4f836f709c5ed0a24ca5df"><div class="ttname"><a href="#a1f101c238f4f836f709c5ed0a24ca5df">CharacterHealth.myDeathLogic</a></div><div class="ttdeci">DeathLogic myDeathLogic</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00013">CharacterHealth.cs:13</a></div></div>
-<div class="ttc" id="aclass_character_health_html_a5bc13bc8480d0fdc40fb2f0bcebe63e5"><div class="ttname"><a href="#a5bc13bc8480d0fdc40fb2f0bcebe63e5">CharacterHealth.deathBroadcast</a></div><div class="ttdeci">DelegateBroadcaster deathBroadcast</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00021">CharacterHealth.cs:21</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -214,11 +206,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00051">51</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_function" href="#a884e8c420ed89420a5bc9757aeb23766">Hurt</a>(<a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a>);</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-<div class="ttc" id="aclass_character_health_html_a884e8c420ed89420a5bc9757aeb23766"><div class="ttname"><a href="#a884e8c420ed89420a5bc9757aeb23766">CharacterHealth.Hurt</a></div><div class="ttdeci">void Hurt(int amt)</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00056">CharacterHealth.cs:56</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00048">48</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        <a class="code hl_function" href="#a884e8c420ed89420a5bc9757aeb23766">Hurt</a>(<a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a>);</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aclass_character_health_html_a884e8c420ed89420a5bc9757aeb23766"><div class="ttname"><a href="#a884e8c420ed89420a5bc9757aeb23766">CharacterHealth.Hurt</a></div><div class="ttdeci">void Hurt(int amt)</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00053">CharacterHealth.cs:53</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -245,10 +237,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00023">23</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">maxHealth</a> = <a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> = Mathf.RoundToInt(<a class="code hl_variable" href="#a50900b47338885e96d44c95b4c04d5bf">baseHealthStat</a>.Value);</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00020">20</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_variable" href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">maxHealth</a> = <a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> = <a class="code hl_variable" href="#a50900b47338885e96d44c95b4c04d5bf">baseHealthStat</a>.ValueInt;</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
 <div class="ttc" id="aclass_character_health_html_a50900b47338885e96d44c95b4c04d5bf"><div class="ttname"><a href="#a50900b47338885e96d44c95b4c04d5bf">CharacterHealth.baseHealthStat</a></div><div class="ttdeci">Stat baseHealthStat</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00007">CharacterHealth.cs:7</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -276,23 +268,23 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00033">33</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a62d85544ffe0913fb000caeb806b8bee">healthBarImage</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="#a0ae6fded0937e754b03aa0177fef4d76">healthBarCanvas</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> &lt; <a class="code hl_variable" href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">maxHealth</a>)</div>
-<div class="line"><span class="lineno">   38</span>            {</div>
-<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a0ae6fded0937e754b03aa0177fef4d76">healthBarCanvas</a>.gameObject.activeInHierarchy) <a class="code hl_variable" href="#a0ae6fded0937e754b03aa0177fef4d76">healthBarCanvas</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   40</span>                <span class="keywordtype">float</span> healthPercent = (float)<a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> / (<span class="keywordtype">float</span>)<a class="code hl_variable" href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">maxHealth</a>;</div>
-<div class="line"><span class="lineno">   41</span>                healthBarImage.fillAmount = healthPercent;</div>
-<div class="line"><span class="lineno">   42</span>            }</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   44</span>            {</div>
-<div class="line"><span class="lineno">   45</span>                healthBarImage.fillAmount = 1;</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a0ae6fded0937e754b03aa0177fef4d76">healthBarCanvas</a>.gameObject.activeInHierarchy) <a class="code hl_variable" href="#a0ae6fded0937e754b03aa0177fef4d76">healthBarCanvas</a>.gameObject.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   47</span>            }</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00030">30</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a62d85544ffe0913fb000caeb806b8bee">healthBarImage</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="#a0ae6fded0937e754b03aa0177fef4d76">healthBarCanvas</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> &lt; <a class="code hl_variable" href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">maxHealth</a>)</div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a0ae6fded0937e754b03aa0177fef4d76">healthBarCanvas</a>.gameObject.activeInHierarchy) <a class="code hl_variable" href="#a0ae6fded0937e754b03aa0177fef4d76">healthBarCanvas</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   37</span>                <span class="keywordtype">float</span> healthPercent = (float)<a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a> / (<span class="keywordtype">float</span>)<a class="code hl_variable" href="#abe0e72be8d4cdfc57bd2313ad28ab7c7">maxHealth</a>;</div>
+<div class="line"><span class="lineno">   38</span>                healthBarImage.fillAmount = healthPercent;</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                healthBarImage.fillAmount = 1;</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a0ae6fded0937e754b03aa0177fef4d76">healthBarCanvas</a>.gameObject.activeInHierarchy) <a class="code hl_variable" href="#a0ae6fded0937e754b03aa0177fef4d76">healthBarCanvas</a>.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
 <div class="ttc" id="aclass_character_health_html_a0ae6fded0937e754b03aa0177fef4d76"><div class="ttname"><a href="#a0ae6fded0937e754b03aa0177fef4d76">CharacterHealth.healthBarCanvas</a></div><div class="ttdeci">Canvas healthBarCanvas</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00018">CharacterHealth.cs:18</a></div></div>
 <div class="ttc" id="aclass_character_health_html_a62d85544ffe0913fb000caeb806b8bee"><div class="ttname"><a href="#a62d85544ffe0913fb000caeb806b8bee">CharacterHealth.healthBarImage</a></div><div class="ttdeci">Image healthBarImage</div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00016">CharacterHealth.cs:16</a></div></div>
 </div><!-- fragment -->
@@ -344,22 +336,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00010">10</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
-
-</div>
-</div>
-<a id="a5bc13bc8480d0fdc40fb2f0bcebe63e5" name="a5bc13bc8480d0fdc40fb2f0bcebe63e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bc13bc8480d0fdc40fb2f0bcebe63e5">&#9670;&#160;</a></span>deathBroadcast</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_delegate_broadcaster.html">DelegateBroadcaster</a> CharacterHealth.deathBroadcast</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00021">21</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
 
 </div>
 </div>
@@ -480,10 +456,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00028">28</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a>; }</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_character_health_8cs_source.html#l00025">25</a> of file <a class="el" href="_character_health_8cs_source.html">CharacterHealth.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a1aeab73ed24a091ec925f0852ddefb73">currentHealth</a>; }</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

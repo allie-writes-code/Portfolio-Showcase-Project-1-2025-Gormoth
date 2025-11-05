@@ -10,7 +10,7 @@ var class_resource_carry =
     [ "isPlayer", "class_resource_carry.html#aa16c559624fb478a6b272f38171ee71f", null ],
     [ "maxResourceItemColliders", "class_resource_carry.html#a9047cb0deecb4a3db4f6fcc4f763230a", null ],
     [ "numCollidersHit", "class_resource_carry.html#a0e8887b3035b1d9f2906c7ad37fb3aa7", null ],
-    [ "resourceCollectRadius", "class_resource_carry.html#a672afbde8dc7be4a15c9cca43597c09a", null ],
+    [ "resourceCollectRadius", "class_resource_carry.html#a7868dd1f820b54db20f1dfa3d12fe889", null ],
     [ "resourceItemColliders", "class_resource_carry.html#a85d796a47bc711319e5f8598f471dadc", null ],
     [ "resourceItemsLayer", "class_resource_carry.html#a251dcfc11eaa43d06589b3514d2d8c83", null ],
     [ "resourceManager", "class_resource_carry.html#abf4e71f32d403ca621f93bebde8fb77f", null ],

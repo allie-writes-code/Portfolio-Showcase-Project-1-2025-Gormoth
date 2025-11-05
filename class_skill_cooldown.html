@@ -117,7 +117,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a04da534ceae685bd078c74bb352ec252" id="r_a04da534ceae685bd078c74bb352ec252"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> = 0</td></tr>
 <tr class="memdesc:a04da534ceae685bd078c74bb352ec252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base cooldown time.  <br /></td></tr>
 <tr class="memitem:ac4b98b8e426a2b081cffd7a142c2712d" id="r_ac4b98b8e426a2b081cffd7a142c2712d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stat.html">Stat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a></td></tr>
-<tr class="memdesc:ac4b98b8e426a2b081cffd7a142c2712d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_stat.html" title="ScriptableObject class for defining stats. Stat name is defined via object / file name.">Stat</a> reference. The stat used to adjust cooldown time - e.g. player cooldown speed.  <br /></td></tr>
+<tr class="memdesc:ac4b98b8e426a2b081cffd7a142c2712d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_stat.html">Stat</a> reference. The stat used to adjust cooldown time - e.g. player cooldown speed.  <br /></td></tr>
 <tr class="memitem:abb4761ec4f4c23eb07febb5c3613a655" id="r_abb4761ec4f4c23eb07febb5c3613a655"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a></td></tr>
 <tr class="memdesc:abb4761ec4f4c23eb07febb5c3613a655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Float, the current timer for the cooldown. Used to track the cooldown's progress.  <br /></td></tr>
 </table>
@@ -143,8 +143,8 @@ Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_skill_cooldown_8cs_source.html#l00032">32</a> of file <a class="el" href="_skill_cooldown_8cs_source.html">SkillCooldown.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
 <div class="line"><span class="lineno">   34</span>        <span class="keywordtype">bool</span> ready = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt;= (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.Value)))</div>
+<div class="line"><span class="lineno">   35</span>        <span class="comment">// Debug.Log(&quot;Cooldown check: &quot; + timer + &quot; checked against: &quot; + (baseAmt - (baseAmt * cooldownStat.ValueFloat)) + &quot; - from &quot; + this.name);</span></div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt;= (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.ValueFloat)))</div>
 <div class="line"><span class="lineno">   37</span>        {</div>
 <div class="line"><span class="lineno">   38</span>            ready = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   39</span>        }</div>
@@ -226,7 +226,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_stat.html" title="ScriptableObject class for defining stats. Stat name is defined via object / file name.">Stat</a> reference. The stat used to adjust cooldown time - e.g. player cooldown speed. </p>
+<p><a class="el" href="class_stat.html">Stat</a> reference. The stat used to adjust cooldown time - e.g. player cooldown speed. </p>
 
 <p class="definition">Definition at line <a class="el" href="_skill_cooldown_8cs_source.html#l00012">12</a> of file <a class="el" href="_skill_cooldown_8cs_source.html">SkillCooldown.cs</a>.</p>
 
@@ -285,7 +285,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   20</span>        <span class="keyword">set</span> </div>
 <div class="line"><span class="lineno">   21</span>        { </div>
 <div class="line"><span class="lineno">   22</span>            <a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = value;</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt; (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.Value))) <a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.Value));</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt; (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.ValueFloat))) <a class="code hl_variable" href="#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.ValueFloat));</div>
 <div class="line"><span class="lineno">   24</span>        }</div>
 <div class="line"><span class="lineno">   25</span>    }</div>
 </div><!-- fragment -->

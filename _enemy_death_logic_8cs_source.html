@@ -97,18 +97,25 @@ $(function(){initNavTree('_enemy_death_logic_8cs_source.html','',''); });
 <div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_enemy_death_logic.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_enemy_death_logic.html">EnemyDeathLogic</a> : <a class="code hl_class" href="class_death_logic.html">DeathLogic</a></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_enemy_death_logic.html#a74e04be505d9a03c19337a3e42406e75">    6</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_enemy_death_logic.html#a74e04be505d9a03c19337a3e42406e75">Die</a>()</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        Destroy(<a class="code hl_property" href="class_death_logic.html#a2d4c3a57661b9c4bb687bdeedf589274">DeathObject</a>);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    }</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    [SerializeField]</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_enemy_death_logic.html#a8f4c8008065e7de3f04dcea375318111">    7</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="class_delegate_broadcaster.html">DelegateBroadcaster</a> <a class="code hl_variable" href="class_enemy_death_logic.html#a8f4c8008065e7de3f04dcea375318111">enemyDiedBroadcast</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_enemy_death_logic.html#a74e04be505d9a03c19337a3e42406e75">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_enemy_death_logic.html#a74e04be505d9a03c19337a3e42406e75">Die</a>()</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        Debug.Log(<span class="stringliteral">&quot;Enemy died&quot;</span>);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_variable" href="class_enemy_death_logic.html#a8f4c8008065e7de3f04dcea375318111">enemyDiedBroadcast</a>.InvokeMe();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        Destroy(<a class="code hl_property" href="class_death_logic.html#a2d4c3a57661b9c4bb687bdeedf589274">DeathObject</a>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
 </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
 </div>
 <div class="ttc" id="aclass_death_logic_html"><div class="ttname"><a href="class_death_logic.html">DeathLogic</a></div><div class="ttdoc">Parent abstract class for handling death logic of objects with health.</div><div class="ttdef"><b>Definition</b> <a href="_death_logic_8cs_source.html#l00004">DeathLogic.cs:5</a></div></div>
 <div class="ttc" id="aclass_death_logic_html_a2d4c3a57661b9c4bb687bdeedf589274"><div class="ttname"><a href="class_death_logic.html#a2d4c3a57661b9c4bb687bdeedf589274">DeathLogic.DeathObject</a></div><div class="ttdeci">GameObject DeathObject</div><div class="ttdef"><b>Definition</b> <a href="_death_logic_8cs_source.html#l00008">DeathLogic.cs:8</a></div></div>
+<div class="ttc" id="aclass_delegate_broadcaster_html"><div class="ttname"><a href="class_delegate_broadcaster.html">DelegateBroadcaster</a></div><div class="ttdef"><b>Definition</b> <a href="_delegate_broadcaster_8cs_source.html#l00019">DelegateBroadcaster.cs:20</a></div></div>
 <div class="ttc" id="aclass_enemy_death_logic_html"><div class="ttname"><a href="class_enemy_death_logic.html">EnemyDeathLogic</a></div><div class="ttdef"><b>Definition</b> <a href="#l00004">EnemyDeathLogic.cs:5</a></div></div>
-<div class="ttc" id="aclass_enemy_death_logic_html_a74e04be505d9a03c19337a3e42406e75"><div class="ttname"><a href="class_enemy_death_logic.html#a74e04be505d9a03c19337a3e42406e75">EnemyDeathLogic.Die</a></div><div class="ttdeci">override void Die()</div><div class="ttdef"><b>Definition</b> <a href="#l00006">EnemyDeathLogic.cs:6</a></div></div>
+<div class="ttc" id="aclass_enemy_death_logic_html_a74e04be505d9a03c19337a3e42406e75"><div class="ttname"><a href="class_enemy_death_logic.html#a74e04be505d9a03c19337a3e42406e75">EnemyDeathLogic.Die</a></div><div class="ttdeci">override void Die()</div><div class="ttdef"><b>Definition</b> <a href="#l00009">EnemyDeathLogic.cs:9</a></div></div>
+<div class="ttc" id="aclass_enemy_death_logic_html_a8f4c8008065e7de3f04dcea375318111"><div class="ttname"><a href="class_enemy_death_logic.html#a8f4c8008065e7de3f04dcea375318111">EnemyDeathLogic.enemyDiedBroadcast</a></div><div class="ttdeci">DelegateBroadcaster enemyDiedBroadcast</div><div class="ttdef"><b>Definition</b> <a href="#l00007">EnemyDeathLogic.cs:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

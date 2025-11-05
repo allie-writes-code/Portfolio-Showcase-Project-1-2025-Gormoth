@@ -1,9 +1,11 @@
 var class_world_object_spawner =
 [
+    [ "GetClearPosWithDistance", "class_world_object_spawner.html#ab3f8be1337a6e4ed1a321ea6651ad5ad", null ],
     [ "LevelLoaded", "class_world_object_spawner.html#a201839ecd7b58e1f98741a724c8ead04", null ],
     [ "OnDisable", "class_world_object_spawner.html#ae3f2ff209284b3732c6fa23b1de30a07", null ],
     [ "OnEnable", "class_world_object_spawner.html#a3668db27a3b0f9e45d9642aebe59dbf8", null ],
     [ "ResourceDropperDied", "class_world_object_spawner.html#a69b4cab734488f3d9546686c7effd545", null ],
+    [ "SpawnInitialBuildings", "class_world_object_spawner.html#abe848c3ca94ce42c47b7ff5d2fdfc88c", null ],
     [ "SpawnInitialResourceDroppers", "class_world_object_spawner.html#aa6ee1df64e3bc765be3383d1979354c8", null ],
     [ "SpawnPlayer", "class_world_object_spawner.html#a559a352e1d9e5c040f363782c3fba4d4", null ],
     [ "grid", "class_world_object_spawner.html#a6989797216872c727bece32da01b04cb", null ],

@@ -206,8 +206,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   50</span> </div>
 <div class="line"><span class="lineno">   51</span>            <span class="keywordflow">while</span> (posFound == <span class="keyword">false</span>)</div>
 <div class="line"><span class="lineno">   52</span>            {</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordtype">int</span> x = Random.Range(<a class="code hl_variable" href="#a05b86249738affea689c95e131449e3e">grid</a>.GridMinX, <a class="code hl_variable" href="#a05b86249738affea689c95e131449e3e">grid</a>.GridMaxX + 1);</div>
-<div class="line"><span class="lineno">   54</span>                <span class="keywordtype">int</span> y = Random.Range(<a class="code hl_variable" href="#a05b86249738affea689c95e131449e3e">grid</a>.GridMinY, <a class="code hl_variable" href="#a05b86249738affea689c95e131449e3e">grid</a>.GridMaxY + 1);</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordtype">int</span> x = Random.Range(<a class="code hl_variable" href="#a05b86249738affea689c95e131449e3e">grid</a>.GridMinX + 25, <a class="code hl_variable" href="#a05b86249738affea689c95e131449e3e">grid</a>.GridMaxX - 24);</div>
+<div class="line"><span class="lineno">   54</span>                <span class="keywordtype">int</span> y = Random.Range(<a class="code hl_variable" href="#a05b86249738affea689c95e131449e3e">grid</a>.GridMinY + 25, <a class="code hl_variable" href="#a05b86249738affea689c95e131449e3e">grid</a>.GridMaxY - 24);</div>
 <div class="line"><span class="lineno">   55</span>                Vector3 wallPos = <span class="keyword">new</span> Vector3(x, 1, y);</div>
 <div class="line"><span class="lineno">   56</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a05b86249738affea689c95e131449e3e">grid</a>.HasNode(wallPos) &amp;&amp; <a class="code hl_variable" href="#a05b86249738affea689c95e131449e3e">grid</a>.IsNodeClear(wallPos))</div>
 <div class="line"><span class="lineno">   57</span>                {</div>
