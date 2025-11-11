@@ -1,6 +1,8 @@
 var hierarchy =
 [
+    [ "ArrayWrapper", "class_array_wrapper.html", null ],
     [ "Placeable.CostIngredient", "class_placeable_1_1_cost_ingredient.html", null ],
+    [ "GameResourceManager", "class_game_resource_manager.html", null ],
     [ "Heap< T >", "class_heap-1-g.html", null ],
     [ "IComparable", null, [
       [ "IHeapItem< T >", "interface_i_heap_item-1-g.html", [
@@ -18,6 +20,7 @@ var hierarchy =
       [ "PathManager", "class_path_manager.html", null ],
       [ "PathQueue", "class_path_queue.html", null ],
       [ "PlaceableBehaviour", "class_placeable_behaviour.html", null ],
+      [ "PlacementDisplayBehaviour", "class_placement_display_behaviour.html", null ],
       [ "PlayerControls", "class_player_controls.html", null ],
       [ "PlayerPlaceableInteract", "class_player_placeable_interact.html", null ],
       [ "PlayerUseSkills", "class_player_use_skills.html", null ],
@@ -60,5 +63,6 @@ var hierarchy =
       [ "WorldObjectSpawner", "class_world_object_spawner.html", null ],
       [ "WorldSpawnData", "class_world_spawn_data.html", null ]
     ] ],
+    [ "StatGameResource", "class_stat_game_resource.html", null ],
     [ "WorldGridManager.WorldGridNode", "class_world_grid_manager_1_1_world_grid_node.html", null ]
 ];

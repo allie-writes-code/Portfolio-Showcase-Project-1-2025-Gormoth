@@ -89,6 +89,7 @@ $(function(){initNavTree('class_player_placeable_interact.html','','class_player
 
 <div class="header">
   <div class="summary">
+<a href="#properties">Properties</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_player_placeable_interact-members.html">List of all members</a>  </div>
@@ -102,6 +103,12 @@ Inheritance diagram for PlayerPlaceableInteract:</div>
   <img src="class_player_placeable_interact.png" alt=""/>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:ab3b8ed609ebae2f9dbec3fe450644e32" id="r_ab3b8ed609ebae2f9dbec3fe450644e32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3b8ed609ebae2f9dbec3fe450644e32">IsCarryingPlaceable</a><code> [get]</code></td></tr>
+<tr class="memitem:a6b7dc711291479a8e577f3230d7ff046" id="r_a6b7dc711291479a8e577f3230d7ff046"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b7dc711291479a8e577f3230d7ff046">IsPlacing</a><code> [get]</code></td></tr>
+<tr class="memitem:af77ca741e59c3885e731740aa70f13d0" id="r_af77ca741e59c3885e731740aa70f13d0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af77ca741e59c3885e731740aa70f13d0">PlacementPercentage</a><code> [get]</code></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a1898e622753fa22fb1cdf8641927f406" id="r_a1898e622753fa22fb1cdf8641927f406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1898e622753fa22fb1cdf8641927f406">OnTriggerEnter</a> (Collider other)</td></tr>
@@ -111,6 +118,7 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a13d4cb43b2886b39804ac0b50ef9d790" id="r_a13d4cb43b2886b39804ac0b50ef9d790"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13d4cb43b2886b39804ac0b50ef9d790">isCarryingPlaceable</a> = false</td></tr>
+<tr class="memitem:a9a6999f07ef7fdf013ba2fe04183a486" id="r_a9a6999f07ef7fdf013ba2fe04183a486"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a6999f07ef7fdf013ba2fe04183a486">isPlacing</a> = false</td></tr>
 <tr class="memitem:a130d9adb1a56677e955c88ec2b43b513" id="r_a130d9adb1a56677e955c88ec2b43b513"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a130d9adb1a56677e955c88ec2b43b513">lastStoppedPosition</a></td></tr>
 <tr class="memitem:ad16b924429217f51bb7a76fcdd14e940" id="r_ad16b924429217f51bb7a76fcdd14e940"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad16b924429217f51bb7a76fcdd14e940">currentStoppedTime</a></td></tr>
 <tr class="memitem:abb299907ac3bd952051d29aa4a012904" id="r_abb299907ac3bd952051d29aa4a012904"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stat.html">Stat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb299907ac3bd952051d29aa4a012904">placementTime</a></td></tr>
@@ -144,13 +152,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00054">54</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_variable" href="#ac2aef211718ca191cf2a081dc0aa5765">heldObject</a>.GetComponent&lt;PlaceableBehaviour&gt;().PlaceMe();</div>
-<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="#a13d4cb43b2886b39804ac0b50ef9d790">isCarryingPlaceable</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00062">62</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_variable" href="#ac2aef211718ca191cf2a081dc0aa5765">heldObject</a>.GetComponent&lt;PlaceableBehaviour&gt;().PlaceMe();</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_variable" href="#a13d4cb43b2886b39804ac0b50ef9d790">isCarryingPlaceable</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="#a9a6999f07ef7fdf013ba2fe04183a486">isPlacing</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
 <div class="ttc" id="aclass_player_placeable_interact_html_a13d4cb43b2886b39804ac0b50ef9d790"><div class="ttname"><a href="#a13d4cb43b2886b39804ac0b50ef9d790">PlayerPlaceableInteract.isCarryingPlaceable</a></div><div class="ttdeci">bool isCarryingPlaceable</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00006">PlayerPlaceableInteract.cs:6</a></div></div>
-<div class="ttc" id="aclass_player_placeable_interact_html_ac2aef211718ca191cf2a081dc0aa5765"><div class="ttname"><a href="#ac2aef211718ca191cf2a081dc0aa5765">PlayerPlaceableInteract.heldObject</a></div><div class="ttdeci">GameObject heldObject</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00014">PlayerPlaceableInteract.cs:14</a></div></div>
+<div class="ttc" id="aclass_player_placeable_interact_html_a9a6999f07ef7fdf013ba2fe04183a486"><div class="ttname"><a href="#a9a6999f07ef7fdf013ba2fe04183a486">PlayerPlaceableInteract.isPlacing</a></div><div class="ttdeci">bool isPlacing</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00007">PlayerPlaceableInteract.cs:7</a></div></div>
+<div class="ttc" id="aclass_player_placeable_interact_html_ac2aef211718ca191cf2a081dc0aa5765"><div class="ttname"><a href="#ac2aef211718ca191cf2a081dc0aa5765">PlayerPlaceableInteract.heldObject</a></div><div class="ttdeci">GameObject heldObject</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00020">PlayerPlaceableInteract.cs:20</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -177,16 +187,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00019">19</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (other.gameObject.tag == <span class="stringliteral">&quot;Placeable&quot;</span> &amp;&amp; !<a class="code hl_variable" href="#a13d4cb43b2886b39804ac0b50ef9d790">isCarryingPlaceable</a>)</div>
-<div class="line"><span class="lineno">   22</span>        {</div>
-<div class="line"><span class="lineno">   23</span>            <a class="code hl_variable" href="#a13d4cb43b2886b39804ac0b50ef9d790">isCarryingPlaceable</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   24</span>            <a class="code hl_variable" href="#ac2aef211718ca191cf2a081dc0aa5765">heldObject</a> = other.gameObject;</div>
-<div class="line"><span class="lineno">   25</span>            <a class="code hl_variable" href="#ac2aef211718ca191cf2a081dc0aa5765">heldObject</a>.GetComponent&lt;PlaceableBehaviour&gt;().UpdateHolder(this.gameObject);</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>        </div>
-<div class="line"><span class="lineno">   28</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00025">25</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (other.gameObject.tag == <span class="stringliteral">&quot;Placeable&quot;</span> &amp;&amp; !<a class="code hl_variable" href="#a13d4cb43b2886b39804ac0b50ef9d790">isCarryingPlaceable</a>)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <a class="code hl_variable" href="#a13d4cb43b2886b39804ac0b50ef9d790">isCarryingPlaceable</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_variable" href="#ac2aef211718ca191cf2a081dc0aa5765">heldObject</a> = other.gameObject;</div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_variable" href="#ac2aef211718ca191cf2a081dc0aa5765">heldObject</a>.GetComponent&lt;PlaceableBehaviour&gt;().UpdateHolder(this.gameObject);</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        </div>
+<div class="line"><span class="lineno">   34</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -213,34 +223,36 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00030">30</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a13d4cb43b2886b39804ac0b50ef9d790">isCarryingPlaceable</a>)</div>
-<div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a130d9adb1a56677e955c88ec2b43b513">lastStoppedPosition</a> != transform.position)</div>
-<div class="line"><span class="lineno">   35</span>            {</div>
-<div class="line"><span class="lineno">   36</span>                <a class="code hl_variable" href="#a130d9adb1a56677e955c88ec2b43b513">lastStoppedPosition</a> = transform.position;</div>
-<div class="line"><span class="lineno">   37</span>                <a class="code hl_variable" href="#ad16b924429217f51bb7a76fcdd14e940">currentStoppedTime</a> = 0;</div>
-<div class="line"><span class="lineno">   38</span>            }</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   40</span>            {</div>
-<div class="line"><span class="lineno">   41</span>                <a class="code hl_variable" href="#ad16b924429217f51bb7a76fcdd14e940">currentStoppedTime</a> += Time.deltaTime;</div>
-<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad16b924429217f51bb7a76fcdd14e940">currentStoppedTime</a> &gt;= <a class="code hl_variable" href="#abb299907ac3bd952051d29aa4a012904">placementTime</a>.ValueFloat)</div>
-<div class="line"><span class="lineno">   43</span>                {</div>
-<div class="line"><span class="lineno">   44</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2e9fba649167087dbfcda4b2a340716f">grid</a>.IsNodeClear(transform.position))</div>
-<div class="line"><span class="lineno">   45</span>                    {</div>
-<div class="line"><span class="lineno">   46</span>                        <a class="code hl_function" href="#a7f4b323e5df1c464840ec58e4f7056e9">BuildPlaceable</a>();</div>
-<div class="line"><span class="lineno">   47</span>                    }</div>
-<div class="line"><span class="lineno">   48</span>                }</div>
-<div class="line"><span class="lineno">   49</span>            }</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>        }</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-<div class="ttc" id="aclass_player_placeable_interact_html_a130d9adb1a56677e955c88ec2b43b513"><div class="ttname"><a href="#a130d9adb1a56677e955c88ec2b43b513">PlayerPlaceableInteract.lastStoppedPosition</a></div><div class="ttdeci">Vector3 lastStoppedPosition</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00008">PlayerPlaceableInteract.cs:8</a></div></div>
-<div class="ttc" id="aclass_player_placeable_interact_html_a2e9fba649167087dbfcda4b2a340716f"><div class="ttname"><a href="#a2e9fba649167087dbfcda4b2a340716f">PlayerPlaceableInteract.grid</a></div><div class="ttdeci">WorldGridManager grid</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00017">PlayerPlaceableInteract.cs:17</a></div></div>
-<div class="ttc" id="aclass_player_placeable_interact_html_a7f4b323e5df1c464840ec58e4f7056e9"><div class="ttname"><a href="#a7f4b323e5df1c464840ec58e4f7056e9">PlayerPlaceableInteract.BuildPlaceable</a></div><div class="ttdeci">void BuildPlaceable()</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00054">PlayerPlaceableInteract.cs:54</a></div></div>
-<div class="ttc" id="aclass_player_placeable_interact_html_abb299907ac3bd952051d29aa4a012904"><div class="ttname"><a href="#abb299907ac3bd952051d29aa4a012904">PlayerPlaceableInteract.placementTime</a></div><div class="ttdeci">Stat placementTime</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00012">PlayerPlaceableInteract.cs:12</a></div></div>
-<div class="ttc" id="aclass_player_placeable_interact_html_ad16b924429217f51bb7a76fcdd14e940"><div class="ttname"><a href="#ad16b924429217f51bb7a76fcdd14e940">PlayerPlaceableInteract.currentStoppedTime</a></div><div class="ttdeci">float currentStoppedTime</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00009">PlayerPlaceableInteract.cs:9</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00036">36</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a13d4cb43b2886b39804ac0b50ef9d790">isCarryingPlaceable</a>)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a130d9adb1a56677e955c88ec2b43b513">lastStoppedPosition</a> != transform.position)</div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9a6999f07ef7fdf013ba2fe04183a486">isPlacing</a>) <a class="code hl_variable" href="#a9a6999f07ef7fdf013ba2fe04183a486">isPlacing</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   43</span>                <a class="code hl_variable" href="#a130d9adb1a56677e955c88ec2b43b513">lastStoppedPosition</a> = transform.position;</div>
+<div class="line"><span class="lineno">   44</span>                <a class="code hl_variable" href="#ad16b924429217f51bb7a76fcdd14e940">currentStoppedTime</a> = 0;</div>
+<div class="line"><span class="lineno">   45</span>            }</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a9a6999f07ef7fdf013ba2fe04183a486">isPlacing</a>) <a class="code hl_variable" href="#a9a6999f07ef7fdf013ba2fe04183a486">isPlacing</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   49</span>                <a class="code hl_variable" href="#ad16b924429217f51bb7a76fcdd14e940">currentStoppedTime</a> += Time.deltaTime;</div>
+<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad16b924429217f51bb7a76fcdd14e940">currentStoppedTime</a> &gt;= <a class="code hl_variable" href="#abb299907ac3bd952051d29aa4a012904">placementTime</a>.ValueFloat)</div>
+<div class="line"><span class="lineno">   51</span>                {</div>
+<div class="line"><span class="lineno">   52</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2e9fba649167087dbfcda4b2a340716f">grid</a>.IsNodeClear(transform.position))</div>
+<div class="line"><span class="lineno">   53</span>                    {</div>
+<div class="line"><span class="lineno">   54</span>                        <a class="code hl_function" href="#a7f4b323e5df1c464840ec58e4f7056e9">BuildPlaceable</a>();</div>
+<div class="line"><span class="lineno">   55</span>                    }</div>
+<div class="line"><span class="lineno">   56</span>                }</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclass_player_placeable_interact_html_a130d9adb1a56677e955c88ec2b43b513"><div class="ttname"><a href="#a130d9adb1a56677e955c88ec2b43b513">PlayerPlaceableInteract.lastStoppedPosition</a></div><div class="ttdeci">Vector3 lastStoppedPosition</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00012">PlayerPlaceableInteract.cs:12</a></div></div>
+<div class="ttc" id="aclass_player_placeable_interact_html_a2e9fba649167087dbfcda4b2a340716f"><div class="ttname"><a href="#a2e9fba649167087dbfcda4b2a340716f">PlayerPlaceableInteract.grid</a></div><div class="ttdeci">WorldGridManager grid</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00023">PlayerPlaceableInteract.cs:23</a></div></div>
+<div class="ttc" id="aclass_player_placeable_interact_html_a7f4b323e5df1c464840ec58e4f7056e9"><div class="ttname"><a href="#a7f4b323e5df1c464840ec58e4f7056e9">PlayerPlaceableInteract.BuildPlaceable</a></div><div class="ttdeci">void BuildPlaceable()</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00062">PlayerPlaceableInteract.cs:62</a></div></div>
+<div class="ttc" id="aclass_player_placeable_interact_html_abb299907ac3bd952051d29aa4a012904"><div class="ttname"><a href="#abb299907ac3bd952051d29aa4a012904">PlayerPlaceableInteract.placementTime</a></div><div class="ttdeci">Stat placementTime</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00016">PlayerPlaceableInteract.cs:16</a></div></div>
+<div class="ttc" id="aclass_player_placeable_interact_html_ad16b924429217f51bb7a76fcdd14e940"><div class="ttname"><a href="#ad16b924429217f51bb7a76fcdd14e940">PlayerPlaceableInteract.currentStoppedTime</a></div><div class="ttdeci">float currentStoppedTime</div><div class="ttdef"><b>Definition</b> <a href="_player_placeable_interact_8cs_source.html#l00013">PlayerPlaceableInteract.cs:13</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -265,7 +277,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00009">9</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00013">13</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -289,7 +301,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00017">17</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00023">23</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -313,7 +325,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00014">14</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00020">20</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -341,6 +353,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9a6999f07ef7fdf013ba2fe04183a486" name="a9a6999f07ef7fdf013ba2fe04183a486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6999f07ef7fdf013ba2fe04183a486">&#9670;&#160;</a></span>isPlacing</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerPlaceableInteract.isPlacing = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00007">7</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+
+</div>
+</div>
 <a id="a130d9adb1a56677e955c88ec2b43b513" name="a130d9adb1a56677e955c88ec2b43b513"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a130d9adb1a56677e955c88ec2b43b513">&#9670;&#160;</a></span>lastStoppedPosition</h2>
 
@@ -361,7 +397,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00008">8</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00012">12</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
 
 </div>
 </div>
@@ -385,8 +421,84 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00012">12</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00016">16</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
 
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
+<a id="ab3b8ed609ebae2f9dbec3fe450644e32" name="ab3b8ed609ebae2f9dbec3fe450644e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b8ed609ebae2f9dbec3fe450644e32">&#9670;&#160;</a></span>IsCarryingPlaceable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerPlaceableInteract.IsCarryingPlaceable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00009">9</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>{ <span class="keyword">get</span>  { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a13d4cb43b2886b39804ac0b50ef9d790">isCarryingPlaceable</a>; } }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6b7dc711291479a8e577f3230d7ff046" name="a6b7dc711291479a8e577f3230d7ff046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7dc711291479a8e577f3230d7ff046">&#9670;&#160;</a></span>IsPlacing</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerPlaceableInteract.IsPlacing</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00010">10</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{ <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9a6999f07ef7fdf013ba2fe04183a486">isPlacing</a>; } }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af77ca741e59c3885e731740aa70f13d0" name="af77ca741e59c3885e731740aa70f13d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77ca741e59c3885e731740aa70f13d0">&#9670;&#160;</a></span>PlacementPercentage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerPlaceableInteract.PlacementPercentage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_placeable_interact_8cs_source.html#l00018">18</a> of file <a class="el" href="_player_placeable_interact_8cs_source.html">PlayerPlaceableInteract.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span> { <span class="keywordflow">return</span> (<a class="code hl_variable" href="#ad16b924429217f51bb7a76fcdd14e940">currentStoppedTime</a> / <a class="code hl_variable" href="#abb299907ac3bd952051d29aa4a012904">placementTime</a>.ValueFloat); } }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

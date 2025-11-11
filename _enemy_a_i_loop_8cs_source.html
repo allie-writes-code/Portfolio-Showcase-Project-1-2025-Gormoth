@@ -171,38 +171,42 @@ $(function(){initNavTree('_enemy_a_i_loop_8cs_source.html','',''); });
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            aiMove.target = <a class="code hl_variable" href="class_enemy_a_i_loop.html#a9057d851eab2ab82120498b36515d050">core</a>.transform;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_function" href="class_enemy_a_i_loop.html#a34c219efde5c851607ea755e590d77bf">DamageCheck</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
 </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_enemy_a_i_loop.html#a1b7af9e23ec9846428f8947bbe56dcbc">   76</a></span>    <span class="keyword">private</span> IEnumerator <a class="code hl_function" href="class_enemy_a_i_loop.html#a1b7af9e23ec9846428f8947bbe56dcbc">PlayerNearCheck</a>()</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">if</span> (Physics.CheckSphere(transform.position, <a class="code hl_variable" href="class_enemy_a_i_loop.html#ac6df898af2c90d7c076f3cc3c64288f4">playerDistanceCheckRadius</a>, <a class="code hl_variable" href="class_enemy_a_i_loop.html#a268faedaddf955ad88bfe68d4a58ecdd">playerLayer</a>))</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            aiMove.target = <a class="code hl_variable" href="class_enemy_a_i_loop.html#acd078390f7f46acc8dffb2b6ebf9f4c6">player</a>.transform;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_enemy_a_i_loop.html#a1b7af9e23ec9846428f8947bbe56dcbc">   80</a></span>    <span class="keyword">private</span> IEnumerator <a class="code hl_function" href="class_enemy_a_i_loop.html#a1b7af9e23ec9846428f8947bbe56dcbc">PlayerNearCheck</a>()</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span> (Physics.CheckSphere(transform.position, <a class="code hl_variable" href="class_enemy_a_i_loop.html#ac6df898af2c90d7c076f3cc3c64288f4">playerDistanceCheckRadius</a>, <a class="code hl_variable" href="class_enemy_a_i_loop.html#a268faedaddf955ad88bfe68d4a58ecdd">playerLayer</a>))</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            aiMove.target = <a class="code hl_variable" href="class_enemy_a_i_loop.html#a9057d851eab2ab82120498b36515d050">core</a>.transform;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            aiMove.target = <a class="code hl_variable" href="class_enemy_a_i_loop.html#acd078390f7f46acc8dffb2b6ebf9f4c6">player</a>.transform;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(Random.Range(1, 3));</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        StartCoroutine(<span class="stringliteral">&quot;PlayerNearCheck&quot;</span>);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
-</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            aiMove.target = <a class="code hl_variable" href="class_enemy_a_i_loop.html#a9057d851eab2ab82120498b36515d050">core</a>.transform;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_enemy_a_i_loop.html#a782ffd805ad2bf485de557cc17b4b6f3">   91</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_enemy_a_i_loop.html#a782ffd805ad2bf485de557cc17b4b6f3">OnTriggerEnter</a>(Collider other)</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span> (other.gameObject.tag == <span class="stringliteral">&quot;Projectile&quot;</span>)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <a class="code hl_class" href="class_simple_projectile_behaviour.html">SimpleProjectileBehaviour</a> behaviour = other.gameObject.GetComponent&lt;<a class="code hl_class" href="class_simple_projectile_behaviour.html">SimpleProjectileBehaviour</a>&gt;();</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <a class="code hl_variable" href="class_enemy_a_i_loop.html#a501ef1ca2a34642d168a809a897712df">myHealth</a>.Hurt(Mathf.RoundToInt(behaviour.<a class="code hl_property" href="class_simple_projectile_behaviour.html#aac47e979614cd10997ab73febaf6c223">Damage</a>));</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            Destroy(other.gameObject);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(Random.Range(1, 3));</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        StartCoroutine(<span class="stringliteral">&quot;PlayerNearCheck&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
 </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_enemy_a_i_loop.html#a782ffd805ad2bf485de557cc17b4b6f3">   95</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_enemy_a_i_loop.html#a782ffd805ad2bf485de557cc17b4b6f3">OnTriggerEnter</a>(Collider other)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">if</span> (other.gameObject.tag == <span class="stringliteral">&quot;Projectile&quot;</span>)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <a class="code hl_class" href="class_simple_projectile_behaviour.html">SimpleProjectileBehaviour</a> behaviour = other.gameObject.GetComponent&lt;<a class="code hl_class" href="class_simple_projectile_behaviour.html">SimpleProjectileBehaviour</a>&gt;();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <a class="code hl_variable" href="class_enemy_a_i_loop.html#a501ef1ca2a34642d168a809a897712df">myHealth</a>.Hurt(Mathf.RoundToInt(behaviour.<a class="code hl_property" href="class_simple_projectile_behaviour.html#aac47e979614cd10997ab73febaf6c223">Damage</a>));</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            Destroy(other.gameObject);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
 </div>
 <div class="ttc" id="aclass_a_i_move_html"><div class="ttname"><a href="class_a_i_move.html">AIMove</a></div><div class="ttdoc">Move AI for non player characters.</div><div class="ttdef"><b>Definition</b> <a href="_a_i_move_8cs_source.html#l00005">AIMove.cs:6</a></div></div>
 <div class="ttc" id="aclass_character_health_html"><div class="ttname"><a href="class_character_health.html">CharacterHealth</a></div><div class="ttdef"><b>Definition</b> <a href="_character_health_8cs_source.html#l00004">CharacterHealth.cs:5</a></div></div>
@@ -210,12 +214,12 @@ $(function(){initNavTree('_enemy_a_i_loop_8cs_source.html','',''); });
 <div class="ttc" id="aclass_enemy_a_i_loop_html"><div class="ttname"><a href="class_enemy_a_i_loop.html">EnemyAILoop</a></div><div class="ttdoc">MonoBehaviour class to define the main AI loop for enemies.</div><div class="ttdef"><b>Definition</b> <a href="#l00006">EnemyAILoop.cs:7</a></div></div>
 <div class="ttc" id="aclass_enemy_a_i_loop_html_a04f21a6f6b2f4032217c6a7a2d8fd669"><div class="ttname"><a href="class_enemy_a_i_loop.html#a04f21a6f6b2f4032217c6a7a2d8fd669">EnemyAILoop.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition</b> <a href="#l00068">EnemyAILoop.cs:68</a></div></div>
 <div class="ttc" id="aclass_enemy_a_i_loop_html_a0589a13b4ce74a2ee0ef4bfce155bb7a"><div class="ttname"><a href="class_enemy_a_i_loop.html#a0589a13b4ce74a2ee0ef4bfce155bb7a">EnemyAILoop.stats</a></div><div class="ttdeci">CharacterStats stats</div><div class="ttdef"><b>Definition</b> <a href="#l00022">EnemyAILoop.cs:22</a></div></div>
-<div class="ttc" id="aclass_enemy_a_i_loop_html_a1b7af9e23ec9846428f8947bbe56dcbc"><div class="ttname"><a href="class_enemy_a_i_loop.html#a1b7af9e23ec9846428f8947bbe56dcbc">EnemyAILoop.PlayerNearCheck</a></div><div class="ttdeci">IEnumerator PlayerNearCheck()</div><div class="ttdef"><b>Definition</b> <a href="#l00076">EnemyAILoop.cs:76</a></div></div>
+<div class="ttc" id="aclass_enemy_a_i_loop_html_a1b7af9e23ec9846428f8947bbe56dcbc"><div class="ttname"><a href="class_enemy_a_i_loop.html#a1b7af9e23ec9846428f8947bbe56dcbc">EnemyAILoop.PlayerNearCheck</a></div><div class="ttdeci">IEnumerator PlayerNearCheck()</div><div class="ttdef"><b>Definition</b> <a href="#l00080">EnemyAILoop.cs:80</a></div></div>
 <div class="ttc" id="aclass_enemy_a_i_loop_html_a268faedaddf955ad88bfe68d4a58ecdd"><div class="ttname"><a href="class_enemy_a_i_loop.html#a268faedaddf955ad88bfe68d4a58ecdd">EnemyAILoop.playerLayer</a></div><div class="ttdeci">LayerMask playerLayer</div><div class="ttdef"><b>Definition</b> <a href="#l00019">EnemyAILoop.cs:19</a></div></div>
 <div class="ttc" id="aclass_enemy_a_i_loop_html_a34c219efde5c851607ea755e590d77bf"><div class="ttname"><a href="class_enemy_a_i_loop.html#a34c219efde5c851607ea755e590d77bf">EnemyAILoop.DamageCheck</a></div><div class="ttdeci">void DamageCheck()</div><div class="ttdef"><b>Definition</b> <a href="#l00037">EnemyAILoop.cs:37</a></div></div>
 <div class="ttc" id="aclass_enemy_a_i_loop_html_a501ef1ca2a34642d168a809a897712df"><div class="ttname"><a href="class_enemy_a_i_loop.html#a501ef1ca2a34642d168a809a897712df">EnemyAILoop.myHealth</a></div><div class="ttdeci">CharacterHealth myHealth</div><div class="ttdef"><b>Definition</b> <a href="#l00024">EnemyAILoop.cs:24</a></div></div>
 <div class="ttc" id="aclass_enemy_a_i_loop_html_a5bb3c92a8582286b77712090e79284db"><div class="ttname"><a href="class_enemy_a_i_loop.html#a5bb3c92a8582286b77712090e79284db">EnemyAILoop.attackRange</a></div><div class="ttdeci">float attackRange</div><div class="ttdef"><b>Definition</b> <a href="#l00016">EnemyAILoop.cs:16</a></div></div>
-<div class="ttc" id="aclass_enemy_a_i_loop_html_a782ffd805ad2bf485de557cc17b4b6f3"><div class="ttname"><a href="class_enemy_a_i_loop.html#a782ffd805ad2bf485de557cc17b4b6f3">EnemyAILoop.OnTriggerEnter</a></div><div class="ttdeci">void OnTriggerEnter(Collider other)</div><div class="ttdef"><b>Definition</b> <a href="#l00091">EnemyAILoop.cs:91</a></div></div>
+<div class="ttc" id="aclass_enemy_a_i_loop_html_a782ffd805ad2bf485de557cc17b4b6f3"><div class="ttname"><a href="class_enemy_a_i_loop.html#a782ffd805ad2bf485de557cc17b4b6f3">EnemyAILoop.OnTriggerEnter</a></div><div class="ttdeci">void OnTriggerEnter(Collider other)</div><div class="ttdef"><b>Definition</b> <a href="#l00095">EnemyAILoop.cs:95</a></div></div>
 <div class="ttc" id="aclass_enemy_a_i_loop_html_a8950660e882ccd72cf73d4b63e68af9a"><div class="ttname"><a href="class_enemy_a_i_loop.html#a8950660e882ccd72cf73d4b63e68af9a">EnemyAILoop.DestroyThisEnemy</a></div><div class="ttdeci">void DestroyThisEnemy()</div><div class="ttdef"><b>Definition</b> <a href="#l00063">EnemyAILoop.cs:63</a></div></div>
 <div class="ttc" id="aclass_enemy_a_i_loop_html_a9057d851eab2ab82120498b36515d050"><div class="ttname"><a href="class_enemy_a_i_loop.html#a9057d851eab2ab82120498b36515d050">EnemyAILoop.core</a></div><div class="ttdeci">GameObject core</div><div class="ttdef"><b>Definition</b> <a href="#l00011">EnemyAILoop.cs:11</a></div></div>
 <div class="ttc" id="aclass_enemy_a_i_loop_html_ab0064616c6d3d0ed2557fd2275e135f3"><div class="ttname"><a href="class_enemy_a_i_loop.html#ab0064616c6d3d0ed2557fd2275e135f3">EnemyAILoop.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition</b> <a href="#l00026">EnemyAILoop.cs:26</a></div></div>

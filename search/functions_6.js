@@ -9,5 +9,7 @@ var searchData=
   ['getclearposwithdistance_6',['GetClearPosWithDistance',['../class_world_object_spawner.html#ab3f8be1337a6e4ed1a321ea6651ad5ad',1,'WorldObjectSpawner']]],
   ['getdistance_7',['GetDistance',['../class_path_manager.html#a227fb35e4ee1fb45663684078f4a88df',1,'PathManager']]],
   ['getneighbours_8',['GetNeighbours',['../class_node_grid.html#af14346b1742eac1d5ba01b99dbc187a5',1,'NodeGrid']]],
-  ['getnodefrompos_9',['GetNodeFromPos',['../class_world_grid_manager.html#aeafaba768b44dc986b5ce867d182961a',1,'WorldGridManager']]]
+  ['getnodefrompos_9',['GetNodeFromPos',['../class_world_grid_manager.html#aeafaba768b44dc986b5ce867d182961a',1,'WorldGridManager']]],
+  ['getstatsgameresourcesfromjson_10',['GetStatsGameResourcesFromJSON',['../class_game_resource_manager.html#a61bb8213e5e0817bae80ce3cc4e54b72',1,'GameResourceManager']]],
+  ['getwrapper_11',['GetWrapper',['../class_game_resource_manager.html#afa55b79bea3732aee9e4045aa2b86d3d',1,'GameResourceManager']]]
 ];

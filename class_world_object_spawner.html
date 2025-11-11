@@ -252,7 +252,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   33</span>    }</div>
 <div class="ttc" id="aclass_world_object_spawner_html_a201839ecd7b58e1f98741a724c8ead04"><div class="ttname"><a href="#a201839ecd7b58e1f98741a724c8ead04">WorldObjectSpawner.LevelLoaded</a></div><div class="ttdeci">void LevelLoaded()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00035">WorldObjectSpawner.cs:35</a></div></div>
 <div class="ttc" id="aclass_world_object_spawner_html_a51dce4cc9b23915439247c5ad272a5b7"><div class="ttname"><a href="#a51dce4cc9b23915439247c5ad272a5b7">WorldObjectSpawner.resourceDropperDiedListener</a></div><div class="ttdeci">DelegateListener resourceDropperDiedListener</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00012">WorldObjectSpawner.cs:12</a></div></div>
-<div class="ttc" id="aclass_world_object_spawner_html_a69b4cab734488f3d9546686c7effd545"><div class="ttname"><a href="#a69b4cab734488f3d9546686c7effd545">WorldObjectSpawner.ResourceDropperDied</a></div><div class="ttdeci">void ResourceDropperDied()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00127">WorldObjectSpawner.cs:127</a></div></div>
+<div class="ttc" id="aclass_world_object_spawner_html_a69b4cab734488f3d9546686c7effd545"><div class="ttname"><a href="#a69b4cab734488f3d9546686c7effd545">WorldObjectSpawner.ResourceDropperDied</a></div><div class="ttdeci">void ResourceDropperDied()</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00133">WorldObjectSpawner.cs:133</a></div></div>
 <div class="ttc" id="aclass_world_object_spawner_html_a8d2b0c2bbf821c8c2701b5d2b39d0503"><div class="ttname"><a href="#a8d2b0c2bbf821c8c2701b5d2b39d0503">WorldObjectSpawner.levelSpawnedListener</a></div><div class="ttdeci">DelegateListener levelSpawnedListener</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00009">WorldObjectSpawner.cs:9</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -311,10 +311,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00127">127</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
-<div class="line"><span class="lineno">  129</span>        <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.currentResourceDroppersTotal--;</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_world_object_spawner_8cs_source.html#l00133">133</a> of file <a class="el" href="_world_object_spawner_8cs_source.html">WorldObjectSpawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>    {</div>
+<div class="line"><span class="lineno">  135</span>        <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.currentResourceDroppersTotal--;</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
 <div class="ttc" id="aclass_world_object_spawner_html_a5e9a68541c74b6e3867238d472340fe2"><div class="ttname"><a href="#a5e9a68541c74b6e3867238d472340fe2">WorldObjectSpawner.spawnData</a></div><div class="ttdeci">WorldSpawnData spawnData</div><div class="ttdef"><b>Definition</b> <a href="_world_object_spawner_8cs_source.html#l00018">WorldObjectSpawner.cs:18</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -453,8 +453,14 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  121</span>        {</div>
 <div class="line"><span class="lineno">  122</span>            GameObject playerObject = Instantiate(<a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.playerPrefab, <span class="keyword">new</span> Vector3(0, 1, 0), <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.playerPrefab.transform.rotation);</div>
 <div class="line"><span class="lineno">  123</span>            playerObject.name = <span class="stringliteral">&quot;Player&quot;</span>;</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.placementDisplayPrefab != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                GameObject placementDisplay = Instantiate(<a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.placementDisplayPrefab, playerObject.transform.position, <a class="code hl_variable" href="#a5e9a68541c74b6e3867238d472340fe2">spawnData</a>.placementDisplayPrefab.transform.rotation);</div>
+<div class="line"><span class="lineno">  128</span>                placementDisplay.name = <span class="stringliteral">&quot;Placement Display UI&quot;</span>;</div>
+<div class="line"><span class="lineno">  129</span>            }</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

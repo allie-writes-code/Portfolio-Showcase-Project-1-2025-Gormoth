@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['heap_2d1_2dg_0',['Heap-1-g',['../class_heap-1-g.html',1,'']]]
+  ['gameresourcemanager_0',['GameResourceManager',['../class_game_resource_manager.html',1,'']]]
 ];

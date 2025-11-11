@@ -20,5 +20,6 @@ var searchData=
   ['worldsizex_17',['worldSizeX',['../class_world_spawn_data.html#a56e68e551fc68220d17e10bef6f9a613',1,'WorldSpawnData']]],
   ['worldsizey_18',['worldSizeY',['../class_world_spawn_data.html#a4a1ad0b0821f856220b966403552dd75',1,'WorldSpawnData']]],
   ['worldspawndata_19',['WorldSpawnData',['../class_world_spawn_data.html',1,'']]],
-  ['worldspawndata_2ecs_20',['WorldSpawnData.cs',['../_world_spawn_data_8cs.html',1,'']]]
+  ['worldspawndata_2ecs_20',['WorldSpawnData.cs',['../_world_spawn_data_8cs.html',1,'']]],
+  ['wrappertojsonstring_21',['WrapperToJSONString',['../class_game_resource_manager.html#af9049e8f6e104cee6521c42d79b97475',1,'GameResourceManager']]]
 ];

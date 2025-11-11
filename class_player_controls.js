@@ -3,6 +3,7 @@ var class_player_controls =
     [ "OnDrawGizmos", "class_player_controls.html#a64a6e82bb6a26af416ac1035dc1642f1", null ],
     [ "RemoveDiagonalSpeedBoost", "class_player_controls.html#a1c6e8af72404414ce61ba8b30b064049", null ],
     [ "Update", "class_player_controls.html#a5a15b038e7bb8eaf0653350fb0419bdd", null ],
+    [ "gameResourceManager", "class_player_controls.html#ae25f9a851d410017bd1dd85629caa76c", null ],
     [ "grid", "class_player_controls.html#a551d03e10634b6005cf6c52185396e54", null ],
     [ "hor", "class_player_controls.html#afb622e8be8f59caacca2d9b8aab683eb", null ],
     [ "moveDirDown", "class_player_controls.html#a4c4dcd264b264148a383f20d1375f76c", null ],

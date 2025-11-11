@@ -98,54 +98,50 @@ $(function(){initNavTree('_skill_cooldown_8cs_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html">    4</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_skill_cooldown.html">SkillCooldown</a> : ScriptableObject</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    [SerializeField]</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#a04da534ceae685bd078c74bb352ec252">    8</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_skill_cooldown.html#a04da534ceae685bd078c74bb352ec252">baseAmt</a> = 0;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#a48877f7c3251fb00b9e8eabb3ffe8d7d">    8</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="class_stat.html">Stat</a> <a class="code hl_variable" href="class_skill_cooldown.html#a48877f7c3251fb00b9e8eabb3ffe8d7d">skillCooldownBase</a>;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    [SerializeField]</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#ac4b98b8e426a2b081cffd7a142c2712d">   12</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="class_stat.html">Stat</a> <a class="code hl_variable" href="class_skill_cooldown.html#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">   15</a></span>    <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#af6ee27d23632248a6b77c5eb7817bc33">   17</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="class_skill_cooldown.html#af6ee27d23632248a6b77c5eb7817bc33">Timer</a></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a>; } </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">set</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        { </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = value;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt; (<a class="code hl_variable" href="class_skill_cooldown.html#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="class_skill_cooldown.html#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="class_skill_cooldown.html#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.ValueFloat))) <a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = (<a class="code hl_variable" href="class_skill_cooldown.html#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="class_skill_cooldown.html#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="class_skill_cooldown.html#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.ValueFloat));</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">   11</a></span>    <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#af6ee27d23632248a6b77c5eb7817bc33">   13</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="class_skill_cooldown.html#af6ee27d23632248a6b77c5eb7817bc33">Timer</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a>; } </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">set</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        { </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = value;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt; <a class="code hl_variable" href="class_skill_cooldown.html#a48877f7c3251fb00b9e8eabb3ffe8d7d">skillCooldownBase</a>.ValueFloat) <a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = <a class="code hl_variable" href="class_skill_cooldown.html#a48877f7c3251fb00b9e8eabb3ffe8d7d">skillCooldownBase</a>.ValueFloat;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#afe392b26a638e4ba510b44bc0824a599">   27</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_skill_cooldown.html#afe392b26a638e4ba510b44bc0824a599">Reset</a>()</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = 0;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#afe392b26a638e4ba510b44bc0824a599">   23</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_skill_cooldown.html#afe392b26a638e4ba510b44bc0824a599">Reset</a>()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a> = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#a2a4cef8bdcd52ec46968f6ad66d3cb85">   32</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_skill_cooldown.html#a2a4cef8bdcd52ec46968f6ad66d3cb85">IsReady</a>()</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">bool</span> ready = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="comment">// Debug.Log(&quot;Cooldown check: &quot; + timer + &quot; checked against: &quot; + (baseAmt - (baseAmt * cooldownStat.ValueFloat)) + &quot; - from &quot; + this.name);</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt;= (<a class="code hl_variable" href="class_skill_cooldown.html#a04da534ceae685bd078c74bb352ec252">baseAmt</a> - (<a class="code hl_variable" href="class_skill_cooldown.html#a04da534ceae685bd078c74bb352ec252">baseAmt</a> * <a class="code hl_variable" href="class_skill_cooldown.html#ac4b98b8e426a2b081cffd7a142c2712d">cooldownStat</a>.ValueFloat)))</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            ready = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> ready;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_skill_cooldown.html#a2a4cef8bdcd52ec46968f6ad66d3cb85">   28</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_skill_cooldown.html#a2a4cef8bdcd52ec46968f6ad66d3cb85">IsReady</a>()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">bool</span> ready = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">timer</a> &gt;= <a class="code hl_variable" href="class_skill_cooldown.html#a48877f7c3251fb00b9e8eabb3ffe8d7d">skillCooldownBase</a>.ValueFloat)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            ready = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> ready;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
 </div>
 <div class="ttc" id="aclass_skill_cooldown_html"><div class="ttname"><a href="class_skill_cooldown.html">SkillCooldown</a></div><div class="ttdef"><b>Definition</b> <a href="#l00004">SkillCooldown.cs:5</a></div></div>
-<div class="ttc" id="aclass_skill_cooldown_html_a04da534ceae685bd078c74bb352ec252"><div class="ttname"><a href="class_skill_cooldown.html#a04da534ceae685bd078c74bb352ec252">SkillCooldown.baseAmt</a></div><div class="ttdeci">int baseAmt</div><div class="ttdoc">Base cooldown time.</div><div class="ttdef"><b>Definition</b> <a href="#l00008">SkillCooldown.cs:8</a></div></div>
-<div class="ttc" id="aclass_skill_cooldown_html_a2a4cef8bdcd52ec46968f6ad66d3cb85"><div class="ttname"><a href="class_skill_cooldown.html#a2a4cef8bdcd52ec46968f6ad66d3cb85">SkillCooldown.IsReady</a></div><div class="ttdeci">bool IsReady()</div><div class="ttdef"><b>Definition</b> <a href="#l00032">SkillCooldown.cs:32</a></div></div>
-<div class="ttc" id="aclass_skill_cooldown_html_abb4761ec4f4c23eb07febb5c3613a655"><div class="ttname"><a href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">SkillCooldown.timer</a></div><div class="ttdeci">float timer</div><div class="ttdoc">Float, the current timer for the cooldown. Used to track the cooldown&#39;s progress.</div><div class="ttdef"><b>Definition</b> <a href="#l00015">SkillCooldown.cs:15</a></div></div>
-<div class="ttc" id="aclass_skill_cooldown_html_ac4b98b8e426a2b081cffd7a142c2712d"><div class="ttname"><a href="class_skill_cooldown.html#ac4b98b8e426a2b081cffd7a142c2712d">SkillCooldown.cooldownStat</a></div><div class="ttdeci">Stat cooldownStat</div><div class="ttdoc">Stat reference. The stat used to adjust cooldown time - e.g. player cooldown speed.</div><div class="ttdef"><b>Definition</b> <a href="#l00012">SkillCooldown.cs:12</a></div></div>
-<div class="ttc" id="aclass_skill_cooldown_html_af6ee27d23632248a6b77c5eb7817bc33"><div class="ttname"><a href="class_skill_cooldown.html#af6ee27d23632248a6b77c5eb7817bc33">SkillCooldown.Timer</a></div><div class="ttdeci">float Timer</div><div class="ttdef"><b>Definition</b> <a href="#l00017">SkillCooldown.cs:18</a></div></div>
-<div class="ttc" id="aclass_skill_cooldown_html_afe392b26a638e4ba510b44bc0824a599"><div class="ttname"><a href="class_skill_cooldown.html#afe392b26a638e4ba510b44bc0824a599">SkillCooldown.Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition</b> <a href="#l00027">SkillCooldown.cs:27</a></div></div>
+<div class="ttc" id="aclass_skill_cooldown_html_a2a4cef8bdcd52ec46968f6ad66d3cb85"><div class="ttname"><a href="class_skill_cooldown.html#a2a4cef8bdcd52ec46968f6ad66d3cb85">SkillCooldown.IsReady</a></div><div class="ttdeci">bool IsReady()</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SkillCooldown.cs:28</a></div></div>
+<div class="ttc" id="aclass_skill_cooldown_html_a48877f7c3251fb00b9e8eabb3ffe8d7d"><div class="ttname"><a href="class_skill_cooldown.html#a48877f7c3251fb00b9e8eabb3ffe8d7d">SkillCooldown.skillCooldownBase</a></div><div class="ttdeci">Stat skillCooldownBase</div><div class="ttdoc">Base cooldown time.</div><div class="ttdef"><b>Definition</b> <a href="#l00008">SkillCooldown.cs:8</a></div></div>
+<div class="ttc" id="aclass_skill_cooldown_html_abb4761ec4f4c23eb07febb5c3613a655"><div class="ttname"><a href="class_skill_cooldown.html#abb4761ec4f4c23eb07febb5c3613a655">SkillCooldown.timer</a></div><div class="ttdeci">float timer</div><div class="ttdoc">Float, the current timer for the cooldown. Used to track the cooldown&#39;s progress.</div><div class="ttdef"><b>Definition</b> <a href="#l00011">SkillCooldown.cs:11</a></div></div>
+<div class="ttc" id="aclass_skill_cooldown_html_af6ee27d23632248a6b77c5eb7817bc33"><div class="ttname"><a href="class_skill_cooldown.html#af6ee27d23632248a6b77c5eb7817bc33">SkillCooldown.Timer</a></div><div class="ttdeci">float Timer</div><div class="ttdef"><b>Definition</b> <a href="#l00013">SkillCooldown.cs:14</a></div></div>
+<div class="ttc" id="aclass_skill_cooldown_html_afe392b26a638e4ba510b44bc0824a599"><div class="ttname"><a href="class_skill_cooldown.html#afe392b26a638e4ba510b44bc0824a599">SkillCooldown.Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition</b> <a href="#l00023">SkillCooldown.cs:23</a></div></div>
 <div class="ttc" id="aclass_stat_html"><div class="ttname"><a href="class_stat.html">Stat</a></div><div class="ttdef"><b>Definition</b> <a href="_stat_8cs_source.html#l00005">Stat.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

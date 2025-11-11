@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "AIMove", "class_a_i_move.html", "class_a_i_move" ],
+    [ "ArrayWrapper", "class_array_wrapper.html", "class_array_wrapper" ],
     [ "AttackFireProjectile", "class_attack_fire_projectile.html", "class_attack_fire_projectile" ],
     [ "BuildingLogic", "class_building_logic.html", "class_building_logic" ],
     [ "CharacterHealth", "class_character_health.html", "class_character_health" ],
@@ -14,6 +15,7 @@ var annotated_dup =
     [ "EnemyAILoop", "class_enemy_a_i_loop.html", "class_enemy_a_i_loop" ],
     [ "EnemyDeathLogic", "class_enemy_death_logic.html", "class_enemy_death_logic" ],
     [ "EnemySpawnManager", "class_enemy_spawn_manager.html", "class_enemy_spawn_manager" ],
+    [ "GameResourceManager", "class_game_resource_manager.html", "class_game_resource_manager" ],
     [ "Heap< T >", "class_heap-1-g.html", "class_heap-1-g" ],
     [ "IHeapItem< T >", "interface_i_heap_item-1-g.html", "interface_i_heap_item-1-g" ],
     [ "LevelManager", "class_level_manager.html", "class_level_manager" ],
@@ -24,6 +26,7 @@ var annotated_dup =
     [ "PathQueue", "class_path_queue.html", "class_path_queue" ],
     [ "Placeable", "class_placeable.html", "class_placeable" ],
     [ "PlaceableBehaviour", "class_placeable_behaviour.html", "class_placeable_behaviour" ],
+    [ "PlacementDisplayBehaviour", "class_placement_display_behaviour.html", "class_placement_display_behaviour" ],
     [ "PlaneDebugger", "class_plane_debugger.html", "class_plane_debugger" ],
     [ "PlayerControls", "class_player_controls.html", "class_player_controls" ],
     [ "PlayerPlaceableInteract", "class_player_placeable_interact.html", "class_player_placeable_interact" ],
@@ -41,6 +44,7 @@ var annotated_dup =
     [ "SimpleProjectileBehaviour", "class_simple_projectile_behaviour.html", "class_simple_projectile_behaviour" ],
     [ "SkillCooldown", "class_skill_cooldown.html", "class_skill_cooldown" ],
     [ "Stat", "class_stat.html", "class_stat" ],
+    [ "StatGameResource", "class_stat_game_resource.html", "class_stat_game_resource" ],
     [ "TurretBehaviour", "class_turret_behaviour.html", "class_turret_behaviour" ],
     [ "TurretBuildingLogic", "class_turret_building_logic.html", "class_turret_building_logic" ],
     [ "WorldGridManager", "class_world_grid_manager.html", "class_world_grid_manager" ],
